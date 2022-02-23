@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
 
-var speed = 300
-var velocity = Vector2.ZERO
+export var speed = 3000
+export var friction = 0.01
+export var acc = 100
+
+var velocity = Vector2()
 
 func get_input():
-	velocity = Vector2.ZERO
+	var input = Vector2()
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
 	if Input.is_action_pressed('ui_left'):
@@ -14,10 +17,14 @@ func get_input():
 		velocity.y += 1
 	if Input.is_action_pressed("ui_up"):
 		velocity.y -= 1
-	velocity = velocity.normalized() * speed
+	return input
 
 func _physics_process(delta):
-	get_input()
+	var direction = get_input()
+	if direction.length() > 0:
+		velocity = lerp(velocity, direction.normalized() * speed, acc)
+	else:
+		velocity = lerp(velocity, Vector2.ZERO, friction)
 	velocity = move_and_slide(velocity)
 
 func _ready():
