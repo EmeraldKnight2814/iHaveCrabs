@@ -1,36 +1,32 @@
 extends KinematicBody2D
 
 
-export var speed = 3000
-export var friction = 0.01
-export var acc = 100
+export var speed = 450
 
-var velocity = Vector2()
+var velocity = Vector2.ZERO
 
+func _ready():
+	pass # Replace with function body.
+
+# Movement
 func get_input():
-	var input = Vector2()
+	# Detect up/down/left/right keystate and only move when pressed.
+	velocity = Vector2()
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
 	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
 	if Input.is_action_pressed('ui_down'):
 		velocity.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
-	return input
+	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-	var direction = get_input()
-	if direction.length() > 0:
-		velocity = lerp(velocity, direction.normalized() * speed, acc)
-	else:
-		velocity = lerp(velocity, Vector2.ZERO, friction)
-	velocity = move_and_slide(velocity)
-
-func _ready():
-	pass # Replace with function body.
+	get_input()
+	move_and_slide(velocity)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
+
