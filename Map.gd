@@ -40,7 +40,7 @@ func make_rooms():
 	yield(get_tree(), "idle_frame")
 	# Generate a minimum spanning tree connecting the rooms
 	path = find_mst(room_positions)
-
+"""
 func _draw():
 	for room in $Rooms.get_children():
 		draw_rect(Rect2(room.position - room.size, room.size * 2), Color(0, 255, 0), false)
@@ -50,7 +50,8 @@ func _draw():
 				var pp = path.get_point_position(p)
 				var cp = path.get_point_position(c)
 				draw_line(Vector2(pp.x, pp.y), Vector2(cp.x, cp.y), Color(1, 1, 0), 15, true)
-		
+"""
+
 func _process(delta):
 	update()
 	

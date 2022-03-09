@@ -17,9 +17,11 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
+scale = Vector2( 0.25, 0.25 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 
 [connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
