@@ -55,6 +55,9 @@ func _draw():
 func _process(delta):
 	update()
 	
+"""
+Inputs for testing
+
 func _input(event):
 	if event.is_action_pressed('ui_select'):
 		for n in $Rooms.get_children():
@@ -66,6 +69,7 @@ func _input(event):
 		make_rooms()
 	if event.is_action_pressed("ui_focus_next"):
 		make_map()
+"""
 
 func find_mst(nodes):
 	#Prims Algorithm (https://en.wikipedia.org/wiki/Prim%27s_algorithm)
