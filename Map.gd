@@ -12,7 +12,7 @@ var cull = 0.5 #Chance to cull room
 
 var path #AStar pathfinding object
 var start_room = null
-var end_room = null
+var boss_room = null
 
 
 func _ready():
@@ -98,15 +98,14 @@ func find_mst(nodes):
 		
 func make_map():
 	# Create a TileMap from the generated rooms and path
-	#Map.clear()
+	Map.clear()
 	find_start_room()
-	find_end_room()
+	find_boss_room()
 	
 	# Fill TileMap with walls, then carve empty rooms
 	var full_rect = Rect2()
 	for room in $Rooms.get_children():
-		var r = Rect2(room.position-room.size,
-					room.get_node("CollisionShape2D").shape.extents*2)
+		var r = Rect2(room.position-room.size, room.get_node("CollisionShape2D").shape.extents*2)
 		full_rect = full_rect.merge(r)
 	var topleft = Map.world_to_map(full_rect.position)
 	var bottomright = Map.world_to_map(full_rect.end)
@@ -122,7 +121,13 @@ func make_map():
 		var ul = (room.position / tile_size).floor() - s
 		for x in range(2, s.x * 2 - 1):
 			for y in range(2, s.y * 2 - 1):
-				Map.set_cell(ul.x + x, ul.y + y, 0)
+				if room == boss_room:
+					Map.set_cell(ul.x + x, ul.y + y, 2)
+				elif room == start_room:
+					Map.set_cell(ul.x + x, ul.y + y, 3)
+				else:
+					Map.set_cell(ul.x + x, ul.y + y, 0)
+				
 		# Carve connecting corridor
 		var p = path.get_closest_point(Vector3(room.position.x, 
 											room.position.y, 0))
@@ -147,12 +152,29 @@ func carve_path(pos1, pos2):
 	if (randi() % 2) > 0:
 		x_y = pos2
 		y_x = pos1
-	for x in range(pos1.x, pos2.x, x_diff):
-		Map.set_cell(x, x_y.y, 0)
-		Map.set_cell(x, x_y.y + y_diff, 0)  # widen the corridor
-	for y in range(pos1.y, pos2.y, y_diff):
-		Map.set_cell(y_x.x, y, 0)
-		Map.set_cell(y_x.x + x_diff, y, 0)
+		
+	
+	if pos1 == Map.world_to_map(boss_room.position) :
+		for x in range(pos1.x, pos2.x, x_diff):
+			Map.set_cell(x, x_y.y, 2)
+			Map.set_cell(x, x_y.y + y_diff, 2)  # widen the corridor
+		for y in range(pos1.y, pos2.y, y_diff):
+			Map.set_cell(y_x.x, y, 2)
+			Map.set_cell(y_x.x + x_diff, y, 2)
+	elif pos1 == Map.world_to_map(start_room.position) :
+		for x in range(pos1.x, pos2.x, x_diff):
+			Map.set_cell(x, x_y.y, 3)
+			Map.set_cell(x, x_y.y + y_diff, 3)  # widen the corridor
+		for y in range(pos1.y, pos2.y, y_diff):
+			Map.set_cell(y_x.x, y, 3)
+			Map.set_cell(y_x.x + x_diff, y, 3)
+	else:
+		for x in range(pos1.x, pos2.x, x_diff):
+			Map.set_cell(x, x_y.y, 0)
+			Map.set_cell(x, x_y.y + y_diff, 0)  # widen the corridor
+		for y in range(pos1.y, pos2.y, y_diff):
+			Map.set_cell(y_x.x, y, 0)
+			Map.set_cell(y_x.x + x_diff, y, 0)
 	
 func find_start_room():
 	var min_x = INF
@@ -161,9 +183,9 @@ func find_start_room():
 			start_room = room
 			min_x = room.position.x
 
-func find_end_room():
+func find_boss_room():
 	var max_x = -INF
 	for room in $Rooms.get_children():
 		if room.position.x > max_x:
-			end_room = room
+			boss_room = room
 			max_x = room.position.x
