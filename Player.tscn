@@ -1,11 +1,7 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Walk/Player_Walk_SpriteSheet.png" type="Texture" id=2]
-
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 11.2
-height = 0.0
 
 [sub_resource type="Animation" id=8]
 resource_name = "Idle down"
@@ -161,25 +157,6 @@ tracks/0/keys = {
 [sub_resource type="AnimationNodeAnimation" id=22]
 animation = "Idle down"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
-animation = "idle_up"
-
-[sub_resource type="AnimationNodeAnimation" id=24]
-animation = "idle_right"
-
-[sub_resource type="AnimationNodeAnimation" id=25]
-animation = "walk_left"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=12]
-blend_point_0/node = SubResource( 22 )
-blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 23 )
-blend_point_1/pos = Vector2( 0, -1 )
-blend_point_2/node = SubResource( 24 )
-blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 25 )
-blend_point_3/pos = Vector2( -1, 0 )
-
 [sub_resource type="AnimationNodeAnimation" id=13]
 animation = "walk_down"
 
@@ -202,18 +179,23 @@ blend_point_2/pos = Vector2( 0, -1 )
 blend_point_3/node = SubResource( 16 )
 blend_point_3/pos = Vector2( -1, 0 )
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
 
 [sub_resource type="AnimationNodeStateMachine" id=20]
-states/idle/node = SubResource( 12 )
-states/idle/position = Vector2( 126, 86 )
+"states/Idle down/node" = SubResource( 22 )
+"states/Idle down/position" = Vector2( 141, 86 )
 states/walk/node = SubResource( 17 )
 states/walk/position = Vector2( 339, 86 )
-transitions = [ "idle", "walk", SubResource( 18 ), "walk", "idle", SubResource( 19 ) ]
+transitions = [ "Idle down", "walk", SubResource( 23 ), "walk", "Idle down", SubResource( 24 ) ]
+start_node = "Idle down"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=21]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 11.2
+height = 0.0
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -226,14 +208,7 @@ texture = ExtResource( 2 )
 hframes = 5
 vframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 7 )
-rotation = 1.5708
-scale = Vector2( 2.5, 2 )
-shape = SubResource( 2 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Idle down"
 "anims/Idle down" = SubResource( 8 )
 anims/RESET = SubResource( 3 )
 anims/idle_left = SubResource( 10 )
@@ -248,5 +223,10 @@ anims/walk_up = SubResource( 4 )
 tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 21 )
-parameters/idle/blend_position = Vector2( 0, 0 )
 parameters/walk/blend_position = Vector2( 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 7 )
+rotation = 1.5708
+scale = Vector2( 2.5, 2 )
+shape = SubResource( 2 )

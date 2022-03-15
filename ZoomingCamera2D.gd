@@ -1,6 +1,6 @@
 extends Camera2D
 
-export var min_zoom := 0.25
+export var min_zoom := 0.1
 export var max_zoom := 20.0
 export var zoom_factor := 0.1
 export var zoom_duration := 0.2
@@ -21,6 +21,6 @@ func _unhandled_input(event):
 	if event.is_action_pressed("zoom_out"):
 		_set_zoom_level(_zoom_level + zoom_factor)
 	if event.is_action_pressed("reset_zoom"):
-		_set_zoom_level(0.25)
+		_set_zoom_level(min_zoom)
 	if event.is_action_pressed("max_zoom"):
-		_set_zoom_level(20.0)
+		_set_zoom_level(max_zoom)
