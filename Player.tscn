@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Walk/Player_Walk_SpriteSheet.png" type="Texture" id=2]
@@ -157,6 +157,15 @@ tracks/0/keys = {
 [sub_resource type="AnimationNodeAnimation" id=22]
 animation = "Idle down"
 
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "idle_left"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "idle_right"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "idle_up"
+
 [sub_resource type="AnimationNodeAnimation" id=13]
 animation = "walk_down"
 
@@ -183,12 +192,30 @@ blend_point_3/pos = Vector2( -1, 0 )
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=24]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
 [sub_resource type="AnimationNodeStateMachine" id=20]
 "states/Idle down/node" = SubResource( 22 )
-"states/Idle down/position" = Vector2( 141, 86 )
+"states/Idle down/position" = Vector2( 352, 187 )
+states/idle_left/node = SubResource( 25 )
+states/idle_left/position = Vector2( 162, 86 )
+states/idle_right/node = SubResource( 26 )
+states/idle_right/position = Vector2( 541, 86 )
+states/idle_up/node = SubResource( 27 )
+states/idle_up/position = Vector2( 352, 3 )
 states/walk/node = SubResource( 17 )
-states/walk/position = Vector2( 339, 86 )
-transitions = [ "Idle down", "walk", SubResource( 23 ), "walk", "Idle down", SubResource( 24 ) ]
+states/walk/position = Vector2( 352, 86 )
+transitions = [ "Idle down", "walk", SubResource( 23 ), "walk", "Idle down", SubResource( 24 ), "walk", "idle_left", SubResource( 28 ), "idle_left", "walk", SubResource( 29 ), "idle_up", "walk", SubResource( 30 ), "walk", "idle_up", SubResource( 31 ), "walk", "idle_right", SubResource( 32 ), "idle_right", "walk", SubResource( 33 ) ]
 start_node = "Idle down"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=21]

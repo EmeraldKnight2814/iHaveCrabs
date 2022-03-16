@@ -1,10 +1,7 @@
 extends KinematicBody2D
 
-
-const ACCELERATION = 500
-const MAX_SPEED = 100
-
-
+export var ACCELERATION = 500
+export var MAX_SPEED = 100
 
 var velocity = Vector2.ZERO
 var aniPlayer
