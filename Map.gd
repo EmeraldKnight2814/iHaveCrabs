@@ -4,7 +4,7 @@ var Room = preload("res://Room.tscn")
 onready var Map = $TileMap
 
 var tile_size = 16 #Size of a tile in the TileMap
-var num_rooms = 50 #Number of rooms to generate
+var num_rooms = 30 #Number of rooms to generate
 var min_size = 8 #Minimum size of room in TILES
 var max_size = 20 #Maximum size of room in TILES
 var hspread = 400 #Horizontal spread in PIXELS
