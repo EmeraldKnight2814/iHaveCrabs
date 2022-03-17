@@ -1,20 +1,140 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/UI/InvUI.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/UI/Weapon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/UI/Armor.png" type="Texture" id=3]
+[ext_resource path="res://Cards/Templates/Tarot_Card_Template_Alt1_CROWLEY.png" type="Texture" id=4]
+[ext_resource path="res://Cards/Templates/Enemy_Card_Template_CROWLEY.png" type="Texture" id=5]
+[ext_resource path="res://Cards/Templates/Player_Card_Template_CROWLEY.png" type="Texture" id=6]
+[ext_resource path="res://Cards/Templates/Environment_Card_Template_CROWLEY.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 822, 1122 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 822, 1122 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 822, 1122 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 822, 1122 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 822, 1122 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 822, 1122 )
 
 [node name="Inventory" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
 texture = ExtResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_top = 32.0
+margin_right = 14.0
+margin_bottom = 46.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
+}
+
+[node name="Weapon" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 262.0
+margin_bottom = 263.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Armor" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Env" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play1" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play2" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play3" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tarot" type="Panel" parent="PanelContainer"]
+anchor_left = 3.28571
+anchor_top = 0.5
+anchor_right = 3.28571
+anchor_bottom = 0.5
+margin_left = 1500.0
+margin_top = 7.0
+margin_right = 1754.0
+margin_bottom = 351.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_lock_": true
 }
