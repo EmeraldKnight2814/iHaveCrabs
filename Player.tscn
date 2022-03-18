@@ -574,6 +574,8 @@ scale = Vector2( 0.1, 0.1 )
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
 scale = Vector2( 10, 10 )
+collision_layer = 2
+collision_mask = 15
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 24.8, -1.6 )

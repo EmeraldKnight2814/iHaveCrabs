@@ -23,5 +23,7 @@ scale = Vector2( 0.25, 0.25 )
 [node name="ZoomingCamera2D" parent="Player" instance=ExtResource( 5 )]
 zoom = Vector2( 0.1, 0.1 )
 
+[node name="Enemies" type="Node" parent="."]
+
 [connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
 [connection signal="timeout" from="TileMapTimer" to="." method="_on_MapTimer1_timeout"]
