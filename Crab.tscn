@@ -91,7 +91,9 @@ radius = 208.0
 height = 254.0
 
 [node name="Crab" type="KinematicBody2D"]
+scale = Vector2( 0.015, 0.015 )
 collision_layer = 4
+collision_mask = 5
 script = ExtResource( 23 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

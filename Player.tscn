@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
@@ -138,7 +138,7 @@ tracks/2/keys = {
 "values": [ 90.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:one_way_collision")
+tracks/3/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -363,6 +363,23 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="Animation" id=53]
+resource_name = "spin_attack"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 21, 22, 25, 26, 33, 34, 29, 30 ]
+}
+
 [sub_resource type="Animation" id=5]
 resource_name = "walk_down"
 length = 0.6
@@ -536,6 +553,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 hframes = 6
 vframes = 6
+frame = 25
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -548,6 +566,7 @@ anims/attack_up = SubResource( 35 )
 anims/idle_left = SubResource( 10 )
 anims/idle_right = SubResource( 11 )
 anims/idle_up = SubResource( 9 )
+anims/spin_attack = SubResource( 53 )
 anims/walk_down = SubResource( 5 )
 anims/walk_left = SubResource( 7 )
 anims/walk_right = SubResource( 6 )
@@ -569,6 +588,7 @@ shape = SubResource( 2 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( -1, 6.3 )
+rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
@@ -580,5 +600,6 @@ collision_mask = 15
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 24.8, -1.6 )
 shape = SubResource( 52 )
+disabled = true
 
 [editable path="HitboxPivot/SwordHitbox"]
