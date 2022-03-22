@@ -1,27 +1,27 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://Sprites/Crabs/BlackCrabA.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Crabs/CyanCrabB.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Crabs/BlackCrabB.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Crabs/GreenCrabB.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Crabs/OrangeCrabA.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Crabs/GreenCrabA.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Crabs/BlueCrabA.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Crabs/CyanCrabA.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Crabs/BlueCrabB.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Crabs/RedCrabA.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Crabs/PurpleCrabB.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Crabs/VioletCrabA.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Crabs/WhiteCrabB.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Crabs/RainbowCrabB.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Crabs/VioletCrabB.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Crabs/OrangeCrabB.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Crabs/WhiteCrabA.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Crabs/YellowCrabA.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Crabs/PurpleCrabA.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Crabs/RainbowCrabA.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Crabs/RedCrabB.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Crabs/YellowCrabB.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Crabs/Walk/BlackCrabA.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Crabs/Walk/CyanCrabB.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Crabs/Walk/BlackCrabB.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Crabs/Walk/GreenCrabB.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Crabs/Walk/OrangeCrabA.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Crabs/Walk/GreenCrabA.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Crabs/Walk/BlueCrabA.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Crabs/Walk/CyanCrabA.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Crabs/Walk/BlueCrabB.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Crabs/Walk/RedCrabA.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Crabs/Walk/PurpleCrabB.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Crabs/Walk/VioletCrabA.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Crabs/Walk/WhiteCrabB.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Crabs/Walk/RainbowCrabB.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Crabs/Walk/VioletCrabB.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Crabs/Walk/OrangeCrabB.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Crabs/Walk/WhiteCrabA.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Crabs/Walk/YellowCrabA.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Crabs/Walk/PurpleCrabA.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Crabs/Walk/RainbowCrabA.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Crabs/Walk/RedCrabB.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Crabs/Walk/YellowCrabB.png" type="Texture" id=22]
 [ext_resource path="res://Crab.gd" type="Script" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -31,14 +31,14 @@ animations = [ {
 "name": "black",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "blue",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "cyan",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "blue",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
@@ -46,9 +46,9 @@ animations = [ {
 "name": "green",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 16 ) ],
 "loop": true,
-"name": "violet",
+"name": "orange",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
@@ -56,9 +56,9 @@ animations = [ {
 "name": "white",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "yellow",
+"name": "purple",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
@@ -66,14 +66,14 @@ animations = [ {
 "name": "red",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "purple",
+"name": "yellow",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "orange",
+"name": "violet",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ) ],
@@ -90,6 +90,10 @@ height = 450.0
 radius = 208.0
 height = 254.0
 
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 208.0
+height = 254.0
+
 [node name="Crab" type="KinematicBody2D"]
 scale = Vector2( 0.015, 0.015 )
 collision_layer = 4
@@ -100,7 +104,6 @@ script = ExtResource( 23 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "cyan"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -115,9 +118,16 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -23, -21 )
+modulate = Color( 0.196078, 1, 0, 1 )
+position = Vector2( -19, -0.999878 )
 shape = SubResource( 3 )
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+modulate = Color( 1, 0, 0, 1 )
+rotation = 1.5708
+shape = SubResource( 4 )
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="body_entered" from="HurtBox" to="." method="_on_HurtBox_body_entered"]

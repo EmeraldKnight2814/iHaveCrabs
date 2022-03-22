@@ -3,6 +3,8 @@ extends KinematicBody2D
 export var ACCELERATION = 500
 export var MAX_SPEED = 100
 
+signal hit
+
 enum{
 	MOVE,
 	ATTACK
@@ -14,6 +16,8 @@ var velocity = Vector2.ZERO
 onready var aniPlayer = $AnimationPlayer
 onready var aniTree = $AnimationTree
 onready var aniState = aniTree.get('parameters/playback')
+onready var hurtbox = $Hurtbox
+onready var hitbox = $HitboxPivot/SwordHitbox
 
 func _ready():
 	aniTree.active = true
@@ -54,3 +58,8 @@ func attack_state(delta):
 	
 func attack_animation_finished():
 	state = MOVE
+
+
+func _on_Hurtbox_area_entered(area):
+	if area == hurtbox:
+		emit_signal('hit')

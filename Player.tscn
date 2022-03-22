@@ -602,4 +602,16 @@ position = Vector2( 24.8, -1.6 )
 shape = SubResource( 52 )
 disabled = true
 
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+modulate = Color( 0.00784314, 1, 0, 1 )
+position = Vector2( -0.1, 7 )
+rotation = 1.5708
+scale = Vector2( 2.5, 2 )
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="area_shape_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_shape_entered"]
+
 [editable path="HitboxPivot/SwordHitbox"]
