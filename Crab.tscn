@@ -31,14 +31,14 @@ animations = [ {
 "name": "black",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "cyan",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "blue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "cyan",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
@@ -51,19 +51,14 @@ animations = [ {
 "name": "orange",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "white",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "purple",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "red",
+"name": "violet",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
@@ -71,9 +66,14 @@ animations = [ {
 "name": "yellow",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "violet",
+"name": "red",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "white",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ) ],
@@ -114,8 +114,8 @@ shape = SubResource( 2 )
 [node name="HurtBox" type="Area2D" parent="."]
 position = Vector2( -1, 19 )
 rotation = 1.5708
-collision_layer = 8
-collision_mask = 2
+collision_layer = 4
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 modulate = Color( 0.196078, 1, 0, 1 )
@@ -123,6 +123,8 @@ position = Vector2( -19, -0.999878 )
 shape = SubResource( 3 )
 
 [node name="HitBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 modulate = Color( 1, 0, 0, 1 )

@@ -73,7 +73,7 @@ func _input(event):
 
 func find_mst(nodes):
 	#Prims Algorithm (https://en.wikipedia.org/wiki/Prim%27s_algorithm)
-	var path = AStar.new()
+	path = AStar.new()
 	path.add_point(path.get_available_point_id(), nodes.pop_front())
 	
 	#repeat until no more nodes remain

@@ -13,6 +13,5 @@ func _ready():
 
 
 func _on_HurtBox_area_entered(area):
-	if area == hurtbox:
-		emit_signal("crabHit")
-		queue_free()
+	print("Crab Killed!")
+	queue_free()
