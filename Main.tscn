@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Map.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ZoomingCamera2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Misc. Assets/Wilhelm_Scream.wav" type="AudioStream" id=6]
+[ext_resource path="res://Misc. Assets/Minecraft Oof.wav" type="AudioStream" id=7]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -26,9 +27,12 @@ zoom = Vector2( 0.1, 0.1 )
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="wilhelmScream" type="AudioStreamPlayer2D" parent="."]
+[node name="WilhelmScream" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2( 0.25, 0.25 )
 stream = ExtResource( 6 )
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
 [connection signal="timeout" from="TileMapTimer" to="." method="_on_MapTimer1_timeout"]

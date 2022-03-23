@@ -5,7 +5,8 @@ var rng = RandomNumberGenerator.new()
 
 onready var map = $Map
 onready var player  = $Player
-onready var hitSound = $wilhelmScream
+onready var hitSound = $HitSound
+onready var deathSound = $WilhelmScream
 onready var enemies = $Enemies
 
 func _on_HUD_start_game():
@@ -24,5 +25,11 @@ func _on_HUD_start_game():
 
 
 func _on_Player_hit():
-	hitSound.play()
-	print("Ow")
+	player.LIVES -= 1
+	if player.LIVES <= 0:
+		deathSound.play()
+		print("No Lives Left")
+		player.queue_free()
+	else:
+		hitSound.play()
+		print(str(player.LIVES) + " lives left.")

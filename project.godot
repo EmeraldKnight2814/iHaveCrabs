@@ -137,6 +137,10 @@ inventory={
  ]
 }
 
+[layer_names]
+
+2d_render/World=false
+
 [physics]
 
 common/enable_pause_aware_picking=true

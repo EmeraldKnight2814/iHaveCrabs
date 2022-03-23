@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 100
+export var LIVES = 3
 
 signal hit
 
@@ -61,5 +62,4 @@ func attack_animation_finished():
 
 
 func _on_Hurtbox_area_entered(area):
-	if area == hurtbox:
-		emit_signal('hit')
+	emit_signal('hit')
