@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Weapon.png-ff416b65408c4cab5c4ff018dae1d322.stex"
+path="res://.import/MCardOutline_ROGERS.png-ebfd61c93168a6a17f3a1aeb3aa75edc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Weapon.png"
-dest_files=[ "res://.import/Weapon.png-ff416b65408c4cab5c4ff018dae1d322.stex" ]
+source_file="res://Cards/Templates/MCardOutline_ROGERS.png"
+dest_files=[ "res://.import/MCardOutline_ROGERS.png-ebfd61c93168a6a17f3a1aeb3aa75edc.stex" ]
 
 [params]
 
