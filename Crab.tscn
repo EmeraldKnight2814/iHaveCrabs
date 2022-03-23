@@ -52,6 +52,16 @@ animations = [ {
 "name": "orange",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "yellow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "violet",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "red",
@@ -62,19 +72,9 @@ animations = [ {
 "name": "purple",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "violet",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "white",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "yellow",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ) ],
@@ -98,14 +98,12 @@ height = 100.0
 [node name="Crab" type="KinematicBody2D"]
 scale = Vector2( 0.015, 0.015 )
 collision_layer = 64
-collision_mask = 65
 script = ExtResource( 23 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "cyan"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

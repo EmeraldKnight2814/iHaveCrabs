@@ -1,8 +1,9 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
 [ext_resource path="res://hit_hurt_boxes/HitBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SwordHitBox.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=8]
 resource_name = "Idle down"
@@ -596,6 +597,7 @@ position = Vector2( 15, 0 )
 scale = Vector2( 10, 10 )
 collision_layer = 32
 collision_mask = 8
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 24.8, -1.6 )
