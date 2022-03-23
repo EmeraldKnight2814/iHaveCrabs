@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/UI/InvUI.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/UI/Weapon.png" type="Texture" id=2]
@@ -7,14 +7,11 @@
 [ext_resource path="res://Cards/Templates/Enemy_Card_Template_CROWLEY.png" type="Texture" id=5]
 [ext_resource path="res://Cards/Templates/Player_Card_Template_CROWLEY.png" type="Texture" id=6]
 [ext_resource path="res://Cards/Templates/Environment_Card_Template_CROWLEY.png" type="Texture" id=7]
+[ext_resource path="res://InvSlot.gd" type="Script" id=8]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 256, 256 )
-
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 256, 256 )
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 822, 1122 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 7 )
@@ -28,17 +25,13 @@ region_rect = Rect2( 0, 0, 822, 1122 )
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 822, 1122 )
 
-[sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 822, 1122 )
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="StyleBoxTexture" id=7]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 822, 1122 )
-
-[sub_resource type="StyleBoxTexture" id=8]
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 822, 1122 )
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 256, 256 )
 
 [node name="Inventory" type="Node2D"]
 
@@ -49,92 +42,138 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-margin_top = 32.0
-margin_right = 14.0
-margin_bottom = 46.0
+[node name="TarotCard" type="PanelContainer" parent="."]
+margin_left = 1543.0
+margin_top = 36.0
+margin_right = 1802.0
+margin_bottom = 392.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Weapon" type="Panel" parent="PanelContainer"]
+[node name="Tarot" type="Panel" parent="TarotCard"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 262.0
-margin_bottom = 263.0
-custom_styles/panel = SubResource( 1 )
-
-[node name="Armor" type="Panel" parent="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Env" type="Panel" parent="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Enemy" type="Panel" parent="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-custom_styles/panel = SubResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Play1" type="Panel" parent="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-custom_styles/panel = SubResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Play2" type="Panel" parent="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-custom_styles/panel = SubResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Play3" type="Panel" parent="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-custom_styles/panel = SubResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Tarot" type="Panel" parent="PanelContainer"]
-anchor_left = 3.28571
-anchor_top = 0.5
-anchor_right = 3.28571
-anchor_bottom = 0.5
-margin_left = 1500.0
-margin_top = 7.0
-margin_right = 1754.0
-margin_bottom = 351.0
+margin_right = 252.0
+margin_bottom = 349.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_styles/panel = SubResource( 8 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldCards" type="VBoxContainer" parent="."]
+margin_left = 97.0
+margin_top = 398.0
+margin_right = 292.0
+margin_bottom = 1013.0
+custom_constants/separation = 90
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Env" type="Panel" parent="WorldCards"]
+margin_right = 195.0
+margin_bottom = 262.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy" type="Panel" parent="WorldCards"]
+margin_top = 352.0
+margin_right = 195.0
+margin_bottom = 615.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PlayerCards" type="VBoxContainer" parent="."]
+margin_left = 1192.0
+margin_top = 105.0
+margin_right = 1387.0
+margin_bottom = 998.0
+custom_constants/separation = 52
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Play1" type="Panel" parent="PlayerCards"]
+margin_right = 195.0
+margin_bottom = 263.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play2" type="Panel" parent="PlayerCards"]
+margin_top = 315.0
+margin_right = 195.0
+margin_bottom = 578.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play3" type="Panel" parent="PlayerCards"]
+margin_top = 630.0
+margin_right = 195.0
+margin_bottom = 893.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Wearables" type="VBoxContainer" parent="."]
+margin_left = 1535.0
+margin_top = 433.0
+margin_right = 1810.0
+margin_bottom = 1030.0
+custom_constants/separation = 33
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Weapon" type="Panel" parent="Wearables"]
+margin_right = 275.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Armor" type="Panel" parent="Wearables"]
+margin_top = 315.0
+margin_right = 275.0
+margin_bottom = 597.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
