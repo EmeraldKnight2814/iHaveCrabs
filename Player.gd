@@ -19,10 +19,11 @@ onready var aniTree = $AnimationTree
 onready var aniState = aniTree.get('parameters/playback')
 onready var hurtbox = $Hurtbox
 onready var hitbox = $HitboxPivot/SwordHitbox
+onready var hitboxCollisionShape = $HitboxPivot/SwordHitbox/CollisionShape2D
 
 func _ready():
 	aniTree.active = true
-	$HitboxPivot/SwordHitbox/CollisionShape2D.disabled = true
+	hitboxCollisionShape.disabled = true
 
 func _physics_process(delta):
 	match state:
