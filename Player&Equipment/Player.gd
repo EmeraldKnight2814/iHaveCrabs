@@ -24,6 +24,7 @@ onready var hitboxCollisionShape = $HitboxPivot/SwordHitbox/CollisionShape2D
 func _ready():
 	aniTree.active = true
 	hitboxCollisionShape.disabled = true
+	hitbox.knockback_vector = Vector2.ZERO
 
 func _physics_process(delta):
 	match state:
@@ -42,6 +43,7 @@ func move_state(delta):
 	velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	#aniTree.set('parameters/blend_position', input_vector)
 	if input_vector != Vector2.ZERO:
+		hitbox.knockback_vector = input_vector
 		aniTree.set('parameters/walk/blend_position', input_vector)
 		aniTree.set('parameters/idle/blend_position', input_vector)
 		aniTree.set('parameters/attack/blend_position', input_vector)
