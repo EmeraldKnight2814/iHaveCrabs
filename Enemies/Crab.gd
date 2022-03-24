@@ -10,7 +10,8 @@ enum{
 export var HIT_POINTS = 2
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
-export var ACCELERATION = 300
+export var ACCELERATION = 200
+export var MAX_SPEED = 80
 
 var knockback = Vector2.ZERO
 
@@ -21,6 +22,7 @@ onready var hitboxA = $HitBoxA
 onready var hitboxB = $HitBoxB
 onready var hurtbox = $HurtBox
 onready var scream = $WilhelmScream
+onready var zoneOfTruth = $PlayerDetectionZone
 
 
 func _ready():
@@ -33,11 +35,20 @@ func _physics_process(delta):
 	knockback = move_and_slide(knockback)
 	match state:
 		IDLE:
-			VELOCITY = VELOCITY.move_toward(Vector2.ZERO * FRICTION)
+			VELOCITY = VELOCITY.move_toward(Vector2.ZERO, FRICTION * delta)
+			seek_player()
 		WANDER:
 			pass
 		CHASE:
-			pass
+			var player = zoneOfTruth.player
+			if player != null:
+				var direction = (player.global_position - global_position).normalized()
+				VELOCITY = VELOCITY.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
+	VELOCITY = move_and_slide(VELOCITY)
+
+func seek_player():
+	if zoneOfTruth.can_see_player():
+		state = CHASE
 
 func _on_HurtBox_area_entered(area):
 	if HIT_POINTS <= 0:

@@ -1,6 +1,6 @@
 extends Node2D
 
-var crab = preload("res://Crab.tscn")
+var crab = preload("res://Enemies/Crab.tscn")
 var rng = RandomNumberGenerator.new()
 
 onready var player  = $Player
