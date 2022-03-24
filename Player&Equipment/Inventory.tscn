@@ -6,7 +6,7 @@
 [ext_resource path="res://Cards/Templates/Enemy_Card_Template_CROWLEY.png" type="Texture" id=5]
 [ext_resource path="res://Cards/Templates/Player_Card_Template_CROWLEY.png" type="Texture" id=6]
 [ext_resource path="res://Cards/Templates/Environment_Card_Template_CROWLEY.png" type="Texture" id=7]
-[ext_resource path="res://InvSlot.gd" type="Script" id=8]
+[ext_resource path="res://Player&Equipment/InvSlot.gd" type="Script" id=8]
 
 [sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 4 )

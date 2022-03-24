@@ -6,7 +6,7 @@ extends Panel
 # var b = "text"
 
 
-var CardClass = preload("res://Card.tscn")
+var CardClass = preload("res://Player&Equipment/Card.tscn")
 var card = null
 
 func _ready():

@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Card.gd" type="Script" id=2]
+[ext_resource path="res://Player&Equipment/Card.gd" type="Script" id=2]
+
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/test.jpg-2bb652bfcc9a9b53076df412ded31ede.stex"

@@ -1,9 +1,9 @@
 [gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Player&Equipment/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
 [ext_resource path="res://hit_hurt_boxes/HitBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://SwordHitBox.gd" type="Script" id=4]
+[ext_resource path="res://Player&Equipment/SwordHitBox.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=8]
 resource_name = "Idle down"

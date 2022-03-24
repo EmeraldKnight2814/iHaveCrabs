@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Test_Room.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Main.gd" type="Script" id=3]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ZoomingCamera2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/HUD.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Test_Room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Main.gd" type="Script" id=3]
+[ext_resource path="res://Player&Equipment/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player&Equipment/ZoomingCamera2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Misc. Assets/Wilhelm_Scream.wav" type="AudioStream" id=6]
 [ext_resource path="res://Misc. Assets/Minecraft Oof.wav" type="AudioStream" id=7]
-[ext_resource path="res://Crab.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Crab.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )

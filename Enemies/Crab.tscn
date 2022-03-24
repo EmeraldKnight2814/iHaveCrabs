@@ -22,7 +22,7 @@
 [ext_resource path="res://Sprites/Crabs/Walk/RainbowCrabA.png" type="Texture" id=20]
 [ext_resource path="res://Sprites/Crabs/Walk/RedCrabB.png" type="Texture" id=21]
 [ext_resource path="res://Sprites/Crabs/Walk/YellowCrabB.png" type="Texture" id=22]
-[ext_resource path="res://Crab.gd" type="Script" id=23]
+[ext_resource path="res://Enemies/Crab.gd" type="Script" id=23]
 [ext_resource path="res://Misc. Assets/Wilhelm_Scream.wav" type="AudioStream" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
