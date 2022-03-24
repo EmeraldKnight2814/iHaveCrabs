@@ -21,7 +21,7 @@ margin_top = -10.0
 margin_right = 55.0
 margin_bottom = 10.0
 shortcut = SubResource( 2 )
-text = "GENERATE MAP"
+text = "START"
 __meta__ = {
 "_edit_use_anchors_": false
 }
