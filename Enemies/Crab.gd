@@ -7,7 +7,7 @@ enum{
 	CHASE
 }
 
-export var HIT_POINTS = 2
+export var HIT_POINTS = 75
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 200
@@ -25,12 +25,13 @@ onready var hurtbox = $HurtBox
 onready var scream = $WilhelmScream
 onready var zoneOfTruth = $PlayerDetectionZone
 onready var wanderController = $Wander_Controller
+onready var geraldStats = PlayerStats
 
 
 func _ready():
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
-	HIT_POINTS = 2
+	HIT_POINTS = 75
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -74,10 +75,11 @@ func pick_random_state(state_list):
 	return state_list.pop_front()
 
 func _on_HurtBox_area_entered(area):
+	HIT_POINTS -= geraldStats.damage
 	if HIT_POINTS <= 0:
 		print("Crab Killed!")
 		scream.play()
 		queue_free()
 	else:
 		knockback = area.knockback_vector * 100
-		HIT_POINTS -= 1
+		print("Crab has " + str(HIT_POINTS) + " Hit Points Left")

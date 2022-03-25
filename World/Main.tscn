@@ -58,12 +58,12 @@ stream = ExtResource( 6 )
 position = Vector2( 65, -16 )
 stream = ExtResource( 7 )
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
+[node name="Gerald" parent="." instance=ExtResource( 4 )]
 position = Vector2( 92, 8 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="ZoomingCamera2D" parent="Player" instance=ExtResource( 5 )]
+[node name="ZoomingCamera2D" parent="Gerald" instance=ExtResource( 5 )]
 zoom = Vector2( 0.1, 0.1 )
 
 [connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
-[connection signal="hit" from="Player" to="." method="_on_Player_hit"]
+[connection signal="hit" from="Gerald" to="." method="_on_Player_hit"]

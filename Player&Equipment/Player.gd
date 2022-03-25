@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 150
-export var LIVES = 3
 
 signal hit
 
@@ -13,6 +12,7 @@ enum{
 
 var state = MOVE
 var velocity = Vector2.ZERO
+var stats = PlayerStats
 
 onready var aniPlayer = $AnimationPlayer
 onready var aniTree = $AnimationTree
@@ -25,6 +25,7 @@ func _ready():
 	aniTree.active = true
 	hitboxCollisionShape.disabled = true
 	hitbox.knockback_vector = Vector2.ZERO
+	stats.connect("no_hit_points", self, "queue_free")
 
 func _physics_process(delta):
 	match state:
@@ -65,4 +66,5 @@ func attack_animation_finished():
 
 
 func _on_Hurtbox_area_entered(area):
+	stats.hit_points -= 1
 	emit_signal('hit')
