@@ -29,14 +29,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "black",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "blue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "black",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
@@ -54,9 +54,9 @@ animations = [ {
 "name": "orange",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "white",
+"name": "red",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
@@ -64,14 +64,14 @@ animations = [ {
 "name": "yellow",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "red",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "violet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "white",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
@@ -109,7 +109,6 @@ script = ExtResource( 23 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "cyan"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

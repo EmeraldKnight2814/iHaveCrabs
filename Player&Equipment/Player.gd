@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var ACCELERATION = 500
-export var MAX_SPEED = 100
+export var MAX_SPEED = 150
 export var LIVES = 3
 
 signal hit
