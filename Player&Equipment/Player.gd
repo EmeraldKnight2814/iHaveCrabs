@@ -13,6 +13,7 @@ enum{
 var state = MOVE
 var velocity = Vector2.ZERO
 var stats = PlayerStats
+var sprites = [preload("res://Sprites/Player/Player_BaseSet.png"), preload("res://Sprites/Player/Player_DeathSet.png"), preload("res://Sprites/Player/Player_OceanSet.png"), preload("res://Sprites/Player/Player_VolcanoSet.png")]
 
 onready var aniPlayer = $AnimationPlayer
 onready var aniTree = $AnimationTree
