@@ -14,6 +14,7 @@ var state = MOVE
 var velocity = Vector2.ZERO
 var stats = PlayerStats
 var sprites = [preload("res://Sprites/Player/Player_BaseSet.png"), preload("res://Sprites/Player/Player_DeathSet.png"), preload("res://Sprites/Player/Player_OceanSet.png"), preload("res://Sprites/Player/Player_VolcanoSet.png")]
+var currentSprite = sprites[0]
 
 onready var aniPlayer = $AnimationPlayer
 onready var aniTree = $AnimationTree
@@ -21,6 +22,7 @@ onready var aniState = aniTree.get('parameters/playback')
 onready var hurtbox = $Hurtbox
 onready var hitbox = $HitboxPivot/SwordHitbox
 onready var hitboxCollisionShape = $HitboxPivot/SwordHitbox/CollisionShape2D
+onready var armor = $Sprite
 
 func _ready():
 	aniTree.active = true
@@ -58,6 +60,9 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 	
+func updateArmorSet(index):
+	currentSprite = sprites[index]
+	armor.texture = currentSprite
 	
 func attack_state(delta):
 	aniState.travel('attack')
