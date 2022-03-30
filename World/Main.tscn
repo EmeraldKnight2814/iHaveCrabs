@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://World/HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Test_Room.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Misc. Assets/Wilhelm_Scream.wav" type="AudioStream" id=6]
 [ext_resource path="res://Misc. Assets/Minecraft Oof.wav" type="AudioStream" id=7]
 [ext_resource path="res://Enemies/Crab.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Crab_With_Hat.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -20,34 +21,14 @@ tile_data = PoolIntArray( -393223, 1, 0, -393222, 1, 0, -393221, 1, 0, -393220, 
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 197, 103 )
+position = Vector2( 45, 117 )
 
 [node name="Crab2" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 46, 87 )
+position = Vector2( 93, 42 )
 
-[node name="Crab3" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 86, 88 )
-
-[node name="Crab4" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 134, 85 )
-
-[node name="Crab5" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 270, 32 )
-
-[node name="Crab6" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 100, 171 )
-
-[node name="Crab7" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 275, 128 )
-
-[node name="Crab8" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 209, 169 )
-
-[node name="Crab9" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 168, 150 )
-
-[node name="Crab10" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 35, 185 )
+[node name="Crab_With_Hat" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( 270, 57 )
+scale = Vector2( 0.015, 0.015 )
 
 [node name="WilhelmScream" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 82, -12 )
@@ -59,7 +40,7 @@ position = Vector2( 65, -16 )
 stream = ExtResource( 7 )
 
 [node name="Gerald" parent="." instance=ExtResource( 4 )]
-position = Vector2( 92, 8 )
+position = Vector2( 186, 120 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="ZoomingCamera2D" parent="Gerald" instance=ExtResource( 5 )]
