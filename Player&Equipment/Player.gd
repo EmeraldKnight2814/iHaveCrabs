@@ -65,6 +65,7 @@ func updateArmorSet(index_in, damage_in, hit_points_in):
 	armor.texture = currentSprite
 	stats.damage = damage_in
 	stats.hit_points = hit_points_in
+	stats.max_hit_points = hit_points_in
 	
 func attack_state(delta):
 	aniState.travel('attack')
