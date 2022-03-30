@@ -4,12 +4,11 @@ var speed = 5000
 
 func _ready():
 	$CollisionShape2D.disabled = true
-	yield(get_tree().create_timer(1.1), "timeout")
+	yield(get_tree().create_timer(.2), "timeout")
 	$CollisionShape2D.disabled = false
 
 func _physics_process(delta):
 	position += transform.x * speed * delta
-
 
 
 func _on_Fireball_area_entered(area):
