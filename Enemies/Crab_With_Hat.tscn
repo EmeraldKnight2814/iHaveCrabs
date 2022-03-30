@@ -130,4 +130,6 @@ stream = ExtResource( 26 )
 [node name="FireStarter" type="Position2D" parent="."]
 position = Vector2( 5, 93 )
 
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+
 [editable path="PlayerDetectionZone"]

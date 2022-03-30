@@ -9,7 +9,7 @@ enum{
 
 var fireball = preload("res://Enemies/Fireball.tscn")
 
-export var HIT_POINTS = 75
+export var HIT_POINTS = 25
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 200
@@ -31,7 +31,7 @@ onready var geraldStats = PlayerStats
 func _ready():
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
-	HIT_POINTS = 75
+	HIT_POINTS = 25
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -84,3 +84,14 @@ func fire(player):
 	var fire = fireball.instance()
 	owner.add_child(fire)
 	fire.transform = $FireStarter.global_transform
+
+
+func _on_HurtBox_area_entered(area):
+	HIT_POINTS -= geraldStats.damage
+	if HIT_POINTS <= 0:
+		print("Wizard Crab Killed!")
+		scream.play()
+		queue_free()
+	else:
+		knockback = area.knockback_vector * 100
+		print("Wizard Crab has " + str(HIT_POINTS) + " Hit Points Left")
