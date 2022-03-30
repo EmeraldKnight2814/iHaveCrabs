@@ -615,6 +615,5 @@ scale = Vector2( 2.5, 2 )
 shape = SubResource( 2 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
-[connection signal="area_shape_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_shape_entered"]
 
 [editable path="HitboxPivot/SwordHitbox"]

@@ -157,6 +157,5 @@ shape = SubResource( 5 )
 [node name="Wander_Controller" parent="." instance=ExtResource( 26 )]
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
-[connection signal="body_entered" from="HurtBox" to="." method="_on_HurtBox_body_entered"]
 
 [editable path="PlayerDetectionZone"]

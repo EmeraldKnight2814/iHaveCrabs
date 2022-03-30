@@ -1,6 +1,7 @@
 extends Area2D
 
 var speed = 5000
+var redirectVector = Vector2.ZERO
 
 func _ready():
 	$CollisionShape2D.disabled = true
@@ -12,7 +13,10 @@ func _physics_process(delta):
 
 
 func _on_Fireball_area_entered(area):
-	queue_free()
+	if area.name == "SwordHitbox":
+		redirectVector = area.knockback_vector
+	else:
+		queue_free()
 
 func _on_Fireball_body_entered(body):
 	queue_free()
