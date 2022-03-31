@@ -60,12 +60,9 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 	
-func updateArmorSet(index_in, damage_in, hit_points_in):
+func updateArmorSet(index_in):
 	currentSprite = sprites[index_in]
 	armor.texture = currentSprite
-	stats.damage = damage_in
-	stats.hit_points = hit_points_in
-	stats.max_hit_points = hit_points_in
 	
 func attack_state(delta):
 	aniState.travel('attack')
