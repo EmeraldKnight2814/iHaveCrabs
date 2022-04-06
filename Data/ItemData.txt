@@ -1,0 +1,8 @@
+{
+	"Monster Card": {
+	"ItemCategory": "Monster",
+	"StackSize": 1,
+	"Description": "A card that affects the monsters in the world around you."
+},
+	"Player Card": {
+	"ItemCategory": "Player"
