@@ -532,6 +532,7 @@ states/walk/node = SubResource( 17 )
 states/walk/position = Vector2( 352, 86 )
 transitions = [ "idle", "walk", SubResource( 43 ), "walk", "idle", SubResource( 44 ), "idle", "attack", SubResource( 46 ), "attack", "idle", SubResource( 47 ) ]
 start_node = "idle"
+graph_offset = Vector2( -377.137, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=21]
 
@@ -554,6 +555,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 hframes = 6
 vframes = 6
+frame = 15
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false

@@ -2,6 +2,8 @@ extends Area2D
 
 var speed = 5000
 var redirectVector = Vector2.ZERO
+var hitByPlayer = false
+onready var sprite = $Sprite
 
 func _ready():
 	$CollisionShape2D.disabled = true
@@ -9,12 +11,17 @@ func _ready():
 	$CollisionShape2D.disabled = false
 
 func _physics_process(delta):
-	position += transform.x * speed * delta
+	if hitByPlayer == false:
+		position += transform.x * speed * delta
+	else:
+		position -= transform.x * speed * delta
 
 
 func _on_Fireball_area_entered(area):
 	if area.name == "SwordHitbox":
-		redirectVector = area.knockback_vector
+		hitByPlayer = true
+		sprite.set_flip_h(true)
+		sprite.set_flip_v(true)
 	else:
 		queue_free()
 

@@ -3,11 +3,13 @@ extends Node
 export(int) var max_hit_points = 1 setget set_max_hit_points
 var hit_points = max_hit_points setget set_hit_points
 var damage = damage setget set_damage
+var knockback_modifier = knockback_modifier setget set_knockback_modifier
 
 signal no_hit_points
 signal hit_points_changed(value)
 signal max_hit_points_changed(value)
 signal damage_changed(value)
+signal knockback_modifier_changed(value)
 
 func set_damage(value):
 	damage = value
@@ -23,6 +25,10 @@ func set_hit_points(value):
 	emit_signal("hit_points_changed", hit_points)
 	if hit_points <= 0:
 		emit_signal("no_hit_points")
+
+func set_knockback_modifier(value):
+	knockback_modifier = value
+	emit_signal("knockback_modifier_changed", value)
 
 func _ready():
 	self.hit_points = max_hit_points

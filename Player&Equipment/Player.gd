@@ -47,7 +47,7 @@ func move_state(delta):
 	velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	#aniTree.set('parameters/blend_position', input_vector)
 	if input_vector != Vector2.ZERO:
-		hitbox.knockback_vector = input_vector
+		hitbox.knockback_vector = input_vector * stats.knockback_modifier
 		aniTree.set('parameters/walk/blend_position', input_vector)
 		aniTree.set('parameters/idle/blend_position', input_vector)
 		aniTree.set('parameters/attack/blend_position', input_vector)
