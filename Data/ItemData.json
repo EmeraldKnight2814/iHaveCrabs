@@ -1,0 +1,46 @@
+{
+  "1": {
+    "Name": "M Card",
+    "Type": "M",
+    "Description": "FIGHT THEM ALL",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
+  },
+  "2": {
+    "Name": "P Card",
+    "Type": "PC",
+    "Description": "It eats nothing important, don't worry",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
+  },
+  "3": {
+    "Name": "E Card",
+    "Type": "E",
+    "Description": "The world mannnn",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
+  },
+  "4": {
+    "Name": "X Card",
+    "Type": "X",
+    "Description": "WHOA ITS COOL",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
+  }
+}
