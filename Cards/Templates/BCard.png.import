@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Card_Template_CROWLEY.png-c440df42ad7be3917a76cb678c28eb46.stex"
+path="res://.import/BCard.png-64939af28fe1cd46775b330173ab36cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Templates/Player_Card_Template_CROWLEY.png"
-dest_files=[ "res://.import/Player_Card_Template_CROWLEY.png-c440df42ad7be3917a76cb678c28eb46.stex" ]
+source_file="res://Cards/Templates/BCard.png"
+dest_files=[ "res://.import/BCard.png-64939af28fe1cd46775b330173ab36cb.stex" ]
 
 [params]
 

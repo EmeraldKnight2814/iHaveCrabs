@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Test_Room.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Misc. Assets/Minecraft Oof.wav" type="AudioStream" id=7]
 [ext_resource path="res://Enemies/Crab.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/Crab_With_Hat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Inventory/ItemDrop.tscn" type="PackedScene" id=10]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -45,6 +46,9 @@ scale = Vector2( 0.25, 0.25 )
 
 [node name="ZoomingCamera2D" parent="Gerald" instance=ExtResource( 5 )]
 zoom = Vector2( 0.1, 0.1 )
+
+[node name="ItemDrop" parent="." instance=ExtResource( 10 )]
+position = Vector2( 625, 365 )
 
 [connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
 [connection signal="hit" from="Gerald" to="." method="_on_Player_hit"]

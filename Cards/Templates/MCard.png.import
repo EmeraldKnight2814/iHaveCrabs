@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy_Card_Template_CROWLEY.png-0adcf62a16cf83ae05db99a8f8ab698c.stex"
+path="res://.import/MCard.png-51b14f745dd251f3d433fb961e4c91b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Templates/Enemy_Card_Template_CROWLEY.png"
-dest_files=[ "res://.import/Enemy_Card_Template_CROWLEY.png-0adcf62a16cf83ae05db99a8f8ab698c.stex" ]
+source_file="res://Cards/Templates/MCard.png"
+dest_files=[ "res://.import/MCard.png-51b14f745dd251f3d433fb961e4c91b0.stex" ]
 
 [params]
 

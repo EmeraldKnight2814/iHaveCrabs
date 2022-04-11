@@ -3,7 +3,13 @@ extends Node2D
 var item_name
 
 func _ready():
-	if randi() % 2 == 0:
-		$TextureRect.texture = load("res://Cards/Templates/Enemy_Card_Template_CROWLEY.png")
+	var rand_val =  randi() % 3
+	if rand_val == 0:
+		item_name = "MCard"
+	elif rand_val == 1:
+		item_name = "BCard"
 	else:
-		$TextureRect.texture = load("res://Cards/Templates/Basic_Card_Template_CROWLEY.png")
+		item_name = "PCard"
+	
+	$TextureRect.texture = load("res://Cards/Templates/" + item_name + ".png")
+	
