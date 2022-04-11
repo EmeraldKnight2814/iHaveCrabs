@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tarot_Card_Template_Alt1_CROWLEY.png-e3d72d7e1330c3407edeaaa5b76a20a9.stex"
+path="res://.import/TCard.png-a825e503dc2c53734d7b2b5ba3373515.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Templates/Tarot_Card_Template_Alt1_CROWLEY.png"
-dest_files=[ "res://.import/Tarot_Card_Template_Alt1_CROWLEY.png-e3d72d7e1330c3407edeaaa5b76a20a9.stex" ]
+source_file="res://Cards/Templates/TCard.png"
+dest_files=[ "res://.import/TCard.png-a825e503dc2c53734d7b2b5ba3373515.stex" ]
 
 [params]
 
