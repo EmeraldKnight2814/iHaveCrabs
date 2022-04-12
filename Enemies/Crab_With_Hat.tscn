@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Enemies/Crab_With_Hat.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Crabs_With_Hats/Walk/Hat_RedCrabA.png" type="Texture" id=2]
@@ -25,7 +25,6 @@
 [ext_resource path="res://Sprites/Crabs_With_Hats/Walk/Hat_RainbowCrabB.png" type="Texture" id=23]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Enemies/Wander_Controller.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Misc. Assets/Wilhelm_Scream.wav" type="AudioStream" id=26]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -123,9 +122,6 @@ shape = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="Wander_Controller" parent="." instance=ExtResource( 25 )]
-
-[node name="WilhelmScream" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 26 )
 
 [node name="FireStarter" type="Position2D" parent="."]
 position = Vector2( 5, 93 )

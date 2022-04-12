@@ -22,7 +22,6 @@ var fireballLoop = 50
 
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $HurtBox
-onready var scream = $WilhelmScream
 onready var zoneOfTruth = $PlayerDetectionZone
 onready var wanderController = $Wander_Controller
 onready var geraldStats = PlayerStats
@@ -91,7 +90,6 @@ func _on_HurtBox_area_entered(area):
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
 			print("Wizard Crab Killed!")
-			scream.play()
 			queue_free()
 		else:
 			knockback = area.knockback_vector * 100
@@ -99,11 +97,9 @@ func _on_HurtBox_area_entered(area):
 	elif area.name == "Fireball":
 		HIT_POINTS = 0
 		print("Wizard Crab Killed!")
-		scream.play()
 		queue_free()
 	elif area.name == "Arrow":
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
 			print("Wizard Crab Killed!")
-			scream.play()
 			queue_free()

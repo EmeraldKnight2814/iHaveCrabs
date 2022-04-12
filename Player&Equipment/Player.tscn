@@ -892,7 +892,6 @@ shape = SubResource( 2 )
 [node name="Arrow_Start" type="Position2D" parent="."]
 position = Vector2( -11.4, 8.2 )
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
