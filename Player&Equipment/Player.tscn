@@ -1,9 +1,10 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Player&Equipment/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
 [ext_resource path="res://hit_hurt_boxes/HitBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player&Equipment/SwordHitBox.gd" type="Script" id=4]
+[ext_resource path="res://Player&Equipment/PickupZone.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=8]
 resource_name = "Idle down"
@@ -544,6 +545,9 @@ height = 0.0
 radius = 16.1
 height = 12.2
 
+[sub_resource type="CircleShape2D" id=54]
+radius = 33.0872
+
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 10, 10 )
 collision_layer = 2
@@ -616,6 +620,17 @@ rotation = 1.5708
 scale = Vector2( 2.5, 2 )
 shape = SubResource( 2 )
 
+[node name="PickupZone" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 256
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone"]
+position = Vector2( -0.9, 6.8 )
+shape = SubResource( 54 )
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="body_entered" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_entered"]
+[connection signal="body_exited" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_exited"]
 
 [editable path="HitboxPivot/SwordHitbox"]

@@ -142,9 +142,24 @@ inventory={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+pickup={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
 
 [layer_names]
 
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player (World)"
+2d_physics/layer_3="Crab (Hurt)"
+2d_physics/layer_4="Crab (Hit)"
+2d_physics/layer_5="Player (Hurt)"
+2d_physics/layer_6="Player (Hit)"
+2d_physics/layer_7="Crab (World)"
+2d_physics/layer_8="Crab (Fireball)"
+2d_physics/layer_9="ItemDrop"
 2d_render/World=false
 
 [physics]

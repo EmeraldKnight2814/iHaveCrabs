@@ -74,3 +74,11 @@ func attack_animation_finished():
 func _on_Hurtbox_area_entered(area):
 	stats.hit_points -= 1
 	emit_signal('hit')
+
+#TJ is writing this code btw Dan
+func _input(event):
+	if event.is_action_pressed("pickup"):
+		if $PickupZone.items_in_range.size() > 0:
+			var pickup_item = $PickupZone.items_in_range.values()[0]
+			pickup_item.pick_up_item(self)
+			$PickupZone.items_in_range.erase(pickup_item)
