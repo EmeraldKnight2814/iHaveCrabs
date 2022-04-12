@@ -13,6 +13,7 @@ func _ready():
 	geraldStats.hit_points = 3
 	geraldStats.damage = 25
 	geraldStats.knockback_modifier = 1
+	geraldStats.weapon_type = 1
 
 func _on_HUD_start_game():
 	pass

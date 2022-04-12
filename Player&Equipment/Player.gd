@@ -13,7 +13,23 @@ enum{
 var state = MOVE
 var velocity = Vector2.ZERO
 var stats = PlayerStats
-var sprites = [preload("res://Sprites/Player/Player_BaseSet.png"), preload("res://Sprites/Player/Player_DeathSet.png"), preload("res://Sprites/Player/Player_OceanSet.png"), preload("res://Sprites/Player/Player_VolcanoSet.png")]
+
+var sprites = [preload("res://Sprites/Player/Player_BaseSet.png"), 
+				preload("res://Sprites/Player/Player_DeathSet.png"), 
+				preload("res://Sprites/Player/Player_OceanSet.png"), 
+				preload("res://Sprites/Player/Player_VolcanoSet.png")]
+var unmatchedSprites = [preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_BaseArmor_DeathWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_BaseArmor_OceanWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_BaseArmor_VolcanoWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_DeathArmor_BaseWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_DeathArmor_OceanWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_DeathArmor_VolcanoWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_OceanArmor_BaseWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_OceanArmor_DeathWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_OceanArmor_VolcanoWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_VolcanoArmor_BaseWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_VolcanoArmor_DeathWeapon.png"),
+						preload("res://Sprites/Player/Unmatched_Weapon_And_Armor/Player_VolcanoArmor_OceanWeapon.png")]
 var currentSprite = sprites[0]
 
 onready var aniPlayer = $AnimationPlayer
@@ -65,7 +81,13 @@ func updateArmorSet(index_in):
 	armor.texture = currentSprite
 	
 func attack_state(delta):
-	aniState.travel('attack')
+	if (stats.weapon_type == 1):
+		aniState.travel('attack')
+	elif (stats.weapon_type == 2):
+		pass
+	else:
+		stats.weapon_type == 1
+		aniState.travel('attack')
 	
 func attack_animation_finished():
 	state = MOVE
