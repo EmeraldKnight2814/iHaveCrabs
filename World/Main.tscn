@@ -35,6 +35,8 @@ scale = Vector2( 0.015, 0.015 )
 [node name="Gerald" parent="." instance=ExtResource( 4 )]
 position = Vector2( 186, 120 )
 scale = Vector2( 0.25, 0.25 )
+ACCELERATION = 500
+MAX_SPEED = 150
 
 [node name="ZoomingCamera2D" parent="Gerald" instance=ExtResource( 5 )]
 zoom = Vector2( 0.1, 0.1 )
