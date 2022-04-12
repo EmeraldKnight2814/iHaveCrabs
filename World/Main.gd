@@ -8,6 +8,7 @@ onready var hitSound = $HitSound
 onready var deathSound = $WilhelmScream
 onready var enemies = $Enemies
 onready var geraldStats = PlayerStats
+onready var bgm = $BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 
 func _ready():
 	#Initialilze player's stats with base set
