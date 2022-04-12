@@ -1,5 +1,5 @@
 extends Node2D
-#Change
+
 const SlotClass = preload("res://Inventory/Slot.gd")
 onready var inventory_slots = $GridContainer
 var holding_item = null
