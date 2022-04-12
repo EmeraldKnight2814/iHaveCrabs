@@ -1,7 +1,6 @@
 extends Area2D
 
 var speed = 5000
-var redirectVector = Vector2.ZERO
 var hitByPlayer = false
 onready var sprite = $Sprite
 
