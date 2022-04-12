@@ -89,3 +89,9 @@ func _on_HurtBox_area_entered(area):
 		print("Crab Killed!")
 		scream.play()
 		queue_free()
+	elif area.name == "Arrow":
+		HIT_POINTS -= geraldStats.damage
+		if HIT_POINTS <= 0:
+			print("Crab Killed!")
+			scream.play()
+			queue_free()
