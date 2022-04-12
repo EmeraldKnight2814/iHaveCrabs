@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Player&Equipment/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
@@ -96,6 +96,30 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Arrow_Start:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Arrow_Start:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.40001, 13.3 ) ]
 }
 
 [sub_resource type="Animation" id=37]
@@ -314,6 +338,222 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
+[sub_resource type="Animation" id=55]
+resource_name = "bow_down"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 48, 49, 50, 51 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Arrow_Start:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Arrow_Start:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.40001, 13.3 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "bow_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "bow_left"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 44, 45, 46, 47 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "bow_animation_finished"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Arrow_Start:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -10.8, 8.2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Arrow_Start:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "bow_right"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 40, 41, 42, 43 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Arrow_Start:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Arrow_Start:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, 8.3 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "bow_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "bow_up"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 36, 37, 38, 39 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Arrow_Start:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Arrow_Start:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.3, -11.9 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "bow_animation_finished"
+} ]
+}
+
 [sub_resource type="Animation" id=10]
 resource_name = "idle_left"
 length = 0.1
@@ -472,6 +712,28 @@ blend_point_2/pos = Vector2( 0, -0.9 )
 blend_point_3/node = SubResource( 51 )
 blend_point_3/pos = Vector2( -1, 0 )
 
+[sub_resource type="AnimationNodeAnimation" id=59]
+animation = "bow_down"
+
+[sub_resource type="AnimationNodeAnimation" id=60]
+animation = "bow_up"
+
+[sub_resource type="AnimationNodeAnimation" id=61]
+animation = "bow_right"
+
+[sub_resource type="AnimationNodeAnimation" id=62]
+animation = "bow_left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=63]
+blend_point_0/node = SubResource( 59 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 60 )
+blend_point_1/pos = Vector2( 0, -0.9 )
+blend_point_2/node = SubResource( 61 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 62 )
+blend_point_3/pos = Vector2( -1, 0 )
+
 [sub_resource type="AnimationNodeAnimation" id=38]
 animation = "Idle down"
 
@@ -524,14 +786,20 @@ blend_point_3/pos = Vector2( -1, 0 )
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=47]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=65]
+
 [sub_resource type="AnimationNodeStateMachine" id=20]
 states/attack/node = SubResource( 45 )
-states/attack/position = Vector2( 296, 172 )
+states/attack/position = Vector2( 184, 170 )
+states/bow/node = SubResource( 63 )
+states/bow/position = Vector2( 184, 0 )
 states/idle/node = SubResource( 42 )
 states/idle/position = Vector2( 184, 86 )
 states/walk/node = SubResource( 17 )
 states/walk/position = Vector2( 352, 86 )
-transitions = [ "idle", "walk", SubResource( 43 ), "walk", "idle", SubResource( 44 ), "idle", "attack", SubResource( 46 ), "attack", "idle", SubResource( 47 ) ]
+transitions = [ "idle", "walk", SubResource( 43 ), "walk", "idle", SubResource( 44 ), "idle", "attack", SubResource( 46 ), "attack", "idle", SubResource( 47 ), "bow", "idle", SubResource( 64 ), "idle", "bow", SubResource( 65 ) ]
 start_node = "idle"
 graph_offset = Vector2( -377.137, 0 )
 
@@ -553,15 +821,13 @@ scale = Vector2( 10, 10 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
-ACCELERATION = null
-MAX_SPEED = null
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 13
-frame = 15
+frame = 39
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -571,6 +837,10 @@ anims/attack_down = SubResource( 37 )
 anims/attack_left = SubResource( 36 )
 anims/attack_right = SubResource( 34 )
 anims/attack_up = SubResource( 35 )
+anims/bow_down = SubResource( 55 )
+anims/bow_left = SubResource( 56 )
+anims/bow_right = SubResource( 57 )
+anims/bow_up = SubResource( 58 )
 anims/idle_left = SubResource( 10 )
 anims/idle_right = SubResource( 11 )
 anims/idle_up = SubResource( 9 )
@@ -585,6 +855,7 @@ tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 21 )
 parameters/attack/blend_position = Vector2( 0, 0 )
+parameters/bow/blend_position = Vector2( 0, 0 )
 parameters/idle/blend_position = Vector2( 0.00158477, 0.82659 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
@@ -630,6 +901,10 @@ script = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone"]
 position = Vector2( -0.9, 6.8 )
 shape = SubResource( 54 )
+
+[node name="Arrow_Start" type="Position2D" parent="."]
+position = Vector2( -2.3, -11.9 )
+rotation = -1.5708
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_entered"]
