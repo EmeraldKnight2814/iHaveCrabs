@@ -8,28 +8,15 @@ onready var hitSound = $HitSound
 onready var deathSound = $WilhelmScream
 onready var enemies = $Enemies
 onready var geraldStats = PlayerStats
-onready var bgm = $BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 
 func _ready():
-	#Initialilze player's stats with base set
 	geraldStats.hit_points = 3
 	geraldStats.damage = 25
 	geraldStats.knockback_modifier = 1
-	geraldStats.weapon_type = 1
-	geraldStats.current_armor = 0
-	geraldStats.current_weapon = 0
 
 func _on_HUD_start_game():
 	pass
 
-func _unhandled_input(event):
-	if(event.is_action_pressed("swap_weapon")):
-		if(geraldStats.weapon_type == 1):
-			geraldStats.weapon_type = 2
-		elif(geraldStats.weapon_type == 2):
-			geraldStats.weapon_type = 1
-		else:
-			geraldStats.weapon_type = 1
 
 func _on_Player_hit():
 	if gerald.stats.hit_points <= 0:
