@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://World/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Inventory/inventory.tscn" type="PackedScene" id=2]
@@ -16,6 +16,12 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 3 )
+
+[sub_resource type="InputEventAction" id=5]
+action = "ui_select"
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -41,14 +47,17 @@ visible = false
 
 [node name="Pause" type="Popup" parent="."]
 pause_mode = 2
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -332.0
-margin_top = -258.0
-margin_right = 329.0
-margin_bottom = 288.0
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="Pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.662745, 0, 1, 0.337255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Pause"]
 anchor_left = 0.5
@@ -72,7 +81,8 @@ margin_top = -15.0
 margin_right = 60.5
 margin_bottom = 15.0
 custom_fonts/font = SubResource( 4 )
-text = "Resume?"
+shortcut = SubResource( 6 )
+text = "Resume"
 __meta__ = {
 "_edit_use_anchors_": false
 }

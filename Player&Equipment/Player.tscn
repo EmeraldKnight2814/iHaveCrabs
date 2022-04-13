@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Player&Equipment/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
@@ -688,6 +688,28 @@ blend_point_2/pos = Vector2( 0, -0.9 )
 blend_point_3/node = SubResource( 51 )
 blend_point_3/pos = Vector2( -1, 0 )
 
+[sub_resource type="AnimationNodeAnimation" id=59]
+animation = "bow_down"
+
+[sub_resource type="AnimationNodeAnimation" id=60]
+animation = "bow_right"
+
+[sub_resource type="AnimationNodeAnimation" id=61]
+animation = "bow_up"
+
+[sub_resource type="AnimationNodeAnimation" id=62]
+animation = "bow_left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=63]
+blend_point_0/node = SubResource( 59 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 60 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 61 )
+blend_point_2/pos = Vector2( 0, -0.9 )
+blend_point_3/node = SubResource( 62 )
+blend_point_3/pos = Vector2( -1, 0.1 )
+
 [sub_resource type="AnimationNodeAnimation" id=38]
 animation = "Idle down"
 
@@ -740,14 +762,20 @@ blend_point_3/pos = Vector2( -1, 0 )
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=47]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=65]
+
 [sub_resource type="AnimationNodeStateMachine" id=20]
 states/attack/node = SubResource( 45 )
-states/attack/position = Vector2( 296, 172 )
+states/attack/position = Vector2( 184, 160 )
+states/bow/node = SubResource( 63 )
+states/bow/position = Vector2( 27.863, 86 )
 states/idle/node = SubResource( 42 )
 states/idle/position = Vector2( 184, 86 )
 states/walk/node = SubResource( 17 )
 states/walk/position = Vector2( 352, 86 )
-transitions = [ "idle", "walk", SubResource( 43 ), "walk", "idle", SubResource( 44 ), "idle", "attack", SubResource( 46 ), "attack", "idle", SubResource( 47 ) ]
+transitions = [ "idle", "walk", SubResource( 43 ), "walk", "idle", SubResource( 44 ), "idle", "attack", SubResource( 46 ), "attack", "idle", SubResource( 47 ), "bow", "idle", SubResource( 64 ), "idle", "bow", SubResource( 65 ) ]
 start_node = "idle"
 graph_offset = Vector2( -377.137, 0 )
 
@@ -803,6 +831,7 @@ tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 21 )
 parameters/attack/blend_position = Vector2( 0, 0 )
+parameters/bow/blend_position = Vector2( 0, 0 )
 parameters/idle/blend_position = Vector2( 0.00158477, 0.82659 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
