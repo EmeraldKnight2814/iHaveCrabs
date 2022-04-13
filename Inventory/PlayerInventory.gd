@@ -1,13 +1,13 @@
 extends Node
 
-const NUM_INVENTORY_SLOTS = 20
+const NUM_INVENTORY_SLOTS = 32
 
 var inventory = {
-	0: ["PCard", 1]
+	0: ["PCard"]
 }
 
-func add_item(item_name, item_quantity):
-	for item in inventory:
-		if inventory[item][0] == item_name:
-			#TODO check if slot is full
-			
+func add_item(item_name):
+	for i in range(NUM_INVENTORY_SLOTS):
+		if inventory.has(i) == false:
+			inventory[i] = [item_name]
+			return

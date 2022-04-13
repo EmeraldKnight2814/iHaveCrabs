@@ -41,11 +41,11 @@ func putIntoSlot(new_item):
 	add_child(item)
 	refresh_style()
 
-func initialize_item(item_name, item_quantity):
+func initialize_item(item_name):
 	if item == null:
 		item = ItemClass.instance()
 		add_child(item)
-		item.set_item(item_name, item_quantity)
+		item.set_item(item_name)
 	else:
-		item.set_item(item_name, item_quantity)
+		item.set_item(item_name)
 	refresh_style()

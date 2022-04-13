@@ -16,4 +16,4 @@ func _ready():
 
 func set_item(nm):
 	item_name = nm
-	$TextureRect.tecture = load("res://Cards/Templates/" + item_name + ".png")
+	$TextureRect.texture = load("res://Cards/Templates/" + item_name + ".png")
