@@ -1,5 +1,5 @@
 extends Area2D
-
+#Dan
 var player = null
 
 func can_see_player():
