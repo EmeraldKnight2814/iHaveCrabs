@@ -9,6 +9,8 @@ onready var deathSound = $WilhelmScream
 onready var enemies = $Enemies
 onready var geraldStats = PlayerStats
 onready var bgm = $BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
+onready var hud = $HUD
+onready var pause = $HUD/Pause
 
 func _ready():
 	#Initialilze player's stats with base set
@@ -30,6 +32,9 @@ func _unhandled_input(event):
 			geraldStats.weapon_type = 1
 		else:
 			geraldStats.weapon_type = 1
+	if(event.is_action_pressed("pause")):
+		get_tree().paused = true
+		pause.show()
 
 func _on_Player_hit():
 	if gerald.stats.hit_points <= 0:
@@ -38,3 +43,8 @@ func _on_Player_hit():
 	else:
 		hitSound.play()
 		print(str(gerald.stats.hit_points) + " lives left.")
+
+
+func _on_HUD_unpause():
+	pause.hide()
+	get_tree().paused = false

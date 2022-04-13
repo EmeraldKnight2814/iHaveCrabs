@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal start_game
+signal unpause
 
 func _on_StartButton_pressed():
 	$StartButton.hide()
@@ -10,3 +11,7 @@ func _on_StartButton_pressed():
 func _input(event):
 	if event.is_action_pressed("inventory"):
 		$Inventory.visible = !$Inventory.visible
+
+
+func _on_Unpause_pressed():
+	emit_signal("unpause")
