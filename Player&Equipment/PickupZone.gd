@@ -1,5 +1,5 @@
 extends Area2D
-
+#TJ
 var items_in_range = {}
 
 
