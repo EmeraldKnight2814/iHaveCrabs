@@ -125,7 +125,7 @@ func attack_state(delta):
 	elif (stats.weapon_type == 2):
 		aniState.travel('bow')
 	else:
-		stats.weapon_type == 1
+		stats.weapon_type = 1
 		aniState.travel('attack')
 	
 func attack_animation_finished():
