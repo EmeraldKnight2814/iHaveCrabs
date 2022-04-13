@@ -1,6 +1,6 @@
 extends Node2D
 
-var Room = preload("res://Room.tscn")
+var Room = preload("res://World/Room.tscn")
 onready var Map = $TileMap
 
 var tile_size = 16 #Size of a tile in the TileMap
