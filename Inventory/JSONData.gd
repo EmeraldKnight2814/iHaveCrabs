@@ -13,3 +13,8 @@ func LoadData(file_path):
 	json_data = JSON.parse(file_data.get_as_text())
 	file_data.close()
 	return json_data.result
+
+func random_drop():
+	var a = item_data.keys()
+	a = a[randi() % a.size()]
+	return a

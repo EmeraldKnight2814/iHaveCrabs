@@ -91,3 +91,6 @@ func _on_HurtBox_area_entered(area):
 		if HIT_POINTS <= 0:
 			print("Crab Killed!")
 			queue_free()
+
+func drop_item():
+	PlayerInventory.random_drop()
