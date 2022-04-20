@@ -13,8 +13,8 @@ var slot_index
 enum SlotType {
 	HOTBAR = 0,
 	INVENTORY,
-	PCARD,
-	XCARD
+	P,
+	X
 }
 
 var slotType = null

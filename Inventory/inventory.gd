@@ -9,15 +9,15 @@ func _ready():
 	for i in range(slots.size()):
 		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
 		slots[i].slot_index = i
-#		slots[i].slotType = SlotClass.SlotType.INVENTORY
+		slots[i].slotType = SlotClass.SlotType.INVENTORY
 	
 	for i in range(equip_slots.size()):
 		equip_slots[i].connect("gui_input", self, "slot_gui_input", [equip_slots[i]])
 		equip_slots[i].slot_index = i
-#	equip_slots[0].slotType = SlotClass.SlotType.P
-#	equip_slots[1].slotType = SlotClass.SlotType.P
-#	equip_slots[2].slotType = SlotClass.SlotType.P
-#	equip_slots[3].slotType = SlotClass.SlotType.X
+	equip_slots[0].slotType = SlotClass.SlotType.P
+	equip_slots[1].slotType = SlotClass.SlotType.P
+	equip_slots[2].slotType = SlotClass.SlotType.P
+	equip_slots[3].slotType = SlotClass.SlotType.X
 	initialize_inventory()
 	initialize_equips() 
 
@@ -52,7 +52,7 @@ func able_to_put_into_slot(slot: SlotClass):
 	var holding_item = find_parent("HUD").holding_item
 	if holding_item == null:
 		return true
-	var holding_item_category = JsonData.item_data[holding_item.item_name]["ItemCategory"]
+	var holding_item_category = JsonData.item_data[holding_item.item_name]["Type"]
 	
 	if slot.slotType == SlotClass.SlotType.P:
 		return holding_item_category == "P"
