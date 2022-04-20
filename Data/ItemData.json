@@ -1,17 +1,17 @@
 {
-  "MCard": {
-    "Type": "M",
+  "Card_A": {
+    "Type": "P",
     "Description": "FIGHT THEM ALL"
   },
-  "PCard": {
-    "Type": "PC",
+  "Card_B": {
+    "Type": "P",
     "Description": "It eats nothing important, don't worry"
   },
-  "ECard": {
+  "Card_C": {
     "Type": "E",
     "Description": "The world mannnn"
   },
-  "XCard": {
+  "Card_D": {
     "Type": "X",
     "Description": "WHOA ITS COOL"
   }

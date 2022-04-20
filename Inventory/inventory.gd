@@ -10,15 +10,16 @@ func _ready():
 	for i in range(slots.size()):
 		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
 		slots[i].slot_index = i
-	for i in range(equip_slots.size()):
-		equip_slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
-		equip_slots[i].slot_index = i
-	equip_slots[0].slotType = SlotClass.SlotType.PCARD
-	equip_slots[1].slotType = SlotClass.SlotType.PCARD
-	equip_slots[2].slotType = SlotClass.SlotType.PCARD
-	equip_slots[3].slotType = SlotClass.SlotType.XCARD
-	initialize_inventory()
-	initialize_equips()
+		#slots[i].slotType = SlotClass.SlotType.INVENTORY
+#	for i in range(equip_slots.size()):
+#		equip_slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
+#		equip_slots[i].slot_index = i
+#	equip_slots[0].slotType = SlotClass.SlotType.PCARD
+#	equip_slots[1].slotType = SlotClass.SlotType.PCARD
+#	equip_slots[2].slotType = SlotClass.SlotType.PCARD
+#	equip_slots[3].slotType = SlotClass.SlotType.XCARD
+#	initialize_inventory()
+#	initialize_equips() 
 
 func initialize_inventory():
 	var slots = inventory_slots.get_children()

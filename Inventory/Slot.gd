@@ -10,6 +10,12 @@ var ItemClass = preload("res://Inventory/Item.tscn")
 var item = null
 var slot_index
 
+enum SlotType {
+	INVENTORY,
+	PCARD,
+	XCARD
+}
+
 func _ready():
 	default_style = StyleBoxTexture.new()
 	empty_style = StyleBoxTexture.new()

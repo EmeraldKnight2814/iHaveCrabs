@@ -6,14 +6,14 @@ var item_quantity
 func _ready():
 	var rand_val =  randi() % 3
 	if rand_val == 0:
-		item_name = "MCard"
+		item_name = "Card_A"
 	elif rand_val == 1:
-		item_name = "BCard"
+		item_name = "Card_B"
 	else:
-		item_name = "PCard"
+		item_name = "Card_C"
 	
-	$TextureRect.texture = load("res://Cards/Templates/" + item_name + ".png")
+	$TextureRect.texture = load("res://Cards/" + item_name + ".png")
 
 func set_item(nm):
 	item_name = nm
-	$TextureRect.texture = load("res://Cards/Templates/" + item_name + ".png")
+	$TextureRect.texture = load("res://Cards/" + item_name + ".png")

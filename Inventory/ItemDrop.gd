@@ -9,7 +9,7 @@ var player = null
 var being_picked_up = false
 
 func _ready():
-	item_name = "PCard"
+	item_name = "Card_V"
 
 func _physics_process(delta):
 	if being_picked_up == true:

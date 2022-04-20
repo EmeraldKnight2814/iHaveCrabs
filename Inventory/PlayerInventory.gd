@@ -4,11 +4,11 @@ const ItemClass = preload("res://Inventory/Item.gd")
 const NUM_INVENTORY_SLOTS = 32
 
 var inventory = {
-	0: ["PCard"]
+	0: ["Card_A"]
 }
 
 var equips = {
-	0: ["PCard"]
+	0: ["Card_A"]
 }
 
 func add_item(item_name):
