@@ -1,8 +1,8 @@
 extends Camera2D
 
-export var min_zoom := 0.1
-export var max_zoom := 2.0
-export var zoom_factor := 0.1
+export var min_zoom := 0.05
+export var max_zoom := 0.5
+export var zoom_factor := 0.05
 export var zoom_duration := 0.2
 
 var _zoom_level := 1.0 setget _set_zoom_level
