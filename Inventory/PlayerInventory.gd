@@ -7,6 +7,10 @@ var inventory = {
 	0: ["PCard"]
 }
 
+var equips = {
+	0: ["PCard"]
+}
+
 func add_item(item_name):
 	for i in range(NUM_INVENTORY_SLOTS):
 		if inventory.has(i) == false:

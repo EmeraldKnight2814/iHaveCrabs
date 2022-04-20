@@ -331,29 +331,33 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="PlayerSlot" type="Panel" parent="EquipSlots"]
+[node name="PSlot" type="Panel" parent="EquipSlots"]
 margin_right = 45.0
 margin_bottom = 55.0
 rect_min_size = Vector2( 45, 55 )
 custom_styles/panel = SubResource( 2 )
+script = ExtResource( 3 )
 
-[node name="PlayerSlot2" type="Panel" parent="EquipSlots"]
+[node name="PSlot2" type="Panel" parent="EquipSlots"]
 margin_top = 59.0
 margin_right = 45.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 45, 55 )
 custom_styles/panel = SubResource( 2 )
+script = ExtResource( 3 )
 
-[node name="PlayerSlot3" type="Panel" parent="EquipSlots"]
+[node name="PSlot3" type="Panel" parent="EquipSlots"]
 margin_top = 118.0
 margin_right = 45.0
 margin_bottom = 173.0
 rect_min_size = Vector2( 45, 55 )
 custom_styles/panel = SubResource( 2 )
+script = ExtResource( 3 )
 
-[node name="PlayerSlot4" type="Panel" parent="EquipSlots"]
+[node name="XSlot" type="Panel" parent="EquipSlots"]
 margin_top = 177.0
 margin_right = 45.0
 margin_bottom = 232.0
 rect_min_size = Vector2( 45, 55 )
 custom_styles/panel = SubResource( 2 )
+script = ExtResource( 3 )
