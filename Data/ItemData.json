@@ -8,11 +8,77 @@
     "Description": "It eats nothing important, don't worry"
   },
   "Card_C": {
-    "Type": "E",
+    "Type": "P",
     "Description": "The world mannnn"
   },
   "Card_D": {
-    "Type": "X",
+    "Type": "P",
     "Description": "WHOA ITS COOL"
+  },
+  "Card_E": {
+    "Type": "P"
+  },
+  "Card_F": {
+    "Type": "P"
+  },
+  "Card_G": {
+    "Type": "P"
+  },
+  "Card_H": {
+    "Type": "P"
+  },
+  "Card_I": {
+    "Type": "P"
+  },
+  "Card_J": {
+    "Type": "P"
+  },
+  "Card_K": {
+    "Type": "P"
+  },
+  "Card_L": {
+    "Type": "P"
+  },
+  "Card_M": {
+    "Type": "P"
+  },
+  "Card_N": {
+    "Type": "P"
+  },
+  "Card_O": {
+    "Type": "P"
+  },
+  "Card_P": {
+    "Type": "P"
+  },
+  "Card_Q": {
+    "Type": "P"
+  },
+  "Card_R": {
+    "Type": "P"
+  },
+  "Card_S": {
+    "Type": "P"
+  },
+  "Card_T": {
+    "Type": "P"
+  },
+  "Card_U": {
+    "Type": "P"
+  },
+  "Card_V": {
+    "Type": "P"
+  },
+  "Card_W": {
+    "Type": "P"
+  },
+  "Card_X": {
+    "Type": "P"
+  },
+  "Card_Y": {
+    "Type": "P"
+  },
+  "Card_Z": {
+    "Type": "P"
   }
 }

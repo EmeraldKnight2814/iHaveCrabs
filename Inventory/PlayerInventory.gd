@@ -8,7 +8,9 @@ var inventory = {
 }
 
 var equips = {
-	0: ["Card_A"]
+	0: ["Card_A"],
+	1: ["Card_G"],
+	2: ["Card_L"]
 }
 
 func add_item(item_name):
@@ -20,9 +22,11 @@ func add_item(item_name):
 
 func add_item_to_empty_slot(item: ItemClass, slot: SlotClass):
 	inventory[slot.slot_index] = [item.item_name]
+	equips[slot.slot_index] = [item.item_name]
 
 func remove_item(slot: SlotClass):
 	inventory.erase(slot.slot_index)
+	equips.erase(slot.slot_index)
 
 func update_slot_visual(slot_index, item_name):
 	var slot = get_tree().root.get_node("/root/Main/HUD/Inventory/GridContainer/Slot" + str(slot_index + 1))
