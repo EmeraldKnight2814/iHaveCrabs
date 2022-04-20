@@ -355,6 +355,7 @@ custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="XSlot" type="Panel" parent="EquipSlots"]
+modulate = Color( 0.223529, 0.219608, 0.172549, 1 )
 margin_top = 177.0
 margin_right = 45.0
 margin_bottom = 232.0
