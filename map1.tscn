@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://StartRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Room1.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://CornerRoom2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://LinearRoom1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://BossRoomTop.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Room6.tscn" type="PackedScene" id=11]
+[ext_resource path="res://CornerRoom3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://SingleRoom2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://CornerRoom4.tscn" type="PackedScene" id=14]
 
 [node name="map1" type="Node2D"]
 
@@ -45,3 +49,15 @@ position = Vector2( 64, -1600 )
 
 [node name="BossRoomTop" parent="." instance=ExtResource( 10 )]
 position = Vector2( 64, -2432 )
+
+[node name="Room5" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1088, 896 )
+
+[node name="Room6" parent="." instance=ExtResource( 12 )]
+position = Vector2( -1088, 1727 )
+
+[node name="SingleRoom3" parent="." instance=ExtResource( 13 )]
+position = Vector2( -1088, -768 )
+
+[node name="Room7" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1088, 64 )
