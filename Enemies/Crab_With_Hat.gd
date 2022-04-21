@@ -108,7 +108,7 @@ func _on_HurtBox_area_entered(area):
 			emit_signal("Wizard_Crab_Killed")
 			queue_free()
 		else:
-			knockback = area.knockback_vector * 100
+			knockback = area.knockback_vector * 200
 			print("Wizard Crab has " + str(HIT_POINTS) + " Hit Points Left")
 	elif area.name == "Fireball":
 		HIT_POINTS = 0

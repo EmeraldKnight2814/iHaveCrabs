@@ -43,26 +43,6 @@ animations = [ {
 "name": "white_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "rainbow_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "black_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "red_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "cyan_walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 19 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "violet_walk",
@@ -71,6 +51,26 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "orange_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "rainbow_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "red_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "black_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "cyan_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],

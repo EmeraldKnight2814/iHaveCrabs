@@ -38,34 +38,14 @@ animations = [ {
 "name": "blue",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "green",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "cyan",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "orange",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "violet",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "white",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "purple",
+"name": "green",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
@@ -73,9 +53,29 @@ animations = [ {
 "name": "red",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "purple",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "orange",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "white",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "yellow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "violet",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ) ],

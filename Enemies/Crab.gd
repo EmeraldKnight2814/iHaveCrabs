@@ -10,7 +10,7 @@ enum{
 }
 
 export var HIT_POINTS = 75
-export var FRICTION = 200
+export var FRICTION = 100
 export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 200
 export var MAX_SPEED = 30
@@ -99,7 +99,7 @@ func _on_HurtBox_area_entered(area):
 			emit_signal("Crab_Killed")
 			queue_free()
 		else:
-			knockback = area.knockback_vector * 100
+			knockback = area.knockback_vector * 200
 			print("Crab has " + str(HIT_POINTS) + " Hit Points Left")
 	elif area.name == "Fireball":
 		HIT_POINTS = 0
