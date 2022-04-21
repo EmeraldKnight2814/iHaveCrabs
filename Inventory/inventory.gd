@@ -10,7 +10,7 @@ func _ready():
 		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
 		slots[i].slot_index = i
 		slots[i].slotType = SlotClass.SlotType.INVENTORY
-		EquipChange.set_stats("Card_Z")
+	#	EquipChange.set_stats("Card_Z")
 	
 	for i in range(equip_slots.size()):
 		equip_slots[i].connect("gui_input", self, "slot_gui_input", [equip_slots[i]])
