@@ -4,6 +4,9 @@ var rng = RandomNumberGenerator.new()
 var first_room
 
 func _ready():
+	start_game()
+
+func start_game():
 	rng.randomize()
 	first_room = rng.randi_range(1, 4)
 	if first_room == 1:
@@ -17,86 +20,118 @@ func _ready():
 	else:
 		room3_ready()
 
+
+
+#FUNCTIONS TO READY ROOMS FOR PLAYERS
 func room1_ready():
-	#Disable Collision Shape
-	$Room1/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
 	$Room1.room_ready()
 
 func room2_ready():
-	#Disable Collision Shape
-	$Room2/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$Room2.room_ready()
 
 func room3_ready():
-	#Disable Collision Shape
-	$Room3/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$Room3.room_ready()
 
 func room4_ready():
-	#Disable Collision Shape
-	$Room4/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$Room4.room_ready()
 
 func room5_ready():
-	#Disable Collision Shape
-	$Room5/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$Room5.room_ready()
 
 func room6_ready():
-	#Disable Collision Shape
-	$Room6/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$Room6.room_ready()
 
 func room7_ready():
-	#Disable Collision Shape
-	$Room7/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$Room7.room_ready()
 
 func corner_room1_ready():
-	#Disable Collision Shape
-	$CornerRoom1/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$CornerRoom1.room_ready()
 
 func corner_room2_ready():
-	#Disable Collision Shape
-	$CornerRoom2/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$CornerRoom2.room_ready()
 
 func single_room1_ready():
-	#Disable Collision Shape
-	$SingleRoom1/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$SingleRoom1.room_ready()
 
 func single_room2_ready():
-	#Disable Collision Shape
-	$SingleRoom1/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$SingleRoom2.room_ready()
 
 func single_room3_ready():
-	#Disable Collision Shape
-	$SingleRoom1/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$SingleRoom3.room_ready()
 
 func linear_room1_ready():
-	#Disable Collision Shape
-	$LinearRoom1/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$LinearRoom1.room_ready()
 
 func boss_room_ready():
-	#Disable Collision Shape
-	$BossRoomTop/RoomShape/RectColl.disabled = true
-	#Spawn Enemies
-	#insert
+	$BossRoomTop.room_ready()
+
+
+
+
+#WHEN ROOMS ARE CLEARED, READY NEW ROOMS
+func _on_Room1_room_cleared():
+	room5_ready()
+	room4_ready()
+	corner_room1_ready()
+
+
+func _on_Room4_room_cleared():
+	room1_ready()
+	room6_ready()
+	single_room1_ready()
+
+
+func _on_Room2_room_cleared():
+	corner_room1_ready()
+	corner_room2_ready()
+	single_room2_ready()
+
+
+func _on_CornerRoom1_room_cleared():
+	room1_ready()
+	room2_ready()
+
+
+func _on_SingleRoom1_room_cleared():
+	pass # Replace with function body.
+
+
+func _on_SingleRoom2_room_cleared():
+	pass # Replace with function body.
+
+
+func _on_Room3_room_cleared():
+	single_room3_ready()
+	corner_room2_ready()
+
+
+func _on_CornerRoom2_room_cleared():
+	room3_ready()
+	room2_ready()
+
+
+func _on_LinearRoom1_room_cleared():
+	boss_room_ready()
+
+
+func _on_BossRoomTop_room_cleared():
+	pass # Replace with function body.
+
+
+func _on_Room5_room_cleared():
+	room7_ready()
+	room1_ready()
+	room6_ready()
+
+
+func _on_Room6_room_cleared():
+	room5_ready()
+	room4_ready()
+
+
+func _on_SingleRoom3_room_cleared():
+	pass # Replace with function body.
+
+
+func _on_Room7_room_cleared():
+	room5_ready()

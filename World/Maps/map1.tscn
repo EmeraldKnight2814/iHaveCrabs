@@ -25,6 +25,12 @@ position = Vector2( 64, 64 )
 [node name="Room1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 896 )
 
+[node name="Enemies" parent="Room1" index="4"]
+margin_left = -75.0
+margin_top = -900.0
+margin_right = -75.0
+margin_bottom = -900.0
+
 [node name="Crab" parent="Room1/Enemies" index="0"]
 position = Vector2( 267, 1054 )
 ACCELERATION = 3000
@@ -94,6 +100,21 @@ position = Vector2( -1088, -768 )
 
 [node name="Room7" parent="." instance=ExtResource( 14 )]
 position = Vector2( -1088, 64 )
+
+[connection signal="room_cleared" from="Room1" to="." method="_on_Room1_room_cleared"]
+[connection signal="room_cleared" from="Room4" to="." method="_on_Room4_room_cleared"]
+[connection signal="room_cleared" from="Room2" to="." method="_on_Room2_room_cleared"]
+[connection signal="room_cleared" from="CornerRoom1" to="." method="_on_CornerRoom1_room_cleared"]
+[connection signal="room_cleared" from="SingleRoom1" to="." method="_on_SingleRoom1_room_cleared"]
+[connection signal="room_cleared" from="SingleRoom2" to="." method="_on_SingleRoom2_room_cleared"]
+[connection signal="room_cleared" from="Room3" to="." method="_on_Room3_room_cleared"]
+[connection signal="room_cleared" from="CornerRoom2" to="." method="_on_CornerRoom2_room_cleared"]
+[connection signal="room_cleared" from="LinearRoom1" to="." method="_on_LinearRoom1_room_cleared"]
+[connection signal="room_cleared" from="BossRoomTop" to="." method="_on_BossRoomTop_room_cleared"]
+[connection signal="room_cleared" from="Room5" to="." method="_on_Room5_room_cleared"]
+[connection signal="room_cleared" from="Room6" to="." method="_on_Room6_room_cleared"]
+[connection signal="room_cleared" from="SingleRoom3" to="." method="_on_SingleRoom3_room_cleared"]
+[connection signal="room_cleared" from="Room7" to="." method="_on_Room7_room_cleared"]
 
 [editable path="StartRoom"]
 [editable path="Room1"]
