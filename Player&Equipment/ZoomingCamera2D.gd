@@ -1,11 +1,11 @@
 extends Camera2D
 
-export var min_zoom := 0.5
+export var min_zoom := 0.3
 export var max_zoom := 1.5
 export var zoom_factor := 0.1
 export var zoom_duration := 0.2
 
-var _zoom_level := 1.0 setget _set_zoom_level
+var _zoom_level := 0.3 setget _set_zoom_level
 
 onready var tween: Tween = $Tween
 

@@ -25,6 +25,37 @@ position = Vector2( 64, 64 )
 [node name="Room1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 896 )
 
+[node name="Crab" parent="Room1/Enemies" index="0"]
+position = Vector2( 267, 1054 )
+ACCELERATION = 3000
+
+[node name="Crab2" parent="Room1/Enemies" index="1"]
+position = Vector2( 804, 1188 )
+
+[node name="Crab3" parent="Room1/Enemies" index="2"]
+position = Vector2( 235, 1311 )
+
+[node name="Crab4" parent="Room1/Enemies" index="3"]
+position = Vector2( 783, 1008 )
+
+[node name="Crab5" parent="Room1/Enemies" index="4"]
+position = Vector2( 771, 1425 )
+
+[node name="Crab6" parent="Room1/Enemies" index="5"]
+position = Vector2( 421, 1356 )
+
+[node name="Crab7" parent="Room1/Enemies" index="6"]
+position = Vector2( 511, 1146 )
+
+[node name="Crab8" parent="Room1/Enemies" index="7"]
+position = Vector2( 1032, 1419 )
+
+[node name="Crab9" parent="Room1/Enemies" index="8"]
+position = Vector2( 232, 1488 )
+
+[node name="Crab10" parent="Room1/Enemies" index="9"]
+position = Vector2( 568, 1452 )
+
 [node name="Room4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1184, 1727 )
 

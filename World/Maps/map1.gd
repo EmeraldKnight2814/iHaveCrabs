@@ -21,7 +21,7 @@ func room1_ready():
 	#Disable Collision Shape
 	$Room1/RoomShape/RectColl.disabled = true
 	#Spawn Enemies
-	#insert
+	$Room1.room_ready()
 
 func room2_ready():
 	#Disable Collision Shape

@@ -1,9 +1,8 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://tilemap/ptilemap.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Crab.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Rooms/Room1.gd" type="Script" id=3]
-[ext_resource path="res://Enemies/Crab_With_Hat.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1000,7 +999,7 @@ format = 1
 tile_data = PoolIntArray( 0, 0, 1048586, 1, 0, 1048586, 2, 0, 1048586, 3, 0, 1048586, 4, 0, 1048586, 5, 0, 1048586, 6, 0, 1048586, 7, 0, 851978, 8, 0, 786443, 15, 0, 131081, 16, 0, 131081, 23, 0, 786440, 24, 0, 1048586, 25, 0, 1048586, 26, 0, 1048586, 27, 0, 1048586, 28, 0, 1048586, 29, 0, 1048586, 30, 0, 1048586, 31, 0, 1048586, 65536, 0, 917513, 65537, 0, 917513, 65538, 0, 917513, 65539, 0, 917513, 65540, 0, 917513, 65541, 0, 917513, 65542, 0, 917513, 65543, 0, 917514, 65544, 0, 851979, 65559, 0, 917512, 65560, 0, 917513, 65561, 0, 917513, 65562, 0, 917513, 65563, 0, 917513, 65564, 0, 917513, 65565, 0, 917513, 65566, 0, 917513, 65567, 0, 917513, 131072, 0, 917513, 131073, 0, 917513, 131074, 0, 917513, 131075, 0, 917513, 131076, 0, 917513, 131077, 0, 917513, 131078, 0, 917513, 131079, 0, 917514, 131080, 0, 851979, 131095, 0, 917512, 131096, 0, 917513, 131097, 0, 917513, 131098, 0, 917513, 131099, 0, 917513, 131100, 0, 917513, 131101, 0, 917513, 131102, 0, 917513, 131103, 0, 917513, 196608, 0, 917513, 196609, 0, 917513, 196610, 0, 917513, 196611, 0, 917513, 196612, 0, 917513, 196613, 0, 917513, 196614, 0, 917513, 196615, 0, 917514, 196616, 0, 851979, 196631, 0, 917512, 196632, 0, 917513, 196633, 0, 917513, 196634, 0, 917513, 196635, 0, 917513, 196636, 0, 917513, 196637, 0, 917513, 196638, 0, 917513, 196639, 0, 917513, 262144, 0, 917513, 262145, 0, 917513, 262146, 0, 917513, 262147, 0, 917513, 262148, 0, 917513, 262149, 0, 917513, 262150, 0, 917513, 262151, 0, 917514, 262152, 0, 851979, 262167, 0, 917512, 262168, 0, 917513, 262169, 0, 917513, 262170, 0, 917513, 262171, 0, 917513, 262172, 0, 917513, 262173, 0, 917513, 262174, 0, 917513, 262175, 0, 917513, 327680, 0, 983049, 327681, 0, 983049, 327682, 0, 983049, 327683, 0, 983049, 327684, 0, 983049, 327685, 0, 983049, 327686, 0, 983049, 327687, 0, 983049, 327688, 0, 983050, 327703, 0, 983048, 327704, 0, 983049, 327705, 0, 983049, 327706, 0, 983049, 327707, 0, 983049, 327708, 0, 983049, 327709, 0, 983049, 327710, 0, 983049, 327711, 0, 983050, 458757, 0, 524296, 458758, 0, 524296, 524303, 0, 524297, 589844, 0, 524297, 655360, 0, 131081, 655391, 0, 131081, 720896, 0, 131081, 720927, 0, 131081, 786437, 0, 524296, 786438, 0, 524296, 786446, 0, 524297, 917507, 0, 524296, 1114112, 0, 1048586, 1114113, 0, 1048586, 1114114, 0, 1048586, 1114115, 0, 1048586, 1114116, 0, 1048586, 1114117, 0, 1048586, 1114118, 0, 1048586, 1114119, 0, 1048586, 1114120, 0, 786443, 1114135, 0, 786440, 1114136, 0, 1048586, 1114137, 0, 1048586, 1114138, 0, 1048586, 1114139, 0, 1048586, 1114140, 0, 1048586, 1114141, 0, 1048586, 1114142, 0, 1048586, 1114143, 0, 1048586, 1179648, 0, 917514, 1179649, 0, 917514, 1179650, 0, 917514, 1179651, 0, 917514, 1179652, 0, 917514, 1179653, 0, 917514, 1179654, 0, 917514, 1179655, 0, 917514, 1179656, 0, 851979, 1179667, 0, 524296, 1179668, 0, 524296, 1179671, 0, 1048584, 1179672, 0, 917514, 1179673, 0, 917514, 1179674, 0, 917514, 1179675, 0, 917514, 1179676, 0, 917514, 1179677, 0, 917514, 1179678, 0, 917514, 1179679, 0, 917514, 1245184, 0, 917513, 1245185, 0, 917513, 1245186, 0, 917513, 1245187, 0, 917513, 1245188, 0, 917513, 1245189, 0, 917513, 1245190, 0, 917513, 1245191, 0, 917514, 1245192, 0, 851979, 1245203, 0, 524296, 1245207, 0, 851976, 1245208, 0, 917513, 1245209, 0, 917513, 1245210, 0, 917513, 1245211, 0, 917513, 1245212, 0, 917513, 1245213, 0, 917513, 1245214, 0, 917513, 1245215, 0, 917513, 1310720, 0, 917513, 1310721, 0, 917513, 1310722, 0, 917513, 1310723, 0, 917513, 1310724, 0, 917513, 1310725, 0, 917513, 1310726, 0, 917513, 1310727, 0, 917514, 1310728, 0, 851979, 1310739, 0, 524296, 1310740, 0, 524296, 1310743, 0, 851976, 1310744, 0, 917513, 1310745, 0, 917513, 1310746, 0, 917513, 1310747, 0, 917513, 1310748, 0, 917514, 1310749, 0, 917514, 1310750, 0, 917513, 1310751, 0, 917513, 1376256, 0, 917513, 1376257, 0, 917513, 1376258, 0, 917513, 1376259, 0, 917513, 1376260, 0, 917513, 1376261, 0, 917513, 1376262, 0, 917513, 1376263, 0, 917514, 1376264, 0, 851979, 1376271, 0, 131081, 1376272, 0, 131081, 1376279, 0, 851976, 1376280, 0, 917513, 1376281, 0, 917513, 1376282, 0, 917513, 1376283, 0, 917513, 1376284, 0, 917513, 1376285, 0, 917513, 1376286, 0, 917513, 1376287, 0, 917513 )
 
 [node name="RoomShape" type="RigidBody2D" parent="."]
-collision_mask = 195
+collision_mask = 131
 mode = 1
 __meta__ = {
 "_edit_group_": true
@@ -1013,45 +1012,52 @@ shape = SubResource( 109 )
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 517, 599 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab2" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 171, 348 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab3" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 516, 296 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab4" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 500, 54 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab5" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 301, 79 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab6" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 905, 354 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab7" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 221, 202 )
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
-[node name="Crab_With_Hat" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 977, 567 )
-scale = Vector2( 0.015, 0.015 )
+[node name="Crab8" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
-[node name="Crab_With_Hat2" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 239, 550 )
-scale = Vector2( 0.015, 0.015 )
+[node name="Crab9" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
-[node name="Crab_With_Hat3" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 958, 148 )
-scale = Vector2( 0.015, 0.015 )
+[node name="Crab10" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 232, 283 )
+scale = Vector2( 0.05, 0.05 )
 
-[connection signal="Crab_Killed" from="Enemies/Crab" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Crab_Killed" from="Enemies/Crab2" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Crab_Killed" from="Enemies/Crab3" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Crab_Killed" from="Enemies/Crab4" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Crab_Killed" from="Enemies/Crab5" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Crab_Killed" from="Enemies/Crab6" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Crab_Killed" from="Enemies/Crab7" to="." method="_on_Crab_Crab_Killed"]
-[connection signal="Wizard_Crab_Killed" from="Enemies/Crab_With_Hat" to="." method="_on_Wizard_Crab_Killed"]
-[connection signal="Wizard_Crab_Killed" from="Enemies/Crab_With_Hat2" to="." method="_on_Wizard_Crab_Killed"]
-[connection signal="Wizard_Crab_Killed" from="Enemies/Crab_With_Hat3" to="." method="_on_Wizard_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab2" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab3" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab4" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab5" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab6" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab7" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab8" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab9" to="." method="_on_Crab_Killed"]
+[connection signal="Crab_Killed" from="Enemies/Crab10" to="." method="_on_Crab_Killed"]

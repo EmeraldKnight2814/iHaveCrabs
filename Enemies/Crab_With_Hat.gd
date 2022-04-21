@@ -21,6 +21,7 @@ export var WANDER_TARGET_RANGE = 4
 var knockback = Vector2.ZERO
 var state = IDLE
 var fireballLoop = 50
+var collision_disabled = false
 
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $HurtBox
@@ -64,6 +65,18 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	VELOCITY = move_and_slide(VELOCITY)
+
+func disable_collision_shapes():
+	collision_disabled = true
+	$HurtBox/CollisionShape2D.disabled = true
+	$PlayerDetectionZone/CollisionShape2D.disabled = true
+	
+
+func reenable_collision_shapes():
+	if collision_disabled == true:
+		collision_disabled = false
+		$HurtBox/CollisionShape2D.disabled = false
+		$PlayerDetectionZone/CollisionShape2D.disabled = false
 
 func seek_player():
 	if zoneOfTruth.can_see_player():

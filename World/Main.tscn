@@ -31,7 +31,7 @@ MAX_SPEED = 350
 
 [node name="ZoomingCamera2D" parent="Gerald" instance=ExtResource( 5 )]
 rotation = 0.13207
-zoom = Vector2( 0.1, 0.1 )
+zoom = Vector2( 0.3, 0.3 )
 
 [node name="ItemDrop" parent="." instance=ExtResource( 10 )]
 position = Vector2( -387, -977 )
