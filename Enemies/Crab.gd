@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal Crab_Killed
+
 #bulk of code based off of uheartbeast tutorial (Github: https://github.com/uheartbeast/youtube-tutorials/tree/master/Action%20RPG)
 enum{
 	IDLE,
@@ -78,6 +80,7 @@ func _on_HurtBox_area_entered(area):
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
 			print("Crab Killed!")
+			emit_signal("Crab_Killed")
 			queue_free()
 		else:
 			knockback = area.knockback_vector * 100
@@ -85,11 +88,13 @@ func _on_HurtBox_area_entered(area):
 	elif area.name == "Fireball":
 		HIT_POINTS = 0
 		print("Crab Killed!")
+		emit_signal("Crab_Killed")
 		queue_free()
 	elif area.name == "Arrow":
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
 			print("Crab Killed!")
+			emit_signal("Crab_Killed")
 			queue_free()
 
 func drop_item():

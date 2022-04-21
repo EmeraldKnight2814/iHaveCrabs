@@ -1,0 +1,81 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://World/Rooms/StartRoom.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Rooms/Room1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Rooms/Room4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Rooms/Room2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Rooms/CornerRoom1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Rooms/SingleRoom1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Rooms/Room3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Rooms/CornerRoom2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Rooms/LinearRoom1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Rooms/BossRoomTop.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/Rooms/Room6.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World/Rooms/CornerRoom3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/Rooms/SingleRoom2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World/Rooms/CornerRoom4.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/Maps/map1.gd" type="Script" id=15]
+
+[node name="map1" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="StartRoom" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 64 )
+
+[node name="Room1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 896 )
+
+[node name="Room4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1184, 1727 )
+
+[node name="Room2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1216, -832 )
+
+[node name="CornerRoom1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1216, 896 )
+
+[node name="SingleRoom1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1217, 1727 )
+
+[node name="SingleRoom2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2368, 64 )
+
+[node name="Room3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -1184, -1664 )
+
+[node name="CornerRoom2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1216, -768 )
+
+[node name="LinearRoom1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 64, -1600 )
+
+[node name="BossRoomTop" parent="." instance=ExtResource( 10 )]
+position = Vector2( 64, -2432 )
+
+[node name="Room5" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1088, 896 )
+
+[node name="Room6" parent="." instance=ExtResource( 12 )]
+position = Vector2( -1088, 1727 )
+
+[node name="SingleRoom3" parent="." instance=ExtResource( 13 )]
+position = Vector2( -1088, -768 )
+
+[node name="Room7" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1088, 64 )
+
+[editable path="StartRoom"]
+[editable path="Room1"]
+[editable path="Room4"]
+[editable path="Room2"]
+[editable path="CornerRoom1"]
+[editable path="SingleRoom1"]
+[editable path="SingleRoom2"]
+[editable path="Room3"]
+[editable path="CornerRoom2"]
+[editable path="LinearRoom1"]
+[editable path="BossRoomTop"]
+[editable path="Room5"]
+[editable path="Room6"]
+[editable path="SingleRoom3"]
+[editable path="Room7"]

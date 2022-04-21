@@ -7,6 +7,10 @@ var knockback_modifier = knockback_modifier setget set_knockback_modifier
 var weapon_type = 1 setget set_weapon_type
 var current_weapon = 0 setget set_current_weapon
 var current_armor = 0 setget set_current_armor
+var crab_max_hit_points = 75 setget set_crab_hit_points
+var wizard_max_hit_points = 25 setget set_wizard_hit_points
+var crab_zone_of_truth_radius = 3000 setget set_crab_zone_of_truth 
+var wizard_zone_of_truth_radius = 6000 setget set_wizard_zone_of_truth 
 
 signal no_hit_points
 signal hit_points_changed(value)
@@ -17,6 +21,10 @@ signal unmatched_changed(value)
 signal weapon_type_changed(value)
 signal current_weapon_changed(value)
 signal current_armor_changed(value)
+signal crab_hit_points_changed(value)
+signal wizard_hit_points_changed(value)
+signal crab_zone_of_truth_changed(value)
+signal wizard_zone_of_truth_changed(value)
 
 func set_damage(value):
 	damage = value
@@ -48,6 +56,22 @@ func set_current_weapon(value):
 func set_current_armor(value):
 	current_armor = value
 	emit_signal("current_armor_changed", value)
+
+func set_crab_hit_points(value):
+	crab_max_hit_points = value
+	emit_signal("crab_hit_points_changed", value)
+
+func set_wizard_hit_points(value):
+	wizard_max_hit_points = value
+	emit_signal("wizard_hit_points_changed", value)
+
+func set_crab_zone_of_truth(value):
+	crab_zone_of_truth_radius = value
+	emit_signal("crab_zone_of_truth_changed", value)
+
+func set_wizard_zone_of_truth(value):
+	wizard_zone_of_truth_radius = value
+	emit_signal("wizard_zone_of_truth_changed", value)
 
 func _ready():
 	self.hit_points = max_hit_points
