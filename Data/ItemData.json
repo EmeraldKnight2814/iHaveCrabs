@@ -1,84 +1,262 @@
 {
   "Card_A": {
     "Type": "P",
-    "Description": "FIGHT THEM ALL"
+    "Description": "FIGHT THEM ALL",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_B": {
     "Type": "P",
-    "Description": "It eats nothing important, don't worry"
+    "Description": "It eats nothing important, don't worry",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_C": {
     "Type": "P",
-    "Description": "The world mannnn"
+    "Description": "The world mannnn",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_D": {
     "Type": "P",
-    "Description": "WHOA ITS COOL"
+    "Description": "WHOA ITS COOL",
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_E": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_F": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_G": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_H": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_I": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_J": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_K": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_L": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_M": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_N": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_O": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_P": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_Q": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_R": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_S": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_T": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_U": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_V": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_W": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_X": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_Y": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": null,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   },
   "Card_Z": {
-    "Type": "P"
+    "Type": "P",
+    "Description": null,
+    "Mspeed": 50,
+    "Mattack": null,
+    "Mhealth": null,
+    "Pspeed": null,
+    "Pattack": null,
+    "Phealth": null
   }
 }

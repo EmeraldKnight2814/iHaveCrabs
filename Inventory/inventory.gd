@@ -10,6 +10,7 @@ func _ready():
 		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
 		slots[i].slot_index = i
 		slots[i].slotType = SlotClass.SlotType.INVENTORY
+		EquipChange.set_stats("Card_Z")
 	
 	for i in range(equip_slots.size()):
 		equip_slots[i].connect("gui_input", self, "slot_gui_input", [equip_slots[i]])
@@ -31,6 +32,7 @@ func initialize_equips():
 	for i in range(equip_slots.size()):
 		if PlayerInventory.equips.has(i):
 			equip_slots[i].initialize_item(PlayerInventory.equips[i][0])
+			EquipChange.set_stats(PlayerInventory.equips[i][0])
 
 func slot_gui_input(event: InputEvent, slot: SlotClass):
 	if event is InputEventMouseButton:
