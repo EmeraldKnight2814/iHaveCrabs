@@ -63,10 +63,6 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	VELOCITY = move_and_slide(VELOCITY)
-	#Change stats
-#	if HIT_POINTS == MAX_HIT_POINTS:
-#		MAX_HIT_POINTS == PlayerStats.crab_max_hit_points
-#		HIT_POINTS = MAX_HIT_POINTS
 
 
 func disable_collision_shapes():

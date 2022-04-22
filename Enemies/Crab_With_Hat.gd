@@ -69,24 +69,18 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	VELOCITY = move_and_slide(VELOCITY)
-	
-	#Check for global variable change
-	if HIT_POINTS == MAX_HIT_POINTS:
-		MAX_HIT_POINTS == PlayerStats.wizard_max_hit_points
-		HIT_POINTS = MAX_HIT_POINTS
-	zoneOfTruthShape.shape.radius = PlayerStats.wizard_zone_of_truth_radius
 
 func disable_collision_shapes():
 	collision_disabled = true
-	$HurtBox/CollisionShape2D.disabled = true
-	$PlayerDetectionZone/CollisionShape2D.disabled = true
+	$HurtBox/CollisionShape2D.set_deferred("disabled", true)
+	$PlayerDetectionZone/CollisionShape2D.set_deferred("disabled", true)
 	
 
 func reenable_collision_shapes():
 	if collision_disabled == true:
 		collision_disabled = false
-		$HurtBox/CollisionShape2D.disabled = false
-		$PlayerDetectionZone/CollisionShape2D.disabled = false
+		$HurtBox/CollisionShape2D.set_deferred("disabled", false)
+		$PlayerDetectionZone/CollisionShape2D.set_deferred("disabled", false)
 
 func seek_player():
 	if zoneOfTruth.can_see_player():
