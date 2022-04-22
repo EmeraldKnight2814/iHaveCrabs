@@ -1009,6 +1009,16 @@ __meta__ = {
 position = Vector2( 513, 351.5 )
 shape = SubResource( 109 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -67.0
+margin_top = -64.0
+margin_right = 1087.0
+margin_bottom = 761.0
+color = Color( 0, 0, 0, 0.815686 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Enemies" type="Control" parent="."]
 margin_top = -1000.0
 margin_bottom = -1000.0
@@ -1055,16 +1065,6 @@ scale = Vector2( 0.05, 0.05 )
 [node name="Crab10" parent="Enemies" instance=ExtResource( 2 )]
 position = Vector2( 628, 229 )
 scale = Vector2( 0.05, 0.05 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -67.0
-margin_top = -64.0
-margin_right = 1087.0
-margin_bottom = 761.0
-color = Color( 0, 0, 0, 0.815686 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="Crab_Killed" from="Enemies/Crab" to="." method="_on_Crab_Killed"]
 [connection signal="Crab_Killed" from="Enemies/Crab2" to="." method="_on_Crab_Killed"]
