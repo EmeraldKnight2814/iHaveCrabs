@@ -28,14 +28,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "blue",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "black",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "blue",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
@@ -53,19 +53,14 @@ animations = [ {
 "name": "orange",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "purple",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "yellow",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "white",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "violet",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
@@ -73,9 +68,14 @@ animations = [ {
 "name": "red",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "purple",
+"name": "violet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "white",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ) ],
@@ -102,7 +102,7 @@ radius = 3000.0
 [node name="Crab" type="KinematicBody2D"]
 scale = Vector2( 0.015, 0.015 )
 collision_layer = 64
-collision_mask = 0
+collision_mask = 67
 script = ExtResource( 23 )
 MAX_SPEED = 100
 

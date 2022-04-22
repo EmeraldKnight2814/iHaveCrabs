@@ -33,9 +33,9 @@ animations = [ {
 "name": "green_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "purple_walk",
+"name": "orange_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
@@ -43,9 +43,9 @@ animations = [ {
 "name": "blue_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "cyan_walk",
+"name": "yellow_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
@@ -53,9 +53,9 @@ animations = [ {
 "name": "white_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "orange_walk",
+"name": "red_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 16 ) ],
@@ -63,14 +63,9 @@ animations = [ {
 "name": "violet_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "rainbow_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "red_walk",
+"name": "purple_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 17 ) ],
@@ -78,9 +73,14 @@ animations = [ {
 "name": "black_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "yellow_walk",
+"name": "rainbow_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "cyan_walk",
 "speed": 5.0
 } ]
 
@@ -93,12 +93,14 @@ radius = 6000.0
 
 [node name="Crab_With_Hat" type="KinematicBody2D"]
 collision_layer = 64
+collision_mask = 67
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "rainbow_walk"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
