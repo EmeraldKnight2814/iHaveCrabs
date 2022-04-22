@@ -81,3 +81,17 @@ func set_crab_max_speed(value):
 
 func _ready():
 	self.hit_points = max_hit_points
+
+func set_stats(item_name):
+	if (JsonData.item_data[item_name]["Mspeed"] != null):
+		print(crab_max_speed)
+		print(JsonData.item_data[item_name]["Mspeed"])
+		crab_max_speed += JsonData.item_data[item_name]["Mspeed"]
+		print("EAT")
+		
+	if (JsonData.item_data[item_name]["Sneaky"] != null):
+		print(crab_zone_of_truth_radius)
+		print(JsonData.item_data[item_name]["Sneaky"])
+		set_crab_zone_of_truth(crab_zone_of_truth_radius + JsonData.item_data[item_name]["Sneaky"])
+		print("NOM")
+		print(crab_zone_of_truth_radius)

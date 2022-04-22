@@ -38,6 +38,8 @@ func _ready():
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = 75
+	#Connecting signals
+#	$Player_Stats.connect("crab_zone_of_truth_changed", self, "zone_change")
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -64,10 +66,10 @@ func _physics_process(delta):
 				state = IDLE
 	VELOCITY = move_and_slide(VELOCITY)
 	#Change stats
-	if HIT_POINTS == MAX_HIT_POINTS:
-		MAX_HIT_POINTS == PlayerStats.crab_max_hit_points
-		HIT_POINTS = MAX_HIT_POINTS
-	zoneOfTruthShape.shape.radius = PlayerStats.crab_zone_of_truth_radius
+#	if HIT_POINTS == MAX_HIT_POINTS:
+#		MAX_HIT_POINTS == PlayerStats.crab_max_hit_points
+#		HIT_POINTS = MAX_HIT_POINTS
+#	zoneOfTruthShape.shape.radius = PlayerStats.crab_zone_of_truth_radius
 
 func disable_collision_shapes():
 	collision_disabled = true
@@ -124,3 +126,7 @@ func _on_HurtBox_area_entered(area):
 
 func drop_item():
 	PlayerInventory.random_drop()
+
+func _on_Player_Stats_crab_zone_of_truth_changed(value):
+	zoneOfTruth = value
+	print("CrabZ: " + zoneOfTruth)
