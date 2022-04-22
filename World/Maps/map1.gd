@@ -43,7 +43,8 @@ func start_game():
 	else:
 		room3_ready()
 
-
+func restart():
+	get_tree().reload_current_scene()
 
 #FUNCTIONS TO READY ROOMS FOR PLAYERS
 func room1_ready():

@@ -133,6 +133,7 @@ func attack_state(delta):
 
 func dead_state(delta):
 	hide()
+	$CollisionShape2D.disabled = true
 
 func attack_animation_finished():
 	state = MOVE

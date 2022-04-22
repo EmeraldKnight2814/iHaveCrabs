@@ -1,13 +1,10 @@
 extends CanvasLayer
 
-signal start_game
+signal restart_game
 signal unpause
 
 var holding_item = null
 
-func _on_StartButton_pressed():
-	$StartButton.hide()
-	emit_signal("start_game")
 
 #Open inv
 func _input(event):
@@ -18,3 +15,11 @@ func _input(event):
 
 func _on_Unpause_pressed():
 	emit_signal("unpause")
+
+
+func _on_Quit_pressed():
+	get_tree().quit()
+
+
+func _on_RestartButton_pressed():
+	emit_signal("restart_game")

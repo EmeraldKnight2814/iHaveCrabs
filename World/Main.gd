@@ -13,6 +13,9 @@ onready var hud = $HUD
 onready var pause = $HUD/Pause
 
 func _ready():
+	start_game()
+
+func start_game():
 	#Initialilze player's stats with base set
 	geraldStats.hit_points = 3
 	geraldStats.damage = 25
@@ -20,9 +23,10 @@ func _ready():
 	geraldStats.weapon_type = 1
 	geraldStats.current_armor = 0
 	geraldStats.current_weapon = 0
+	gerald.position.x = 660
+	gerald.position.y = 520
 
-func _on_HUD_start_game():
-	pass
+
 
 func _unhandled_input(event):
 	if(event.is_action_pressed("swap_weapon")):
@@ -40,6 +44,7 @@ func _on_Player_hit():
 	if gerald.stats.hit_points <= 0:
 		deathSound.play()
 		print("No Lives Left")
+		$HUD/RestartButton.show()
 	else:
 		hitSound.play()
 		print(str(gerald.stats.hit_points) + " lives left.")
@@ -48,3 +53,8 @@ func _on_Player_hit():
 func _on_HUD_unpause():
 	pause.hide()
 	get_tree().paused = false
+
+
+func _on_HUD_restart_game():
+	$map1.restart()
+	start_game()
