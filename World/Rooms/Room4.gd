@@ -31,7 +31,7 @@ func _ready():
 
 func room_ready():
 	$ColorRect.hide()
-	$RoomShape/RectColl.call_deferred("free")
+	$RoomShape/RectColl.disabled = true
 	crab1.reenable_collision_shapes()
 	crab2.reenable_collision_shapes()
 	crab3.reenable_collision_shapes()
