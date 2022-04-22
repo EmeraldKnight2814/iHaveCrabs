@@ -64,7 +64,7 @@ func update_hp():
 			hp.texture = hp_4[0]
 		elif PlayerStats.hit_points == 0:
 			hp.texture = hp_4[4]
-	elif PlayerStats.max_hit_points == 4:
+	elif PlayerStats.max_hit_points == 5:
 		if PlayerStats.hit_points == 1:
 			hp.texture = hp_5[4]
 		elif PlayerStats.hit_points == 2:

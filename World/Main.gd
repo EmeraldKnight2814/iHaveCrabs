@@ -4,11 +4,11 @@ var crab = preload("res://Enemies/Crab.tscn")
 var rng = RandomNumberGenerator.new()
 
 onready var gerald  = $Gerald
-onready var hitSound = $HitSound
-onready var deathSound = $WilhelmScream
+onready var hitSound = $Sounds/Player_Hit
+onready var deathSound = $Sounds/Player_Death
 onready var enemies = $Enemies
 onready var geraldStats = PlayerStats
-onready var bgm = $BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
+onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 onready var hud = $HUD
 onready var pause = $HUD/Pause
 
@@ -26,6 +26,7 @@ func start_game():
 	geraldStats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
+	bgm.play()
 	$HUD.update_hp()
 	$HUD.update_current_weapon()
 
@@ -50,12 +51,10 @@ func _on_Player_hit():
 	$HUD.update_hp()
 	if gerald.stats.hit_points <= 0:
 		deathSound.play()
-		print("No Lives Left")
 		$HUD/RestartButton.show()
 		$HUD/dead.show()
 	else:
 		hitSound.play()
-		print(str(gerald.stats.hit_points) + " lives left.")
 
 
 func _on_HUD_unpause():
