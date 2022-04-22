@@ -92,6 +92,7 @@ volume_db = -20.0
 
 [connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Begin" to="." method="_on_Begin_pressed"]
 [connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="healed" from="map1" to="." method="_on_map1_healed"]
 [connection signal="victory" from="map1" to="." method="_on_map1_victory"]
 [connection signal="restart_game" from="HUD" to="." method="_on_HUD_restart_game"]
 [connection signal="unpause" from="HUD" to="." method="_on_HUD_unpause"]

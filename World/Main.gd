@@ -78,3 +78,7 @@ func _on_Begin_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
+
+
+func _on_map1_healed():
+	$HUD.update_hp()
