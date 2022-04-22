@@ -25,10 +25,6 @@ signal victory
 func _ready():
 	start_game()
 
-func _physics_process(delta):
-	if rooms_cleared.size() == 12:
-		linear_room1_ready()
-
 func start_game():
 	rng.randomize()
 	first_room = rng.randi_range(1, 4)
@@ -40,8 +36,6 @@ func start_game():
 		room1_ready()
 	elif first_room == 4:
 		room2_ready()
-	else:
-		room3_ready()
 
 func restart():
 	get_tree().reload_current_scene()
@@ -112,6 +106,8 @@ func _on_Room1_room_cleared():
 	room5_ready()
 	room4_ready()
 	corner_room1_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_Room4_room_cleared():
@@ -119,6 +115,8 @@ func _on_Room4_room_cleared():
 	room1_ready()
 	room6_ready()
 	single_room1_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_Room2_room_cleared():
@@ -126,32 +124,44 @@ func _on_Room2_room_cleared():
 	corner_room1_ready()
 	corner_room2_ready()
 	single_room2_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_CornerRoom1_room_cleared():
 	rooms_cleared.append(8)
 	room1_ready()
 	room2_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_SingleRoom1_room_cleared():
 	rooms_cleared.append(9)
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_SingleRoom2_room_cleared():
 	rooms_cleared.append(10)
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_Room3_room_cleared():
 	rooms_cleared.append(3)
 	single_room3_ready()
 	corner_room2_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_CornerRoom2_room_cleared():
 	rooms_cleared.append(11)
 	room3_ready()
 	room2_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_LinearRoom1_room_cleared():
@@ -167,18 +177,26 @@ func _on_Room5_room_cleared():
 	room7_ready()
 	room1_ready()
 	room6_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_Room6_room_cleared():
 	rooms_cleared.append(6)
 	room5_ready()
 	room4_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_SingleRoom3_room_cleared():
 	rooms_cleared.append(12)
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()
 
 
 func _on_Room7_room_cleared():
 	rooms_cleared.append(7)
 	room5_ready()
+	if rooms_cleared.size() == 12:
+		linear_room1_ready()

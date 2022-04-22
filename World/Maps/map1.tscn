@@ -25,9 +25,6 @@ position = Vector2( 64, 64 )
 [node name="Room1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 896 )
 
-[node name="RoomShape" parent="Room1" index="3"]
-collision_mask = 1
-
 [node name="Enemies" parent="Room1" index="5"]
 margin_left = -75.0
 margin_top = -900.0
