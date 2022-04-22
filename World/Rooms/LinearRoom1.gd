@@ -2,12 +2,18 @@ extends Node2D
 
 signal room_cleared
 
-var total_crabs
-var total_crabs_killed = 0
+onready var crab = $Enemies/Crab
 
 func _ready():
-	pass
+	crab.disable_collision_shapes()
+	crab.hide()
 
 func room_ready():
 	$ColorRect.hide()
 	$RoomShape/RectColl.disabled = true
+	crab.reenable_collision_shapes()
+	crab.show()
+
+
+func _on_Crab_Killed():
+	emit_signal("room_cleared")
