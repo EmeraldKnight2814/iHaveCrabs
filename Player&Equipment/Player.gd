@@ -7,7 +7,8 @@ signal hit
 
 enum{
 	MOVE,
-	ATTACK
+	ATTACK,
+	DEAD
 }
 
 var state = MOVE
@@ -46,7 +47,7 @@ func _ready():
 	aniTree.active = true
 	hitboxCollisionShape.disabled = true
 	hitbox.knockback_vector = Vector2.ZERO
-	stats.connect("no_hit_points", self, "queue_free")
+	stats.connect("no_hit_points", self, "_on_no_hit_points")
 
 func _physics_process(delta):
 	match state:
@@ -55,6 +56,8 @@ func _physics_process(delta):
 		
 		ATTACK:
 			attack_state(delta)
+		DEAD:
+			dead_state(delta)
 	
 	
 func move_state(delta):
@@ -127,7 +130,10 @@ func attack_state(delta):
 	else:
 		stats.weapon_type = 1
 		aniState.travel('attack')
-	
+
+func dead_state(delta):
+	hide()
+
 func attack_animation_finished():
 	state = MOVE
 
@@ -143,6 +149,10 @@ func loose_arrow():
 func _on_Hurtbox_area_entered(area):
 	stats.hit_points -= 1
 	emit_signal('hit')
+
+func _on_no_hit_points():
+	state = DEAD
+	
 
 #TJ is writing this code btw Dan
 func _input(event):
