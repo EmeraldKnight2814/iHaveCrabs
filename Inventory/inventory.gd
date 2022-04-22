@@ -66,7 +66,6 @@ func left_click_empty_slot(slot: SlotClass):
 		PlayerInventory.add_item_to_empty_slot(find_parent("HUD").holding_item, slot)
 		slot.putIntoSlot(find_parent("HUD").holding_item)
 		find_parent("HUD").holding_item = null
-		initialize_equips()
 
 func left_click_swap(event: InputEvent, slot: SlotClass):
 	if able_to_put_into_slot(slot):
@@ -83,3 +82,8 @@ func left_click_not_holding(slot: SlotClass):
 	find_parent("HUD").holding_item = slot.item
 	slot.pickFromSlot()
 	find_parent("HUD").holding_item.global_position = get_global_mouse_position()
+
+func update_stats():
+	for i in range(equip_slots.size()):
+		if PlayerInventory.equips.has(i):
+			Stats.set_stats(PlayerInventory.equips[i][0])

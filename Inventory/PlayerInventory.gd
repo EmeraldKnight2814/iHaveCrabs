@@ -4,11 +4,10 @@ const ItemClass = preload("res://Inventory/Item.gd")
 const NUM_INVENTORY_SLOTS = 32
 
 var inventory = {
-	4: ["Card_Z"]
 }
 
 var equips = {
-	0: ["Card_A"],
+	0: ["Card_Z"],
 	1: ["Card_G"],
 	2: ["Card_L"]
 }

@@ -86,12 +86,26 @@ func set_stats(item_name):
 	if (JsonData.item_data[item_name]["Mspeed"] != null):
 		print(crab_max_speed)
 		print(JsonData.item_data[item_name]["Mspeed"])
-		crab_max_speed += JsonData.item_data[item_name]["Mspeed"]
+		set_crab_max_speed(crab_max_speed + JsonData.item_data[item_name]["Mspeed"])
 		print("EAT")
-		
+
 	if (JsonData.item_data[item_name]["Sneaky"] != null):
 		print(crab_zone_of_truth_radius)
 		print(JsonData.item_data[item_name]["Sneaky"])
 		set_crab_zone_of_truth(crab_zone_of_truth_radius + JsonData.item_data[item_name]["Sneaky"])
 		print("NOM")
 		print(crab_zone_of_truth_radius)
+
+func reset():
+	max_hit_points = 1
+	hit_points = max_hit_points
+	damage = damage
+	knockback_modifier = knockback_modifier
+	weapon_type = 1 
+	current_weapon = 0 
+	current_armor = 0 
+	crab_max_hit_points = 75 
+	wizard_max_hit_points = 25
+	crab_zone_of_truth_radius = 3000
+	wizard_zone_of_truth_radius = 6000
+	crab_max_speed = 30
