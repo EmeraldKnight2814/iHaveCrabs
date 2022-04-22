@@ -23,6 +23,10 @@ var hp_5 = [preload("res://Sprites/UI/HP/Max_5/HealthBarFull_5.png"),
 			preload("res://Sprites/UI/HP/Max_5/HealthBar_4Damage_5.png"),
 			preload("res://Sprites/UI/HP/Max_5/HealthBar_5Damage_5.png"),]
 onready var hp = $Hit_Points
+
+var weapons = [preload("res://Sprites/UI/blank_sword.png"),
+					preload("res://Sprites/UI/blank_bow.png")]
+
 #Open inv
 func _input(event):
 	if event.is_action_pressed("inventory"):
@@ -73,6 +77,14 @@ func update_hp():
 			hp.texture = hp_5[0]
 		elif PlayerStats.hit_points == 0:
 			hp.texture = hp_5[5]
+
+func update_current_weapon():
+	if PlayerStats.weapon_type == 1:
+		$Current_Weapon.texture = weapons[0]
+	elif PlayerStats.weapon_type == 2:
+		$Current_Weapon.texture = weapons[1]
+	else:
+		$Current_Weapon.texture = weapons[0]
 
 func _on_RestartButton_pressed():
 	emit_signal("restart_game")

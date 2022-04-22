@@ -44,6 +44,7 @@ stream = ExtResource( 6 )
 stream = ExtResource( 11 )
 volume_db = -20.0
 
+[connection signal="victory" from="map1" to="." method="_on_map1_victory"]
 [connection signal="restart_game" from="HUD" to="." method="_on_HUD_restart_game"]
 [connection signal="unpause" from="HUD" to="." method="_on_HUD_unpause"]
 [connection signal="hit" from="Gerald" to="." method="_on_Player_hit"]

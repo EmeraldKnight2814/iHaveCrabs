@@ -22,7 +22,7 @@ onready var MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
 
 var knockback = Vector2.ZERO
 var state = IDLE
-var fireballLoop = 50
+var fireballLoop = 100
 var collision_disabled = false
 
 onready var sprite = $AnimatedSprite
@@ -61,7 +61,7 @@ func _physics_process(delta):
 				var direction = (player.global_position - global_position).normalized()
 				VELOCITY = VELOCITY.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 				$FireStarter.rotate($FireStarter.get_angle_to(player.global_position))
-				if fireballLoop == 50:
+				if fireballLoop == 100:
 					fire(player)
 					fireballLoop = 1
 				else:

@@ -4,11 +4,11 @@ var crab = preload("res://Enemies/Crab.tscn")
 var rng = RandomNumberGenerator.new()
 
 onready var gerald  = $Gerald
-onready var hitSound = $Sounds/Player_Hit
-onready var deathSound = $Sounds/Player_Death
+onready var hitSound = $HitSound
+onready var deathSound = $WilhelmScream
 onready var enemies = $Enemies
 onready var geraldStats = PlayerStats
-onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
+onready var bgm = $BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 onready var hud = $HUD
 onready var pause = $HUD/Pause
 
@@ -26,19 +26,22 @@ func start_game():
 	geraldStats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
-	bgm.play()
 	$HUD.update_hp()
+	$HUD.update_current_weapon()
 
 
 
 func _unhandled_input(event):
 	if(event.is_action_pressed("swap_weapon")):
 		if(geraldStats.weapon_type == 1):
-			geraldStats.weapon_type = 2
+			PlayerStats.weapon_type = 2
+			$HUD.update_current_weapon()
 		elif(geraldStats.weapon_type == 2):
-			geraldStats.weapon_type = 1
+			PlayerStats.weapon_type = 1
+			$HUD.update_current_weapon()
 		else:
-			geraldStats.weapon_type = 1
+			PlayerStats.weapon_type = 1
+			$HUD.update_current_weapon()
 	if(event.is_action_pressed("pause")):
 		get_tree().paused = true
 		pause.show()
