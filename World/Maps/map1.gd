@@ -43,59 +43,59 @@ func restart():
 #FUNCTIONS TO READY ROOMS FOR PLAYERS
 func room1_ready():
 	$Room1.room_ready()
-	room1_collision_shape.queue_free()
+	room1_collision_shape.call_deferred("free")
 
 func room2_ready():
 	$Room2.room_ready()
-	room2_collision_shape.queue_free()
+	room2_collision_shape.call_deferred("free")
 
 func room3_ready():
 	$Room3.room_ready()
-	room3_collision_shape.queue_free()
+	room3_collision_shape.call_deferred("free")
 
 func room4_ready():
 	$Room4.room_ready()
-	room4_collision_shape.queue_free()
+	room4_collision_shape.call_deferred("free")
 
 func room5_ready():
 	$Room5.room_ready()
-	room5_collision_shape.queue_free()
+	room5_collision_shape.call_deferred("free")
 
 func room6_ready():
 	$Room6.room_ready()
-	room6_collision_shape.queue_free()
+	room6_collision_shape.call_deferred("free")
 
 func room7_ready():
 	$Room7.room_ready()
-	room7_collision_shape.queue_free()
+	room7_collision_shape.call_deferred("free")
 
 func corner_room1_ready():
 	$CornerRoom1.room_ready()
-	corner_room1_collision_shape.queue_free()
+	corner_room1_collision_shape.call_deferred("free")
 
 func corner_room2_ready():
 	$CornerRoom2.room_ready()
-	corner_room2_collision_shape.queue_free()
+	corner_room2_collision_shape.call_deferred("free")
 
 func single_room1_ready():
 	$SingleRoom1.room_ready()
-	single_room1_collision_shape.queue_free()
+	single_room1_collision_shape.call_deferred("free")
 
 func single_room2_ready():
 	$SingleRoom2.room_ready()
-	single_room2_collision_shape.queue_free()
+	single_room2_collision_shape.call_deferred("free")
 
 func single_room3_ready():
 	$SingleRoom3.room_ready()
-	single_room3_collision_shape.queue_free()
+	single_room3_collision_shape.call_deferred("free")
 
 func linear_room1_ready():
 	$LinearRoom1.room_ready()
-	linear_room_collision_shape.queue_free()
+	linear_room_collision_shape.call_deferred("free")
 
 func boss_room_ready():
 	$BossRoomTop.room_ready()
-	boss_room_collision_shape.queue_free()
+	boss_room_collision_shape.call_deferred("free")
 
 
 

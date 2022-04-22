@@ -10,7 +10,7 @@ func _ready():
 
 func room_ready():
 	$ColorRect.hide()
-	$RoomShape/RectColl.disabled = true
+	$RoomShape/RectColl.call_deferred("free")
 	reginald.reenable_collision_shapes()
 	reginald.show()
 
