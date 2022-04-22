@@ -22,9 +22,6 @@ onready var boss_room_collision_shape = $BossRoomTop/RoomShape/BossRoomColl
 
 signal victory
 
-func _ready():
-	start_game()
-
 func start_game():
 	rng.randomize()
 	first_room = rng.randi_range(1, 4)

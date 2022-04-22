@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Maps/map1.tscn" type="PackedScene" id=2]
@@ -7,11 +7,54 @@
 [ext_resource path="res://Player&Equipment/ZoomingCamera2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Misc. Assets/player_death_sound.wav" type="AudioStream" id=6]
 [ext_resource path="res://Misc. Assets/player_hurt_sound.wav" type="AudioStream" id=7]
+[ext_resource path="res://World/MainMenu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Inventory/ItemDrop.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Misc. Assets/8bit_CrabRave.wav.wav" type="AudioStream" id=11]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
+
+[node name="Start_Screen" type="CanvasLayer" parent="."]
+
+[node name="Back_Screen" type="ColorRect" parent="Start_Screen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.980392, 0.843137, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" parent="Start_Screen" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="VBoxContainer" parent="Start_Screen/MainMenu" index="0"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="TextureRect" parent="Start_Screen/MainMenu/VBoxContainer" index="0"]
+margin_right = 1920.0
+
+[node name="MainMenu_Options" parent="Start_Screen/MainMenu/VBoxContainer" index="1"]
+margin_right = 1920.0
+margin_bottom = 1025.0
+
+[node name="Begin" parent="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options" index="0"]
+margin_top = 338.0
+margin_right = 1920.0
+margin_bottom = 388.0
+
+[node name="Exit" parent="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options" index="1"]
+margin_top = 408.0
+margin_right = 1920.0
+margin_bottom = 458.0
+
+[node name="Label" parent="Start_Screen/MainMenu/VBoxContainer" index="2"]
+margin_top = 1029.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 
 [node name="map1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 82, 113 )
@@ -47,11 +90,14 @@ stream = ExtResource( 6 )
 stream = ExtResource( 11 )
 volume_db = -20.0
 
+[connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Begin" to="." method="_on_Begin_pressed"]
+[connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="victory" from="map1" to="." method="_on_map1_victory"]
 [connection signal="restart_game" from="HUD" to="." method="_on_HUD_restart_game"]
 [connection signal="unpause" from="HUD" to="." method="_on_HUD_unpause"]
 [connection signal="hit" from="Gerald" to="." method="_on_Player_hit"]
 
+[editable path="Start_Screen/MainMenu"]
 [editable path="map1"]
 [editable path="map1/StartRoom"]
 [editable path="map1/Room1"]
