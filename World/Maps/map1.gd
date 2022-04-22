@@ -43,59 +43,45 @@ func restart():
 #FUNCTIONS TO READY ROOMS FOR PLAYERS
 func room1_ready():
 	$Room1.room_ready()
-	room1_collision_shape.queue_free()
 
 func room2_ready():
 	$Room2.room_ready()
-	room2_collision_shape.queue_free()
 
 func room3_ready():
 	$Room3.room_ready()
-	room3_collision_shape.queue_free()
 
 func room4_ready():
 	$Room4.room_ready()
-	room4_collision_shape.queue_free()
 
 func room5_ready():
 	$Room5.room_ready()
-	room5_collision_shape.queue_free()
 
 func room6_ready():
 	$Room6.room_ready()
-	room6_collision_shape.queue_free()
 
 func room7_ready():
 	$Room7.room_ready()
-	room7_collision_shape.queue_free()
 
 func corner_room1_ready():
 	$CornerRoom1.room_ready()
-	corner_room1_collision_shape.queue_free()
 
 func corner_room2_ready():
 	$CornerRoom2.room_ready()
-	corner_room2_collision_shape.queue_free()
 
 func single_room1_ready():
 	$SingleRoom1.room_ready()
-	single_room1_collision_shape.queue_free()
 
 func single_room2_ready():
 	$SingleRoom2.room_ready()
-	single_room2_collision_shape.queue_free()
 
 func single_room3_ready():
 	$SingleRoom3.room_ready()
-	single_room3_collision_shape.queue_free()
 
 func linear_room1_ready():
 	$LinearRoom1.room_ready()
-	linear_room_collision_shape.queue_free()
 
 func boss_room_ready():
 	$BossRoomTop.room_ready()
-	boss_room_collision_shape.queue_free()
 
 
 
