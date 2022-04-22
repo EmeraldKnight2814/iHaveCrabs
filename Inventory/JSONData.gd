@@ -1,6 +1,7 @@
 extends Node
 
 var item_data: Dictionary
+onready var rand = random_drop()
 
 func _ready():
 	item_data = LoadData("res://Data/ItemData.json")
@@ -15,6 +16,10 @@ func LoadData(file_path):
 	return json_data.result
 
 func random_drop():
+	item_data = LoadData("res://Data/ItemData.json")
 	var a = item_data.keys()
 	a = a[randi() % a.size()]
-	return a
+	rand = a
+
+func get_rand():
+	return rand

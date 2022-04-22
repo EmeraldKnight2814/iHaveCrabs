@@ -9,7 +9,11 @@ var player = null
 var being_picked_up = false
 
 func _ready():
-	item_name = "Card_V"
+	if item_name == null:
+		item_name = "Card_A"
+	else:
+		item_name = JsonData.get_rand() 
+	$Sprite.texture = load("res://Cards/" + item_name + ".png")
 
 func _physics_process(delta):
 	if being_picked_up == true:

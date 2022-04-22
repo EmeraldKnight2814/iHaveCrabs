@@ -29,8 +29,11 @@ MAX_SPEED = 350
 rotation = 0.13207
 zoom = Vector2( 0.3, 0.3 )
 
-[node name="ItemDrop" parent="." instance=ExtResource( 10 )]
+[node name="ItemDrop2" parent="." instance=ExtResource( 10 )]
 position = Vector2( -387, -977 )
+
+[node name="ItemDrop" parent="." instance=ExtResource( 10 )]
+position = Vector2( 353, 355 )
 
 [node name="Sounds" type="Node" parent="."]
 

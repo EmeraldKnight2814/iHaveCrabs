@@ -9,6 +9,9 @@ enum{
 	CHASE
 }
 
+#TJ COde
+var drop = preload("res://Inventory/ItemDrop.tscn")
+
 export var HIT_POINTS = 75
 export var FRICTION = 100
 export var VELOCITY = Vector2.ZERO
@@ -118,7 +121,8 @@ func _on_HurtBox_area_entered(area):
 			$Hit.play()
 
 func drop_item():
-	PlayerInventory.random_drop()
+	JsonData.random_drop()
+	owner.owner.owner.add_child(drop.instance())
 
 func zone_change(value):
 	$PlayerDetectionZone/CollisionShape2D.shape.radius = value
