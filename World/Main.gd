@@ -45,6 +45,7 @@ func _on_Player_hit():
 		deathSound.play()
 		print("No Lives Left")
 		$HUD/RestartButton.show()
+		$HUD/dead.show()
 	else:
 		hitSound.play()
 		print(str(gerald.stats.hit_points) + " lives left.")
@@ -58,3 +59,5 @@ func _on_HUD_unpause():
 func _on_HUD_restart_game():
 	$map1.restart()
 	start_game()
+	$HUD/RestartButton.hide()
+	$HUD/dead.hide()
