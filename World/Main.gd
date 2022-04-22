@@ -7,20 +7,19 @@ onready var gerald  = $Gerald
 onready var hitSound = $Sounds/Player_Hit
 onready var deathSound = $Sounds/Player_Death
 onready var enemies = $Enemies
-onready var geraldStats = PlayerStats
 onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 onready var hud = $HUD
 onready var pause = $HUD/Pause
 
 func start_game():
 	#Initialilze player's stats with base set
-	geraldStats.hit_points = 3
-	geraldStats.max_hit_points = 3
-	geraldStats.damage = 25
-	geraldStats.knockback_modifier = 1
-	geraldStats.weapon_type = 1
-	geraldStats.current_armor = 0
-	geraldStats.current_weapon = 0
+	PlayerStats.hit_points = 3
+	PlayerStats.max_hit_points = 3
+	PlayerStats.damage = 25
+	PlayerStats.knockback_modifier = 1
+	PlayerStats.weapon_type = 1
+	PlayerStats.current_armor = 0
+	PlayerStats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
 	bgm.play()
