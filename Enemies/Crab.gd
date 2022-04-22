@@ -16,6 +16,8 @@ export var ACCELERATION = 200
 export var MAX_SPEED = 30
 export var WANDER_TARGET_RANGE = 4
 
+onready var MAX_HIT_POINTS = PlayerStats.crab_max_hit_points
+
 var knockback = Vector2.ZERO
 var collision_disabled = false
 
@@ -26,6 +28,7 @@ onready var hitboxA = $HitBoxA
 onready var hitboxB = $HitBoxB
 onready var hurtbox = $HurtBox
 onready var zoneOfTruth = $PlayerDetectionZone
+onready var zoneOfTruthShape = $PlayerDetectionZone/CollisionShape2D
 onready var wanderController = $Wander_Controller
 onready var geraldStats = PlayerStats
 
@@ -60,6 +63,11 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	VELOCITY = move_and_slide(VELOCITY)
+	#Change stats
+	if HIT_POINTS == MAX_HIT_POINTS:
+		MAX_HIT_POINTS == PlayerStats.crab_max_hit_points
+		HIT_POINTS = MAX_HIT_POINTS
+	zoneOfTruthShape.shape.radius = PlayerStats.crab_zone_of_truth_radius
 
 func disable_collision_shapes():
 	collision_disabled = true

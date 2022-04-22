@@ -11,12 +11,14 @@ enum{
 
 var fireball = preload("res://Enemies/Fireball.tscn")
 
-export var HIT_POINTS = 25
+export var HIT_POINTS = 0
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 500
 export var MAX_SPEED = 50
 export var WANDER_TARGET_RANGE = 4
+
+onready var MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
 
 var knockback = Vector2.ZERO
 var state = IDLE
@@ -26,6 +28,7 @@ var collision_disabled = false
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $HurtBox
 onready var zoneOfTruth = $PlayerDetectionZone
+onready var zoneOfTruthShape = $PlayerDetectionZone/CollisionShape2D
 onready var wanderController = $Wander_Controller
 onready var geraldStats = PlayerStats
 
@@ -34,7 +37,7 @@ func _ready():
 	randomize()
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
-	HIT_POINTS = 25
+	HIT_POINTS = MAX_HIT_POINTS
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -66,6 +69,12 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	VELOCITY = move_and_slide(VELOCITY)
+	
+	#Check for global variable change
+	if HIT_POINTS == MAX_HIT_POINTS:
+		MAX_HIT_POINTS == PlayerStats.wizard_max_hit_points
+		HIT_POINTS = MAX_HIT_POINTS
+	zoneOfTruthShape.shape.radius = PlayerStats.wizard_zone_of_truth_radius
 
 func disable_collision_shapes():
 	collision_disabled = true
