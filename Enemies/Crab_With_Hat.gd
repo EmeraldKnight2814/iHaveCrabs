@@ -114,21 +114,22 @@ func _on_HurtBox_area_entered(area):
 	if area.name == "SwordHitbox":
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
-			print("Wizard Crab Killed!")
 			emit_signal("Wizard_Crab_Killed")
 			queue_free()
 		else:
 			knockback = area.knockback_vector * 200
-			print("Wizard Crab has " + str(HIT_POINTS) + " Hit Points Left")
+			$Hit.play
 	elif area.name == "Fireball":
 		HIT_POINTS -= 75
 		if HIT_POINTS <= 0:
-			print("Wizard Crab Killed!")
 			emit_signal("Wizard_Crab_Killed")
 			queue_free()
+		else:
+			$Hit.play()
 	elif area.name == "Arrow":
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
-			print("Wizard Crab Killed!")
 			emit_signal("Wizard_Crab_Killed")
 			queue_free()
+		else:
+			$Hit.play()

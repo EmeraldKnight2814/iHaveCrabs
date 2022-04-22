@@ -114,6 +114,7 @@ func room_ready():
 
 
 func _on_Crab_Killed():
+	$Crab_Dead.play()
 	total_crabs_killed += 1
 	if total_crabs_killed == total_crabs:
 		emit_signal("room_cleared")

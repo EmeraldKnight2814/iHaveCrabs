@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Enemies/Crab_With_Hat.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Crabs_With_Hats/Walk/Hat_RedCrabA.png" type="Texture" id=2]
@@ -25,37 +25,13 @@
 [ext_resource path="res://Sprites/Crabs_With_Hats/Walk/Hat_RainbowCrabB.png" type="Texture" id=23]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Enemies/Wander_Controller.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Misc. Assets/crab_hit_sound.wav" type="AudioStream" id=26]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "green_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "orange_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "blue_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "yellow_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "white_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "red_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 16 ) ],
@@ -68,9 +44,29 @@ animations = [ {
 "name": "purple_walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "cyan_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "blue_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "red_walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "black_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "white_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
@@ -78,9 +74,14 @@ animations = [ {
 "name": "rainbow_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "cyan_walk",
+"name": "orange_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "yellow_walk",
 "speed": 5.0
 } ]
 
@@ -128,6 +129,9 @@ shape = SubResource( 3 )
 
 [node name="FireStarter" type="Position2D" parent="."]
 position = Vector2( 5, 93 )
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 

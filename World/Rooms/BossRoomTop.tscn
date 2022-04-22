@@ -1,8 +1,9 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=110 format=2]
 
 [ext_resource path="res://World/Rooms/BossRoomTop.gd" type="Script" id=1]
 [ext_resource path="res://tilemap/ptilemap.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Crab_With_Hat.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Misc. Assets/Wilhelm_Scream.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 541.5, 398 )
@@ -1091,5 +1092,8 @@ __meta__ = {
 position = Vector2( 508, 377 )
 scale = Vector2( 0.5, 0.5 )
 HIT_POINTS = 250
+
+[node name="Crab_Dead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="Wizard_Crab_Killed" from="Boss/Reginald_king_of_the_crabs" to="." method="_on_Reginald_king_of_the_crabs_Killed"]

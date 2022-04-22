@@ -71,18 +71,18 @@ func _physics_process(delta):
 
 func disable_collision_shapes():
 	collision_disabled = true
-	$HurtBox/CollisionShape2D.disabled = true
-	$HitBoxA/CollisionShape2D.disabled = true
-	$HitBoxB/CollisionShape2D.disabled = true
-	$PlayerDetectionZone/CollisionShape2D.disabled = true
+	$HurtBox/CollisionShape2D.set_deferred("disabled", true)
+	$HitBoxA/CollisionShape2D.set_deferred("disabled", true)
+	$HitBoxB/CollisionShape2D.set_deferred("disabled", true)
+	$PlayerDetectionZone/CollisionShape2D.set_deferred("disabled", true)
 
 func reenable_collision_shapes():
 	if collision_disabled == true:
 		collision_disabled = false
-		$HurtBox/CollisionShape2D.disabled = false
-		$HitBoxA/CollisionShape2D.disabled = false
-		$HitBoxB/CollisionShape2D.disabled = false
-		$PlayerDetectionZone/CollisionShape2D.disabled = false
+		$HurtBox/CollisionShape2D.set_deferred("disabled", false)
+		$HitBoxA/CollisionShape2D.set_deferred("disabled", false)
+		$HitBoxB/CollisionShape2D.set_deferred("disabled", false)
+		$PlayerDetectionZone/CollisionShape2D.set_deferred("disabled", false)
 
 func seek_player():
 	if zoneOfTruth.can_see_player():
@@ -104,23 +104,22 @@ func _on_HurtBox_area_entered(area):
 	if area.name == "SwordHitbox":
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
-			print("Crab Killed!")
 			emit_signal("Crab_Killed")
 			queue_free()
 		else:
+			$Hit.play()
 			knockback = area.knockback_vector * 200
-			print("Crab has " + str(HIT_POINTS) + " Hit Points Left")
 	elif area.name == "Fireball":
 		HIT_POINTS = 0
-		print("Crab Killed!")
 		emit_signal("Crab_Killed")
 		queue_free()
 	elif area.name == "Arrow":
 		HIT_POINTS -= geraldStats.damage
 		if HIT_POINTS <= 0:
-			print("Crab Killed!")
 			emit_signal("Crab_Killed")
 			queue_free()
+		else:
+			$Hit.play()
 
 func drop_item():
 	PlayerInventory.random_drop()

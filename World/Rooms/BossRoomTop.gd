@@ -16,4 +16,5 @@ func room_ready():
 
 
 func _on_Reginald_king_of_the_crabs_Killed():
+	$Crab_Dead.play()
 	emit_signal("room_cleared")

@@ -4,11 +4,11 @@ var crab = preload("res://Enemies/Crab.tscn")
 var rng = RandomNumberGenerator.new()
 
 onready var gerald  = $Gerald
-onready var hitSound = $HitSound
-onready var deathSound = $WilhelmScream
+onready var hitSound = $Sounds/Player_Hit
+onready var deathSound = $Sounds/Player_Death
 onready var enemies = $Enemies
 onready var geraldStats = PlayerStats
-onready var bgm = $BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
+onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 onready var hud = $HUD
 onready var pause = $HUD/Pause
 
@@ -26,6 +26,7 @@ func start_game():
 	geraldStats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
+	bgm.play()
 	$HUD.update_hp()
 
 
