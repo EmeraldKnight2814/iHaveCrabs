@@ -25,17 +25,17 @@ func _ready():
 
 func room_ready():
 	$ColorRect.hide()
-	$RoomShape/RectColl.disabled = true
-	crab1.reenable_collision_shapes()
-	crab2.reenable_collision_shapes()
-	crab3.reenable_collision_shapes()
-	crab4.reenable_collision_shapes()
-	crab5.reenable_collision_shapes()
-	crab1.show()
-	crab2.show()
-	crab3.show()
-	crab4.show()
-	crab5.show()
+	if total_crabs_killed != total_crabs:
+		crab1.reenable_collision_shapes()
+		crab2.reenable_collision_shapes()
+		crab3.reenable_collision_shapes()
+		crab4.reenable_collision_shapes()
+		crab5.reenable_collision_shapes()
+		crab1.show()
+		crab2.show()
+		crab3.show()
+		crab4.show()
+		crab5.show()
 
 
 func _on_Wizard_Crab_Killed():

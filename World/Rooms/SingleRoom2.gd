@@ -16,11 +16,11 @@ func _ready():
 
 func room_ready():
 	$ColorRect.hide()
-	$RoomShape/RectColl.disabled = true
-	crab1.reenable_collision_shapes()
-	crab2.reenable_collision_shapes()
-	crab1.show()
-	crab2.show()
+	if total_crabs_killed != total_crabs:
+		crab1.reenable_collision_shapes()
+		crab2.reenable_collision_shapes()
+		crab1.show()
+		crab2.show()
 
 
 func _on_Crab_Killed():

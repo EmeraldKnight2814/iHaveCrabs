@@ -10,7 +10,6 @@ func _ready():
 
 func room_ready():
 	$ColorRect.hide()
-	$RoomShape/RectColl.disabled = true
 	crab.reenable_collision_shapes()
 	crab.show()
 
