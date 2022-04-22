@@ -10,7 +10,6 @@ func _ready():
 		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
 		slots[i].slot_index = i
 		slots[i].slotType = SlotClass.SlotType.INVENTORY
-	#	EquipChange.set_stats("Card_Z")
 	
 	for i in range(equip_slots.size()):
 		equip_slots[i].connect("gui_input", self, "slot_gui_input", [equip_slots[i]])
@@ -67,6 +66,7 @@ func left_click_empty_slot(slot: SlotClass):
 		PlayerInventory.add_item_to_empty_slot(find_parent("HUD").holding_item, slot)
 		slot.putIntoSlot(find_parent("HUD").holding_item)
 		find_parent("HUD").holding_item = null
+		initialize_equips()
 
 func left_click_swap(event: InputEvent, slot: SlotClass):
 	if able_to_put_into_slot(slot):

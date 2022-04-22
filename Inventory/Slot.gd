@@ -35,6 +35,7 @@ func refresh_style():
 		set('custom_styles/panel', empty_style)
 	else:
 		set('custom_styles/panel', default_style)
+	
 
 func pickFromSlot():
 	remove_child(item)

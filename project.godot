@@ -20,6 +20,7 @@ PlayerStats="*res://Player&Equipment/Player_Stats.tscn"
 JsonData="*res://Inventory/JSONData.gd"
 PlayerInventory="*res://Inventory/PlayerInventory.gd"
 EquipChange="*res://Inventory/EquipChange.gd"
+Stats="*res://Stats.gd"
 
 [display]
 

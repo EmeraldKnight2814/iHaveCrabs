@@ -4,7 +4,7 @@ const ItemClass = preload("res://Inventory/Item.gd")
 const NUM_INVENTORY_SLOTS = 32
 
 var inventory = {
-	0: ["Card_Z"]
+	4: ["Card_Z"]
 }
 
 var equips = {
@@ -21,12 +21,18 @@ func add_item(item_name):
 			return
 
 func add_item_to_empty_slot(item: ItemClass, slot: SlotClass):
-	inventory[slot.slot_index] = [item.item_name]
-	equips[slot.slot_index] = [item.item_name]
+	match slot.SlotType:
+		SlotClass.SlotType.INVENTORY:
+			inventory[slot.slot_index] = [item.item_name]
+		_:
+			equips[slot.slot_index] = [item.item_name]
 
 func remove_item(slot: SlotClass):
-	inventory.erase(slot.slot_index)
-	equips.erase(slot.slot_index)
+	match slot.SlotType:
+		SlotClass.SlotType.INVENTORY:
+			inventory.erase(slot.slot_index)
+		_:
+			equips.erase(slot.slot_index)
 
 func update_slot_visual(slot_index, item_name):
 	var slot = get_tree().root.get_node("/root/Main/HUD/Inventory/GridContainer/Slot" + str(slot_index + 1))
