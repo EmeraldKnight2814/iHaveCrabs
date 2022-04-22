@@ -108,7 +108,6 @@ func fire(player):
 	var fire = fireball.instance()
 	fire.transform = $FireStarter.global_transform
 	owner.owner.owner.add_child(fire)
-	print("Fire!!!")
 
 
 func _on_HurtBox_area_entered(area):

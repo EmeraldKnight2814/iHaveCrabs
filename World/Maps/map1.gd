@@ -4,6 +4,22 @@ var rng = RandomNumberGenerator.new()
 var first_room
 var rooms_cleared = []
 
+onready var room1_collision_shape = $Room1/RoomShape/RectColl
+onready var room2_collision_shape = $Room1/RoomShape/RectColl
+onready var room3_collision_shape = $Room1/RoomShape/RectColl
+onready var room4_collision_shape = $Room1/RoomShape/RectColl
+onready var room5_collision_shape = $Room1/RoomShape/RectColl
+onready var room6_collision_shape = $Room1/RoomShape/RectColl
+onready var room7_collision_shape = $Room1/RoomShape/RectColl
+onready var single_room1_collision_shape = $SingleRoom1/RoomShape/RectColl
+onready var single_room2_collision_shape = $SingleRoom2/RoomShape/RectColl
+onready var single_room3_collision_shape = $SingleRoom3/RoomShape/RectColl
+onready var corner_room1_collision_shape = $CornerRoom1/RoomShape/RectColl
+onready var corner_room2_collision_shape = $CornerRoom2/RoomShape/RectColl
+onready var linear_room_collision_shape = $LinearRoom1/RoomShape/RectColl
+onready var boss_room_collision_shape = $BossRoomTop/RoomShape/BossRoomColl
+
+
 signal victory
 
 func _ready():
@@ -32,45 +48,59 @@ func start_game():
 #FUNCTIONS TO READY ROOMS FOR PLAYERS
 func room1_ready():
 	$Room1.room_ready()
+	room1_collision_shape.queue_free()
 
 func room2_ready():
 	$Room2.room_ready()
+	room2_collision_shape.queue_free()
 
 func room3_ready():
 	$Room3.room_ready()
+	room3_collision_shape.queue_free()
 
 func room4_ready():
 	$Room4.room_ready()
+	room4_collision_shape.queue_free()
 
 func room5_ready():
 	$Room5.room_ready()
+	room5_collision_shape.queue_free()
 
 func room6_ready():
 	$Room6.room_ready()
+	room6_collision_shape.queue_free()
 
 func room7_ready():
 	$Room7.room_ready()
+	room7_collision_shape.queue_free()
 
 func corner_room1_ready():
 	$CornerRoom1.room_ready()
+	corner_room1_collision_shape.queue_free()
 
 func corner_room2_ready():
 	$CornerRoom2.room_ready()
+	corner_room2_collision_shape.queue_free()
 
 func single_room1_ready():
 	$SingleRoom1.room_ready()
+	single_room1_collision_shape.queue_free()
 
 func single_room2_ready():
 	$SingleRoom2.room_ready()
+	single_room2_collision_shape.queue_free()
 
 func single_room3_ready():
 	$SingleRoom3.room_ready()
+	single_room3_collision_shape.queue_free()
 
 func linear_room1_ready():
 	$LinearRoom1.room_ready()
+	linear_room_collision_shape.queue_free()
 
 func boss_room_ready():
 	$BossRoomTop.room_ready()
+	boss_room_collision_shape.queue_free()
 
 
 
