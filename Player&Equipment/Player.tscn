@@ -1,10 +1,11 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Player&Equipment/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
 [ext_resource path="res://hit_hurt_boxes/HitBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player&Equipment/SwordHitBox.gd" type="Script" id=4]
 [ext_resource path="res://Player&Equipment/PickupZone.gd" type="Script" id=5]
+[ext_resource path="res://Misc. Assets/sword_swish.wav" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=8]
 resource_name = "Idle down"
@@ -109,6 +110,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 3.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("swoosh:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=37]
 resource_name = "attack_down"
@@ -162,6 +175,18 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("swoosh:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=36]
@@ -217,6 +242,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("swoosh:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=34]
 resource_name = "attack_right"
@@ -271,6 +308,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("swoosh:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=35]
 resource_name = "attack_up"
@@ -324,6 +373,18 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("swoosh:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=55]
@@ -815,7 +876,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 13
-frame = 35
+frame = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -856,7 +917,7 @@ shape = SubResource( 2 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( -1, 6.3 )
-rotation = 1.5708
+rotation = 4.71239
 scale = Vector2( 0.1, 0.1 )
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
@@ -894,6 +955,9 @@ shape = SubResource( 54 )
 [node name="Arrow_Start" type="Position2D" parent="."]
 position = Vector2( -2.3, -11.9 )
 rotation = -1.5708
+
+[node name="swoosh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_entered"]

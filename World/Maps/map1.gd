@@ -93,6 +93,7 @@ func _on_Room1_room_cleared():
 	corner_room1_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -104,6 +105,7 @@ func _on_Room4_room_cleared():
 	single_room1_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -115,6 +117,7 @@ func _on_Room2_room_cleared():
 	single_room2_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -125,6 +128,7 @@ func _on_CornerRoom1_room_cleared():
 	room2_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -133,6 +137,7 @@ func _on_SingleRoom1_room_cleared():
 	rooms_cleared.append(9)
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -141,6 +146,7 @@ func _on_SingleRoom2_room_cleared():
 	rooms_cleared.append(10)
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -151,6 +157,7 @@ func _on_Room3_room_cleared():
 	corner_room2_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -161,6 +168,7 @@ func _on_CornerRoom2_room_cleared():
 	room2_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -169,12 +177,14 @@ func _on_LinearRoom1_room_cleared():
 	boss_room_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 
 
 func _on_BossRoomTop_room_cleared():
 	emit_signal("victory")
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 
 
 func _on_Room5_room_cleared():
@@ -184,6 +194,7 @@ func _on_Room5_room_cleared():
 	room6_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -194,6 +205,7 @@ func _on_Room6_room_cleared():
 	room4_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -202,6 +214,7 @@ func _on_SingleRoom3_room_cleared():
 	rooms_cleared.append(12)
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
 
@@ -211,5 +224,6 @@ func _on_Room7_room_cleared():
 	room5_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	$RoomClear.play()
 	if rooms_cleared.size() == 12:
 		linear_room1_ready()
