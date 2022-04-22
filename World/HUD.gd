@@ -86,5 +86,9 @@ func update_current_weapon():
 	else:
 		$Current_Weapon.texture = weapons[0]
 
+func victory():
+	$RestartButton.text = "You Won! Restart?"
+	$RestartButton.show()
+
 func _on_RestartButton_pressed():
 	emit_signal("restart_game")

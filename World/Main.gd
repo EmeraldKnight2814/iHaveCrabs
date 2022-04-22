@@ -68,3 +68,7 @@ func _on_HUD_restart_game():
 	start_game()
 	$HUD/RestartButton.hide()
 	$HUD/dead.hide()
+
+
+func _on_map1_victory():
+	$HUD.victory()
