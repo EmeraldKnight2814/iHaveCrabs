@@ -1009,7 +1009,6 @@ position = Vector2( 513, 351.5 )
 shape = SubResource( 109 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 margin_left = -69.0
 margin_top = -62.0
 margin_right = 1084.0

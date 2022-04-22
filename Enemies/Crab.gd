@@ -31,6 +31,7 @@ onready var geraldStats = PlayerStats
 
 
 func _ready():
+	randomize()
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = 75

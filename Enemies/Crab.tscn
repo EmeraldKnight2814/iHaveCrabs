@@ -28,14 +28,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "black",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "blue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "black",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
@@ -48,6 +48,26 @@ animations = [ {
 "name": "green",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 5 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "orange",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "yellow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "white",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "violet",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "red",
@@ -56,26 +76,6 @@ animations = [ {
 "frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "purple",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "orange",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "white",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "yellow",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "violet",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ) ],
@@ -110,6 +110,7 @@ MAX_SPEED = 100
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "cyan"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

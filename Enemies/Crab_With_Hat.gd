@@ -14,8 +14,8 @@ var fireball = preload("res://Enemies/Fireball.tscn")
 export var HIT_POINTS = 25
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
-export var ACCELERATION = 200
-export var MAX_SPEED = 15
+export var ACCELERATION = 500
+export var MAX_SPEED = 50
 export var WANDER_TARGET_RANGE = 4
 
 var knockback = Vector2.ZERO
@@ -31,6 +31,7 @@ onready var geraldStats = PlayerStats
 
 
 func _ready():
+	randomize()
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = 25
@@ -96,8 +97,9 @@ func pick_random_state(state_list):
 
 func fire(player):
 	var fire = fireball.instance()
-	owner.add_child(fire)
 	fire.transform = $FireStarter.global_transform
+	owner.owner.owner.add_child(fire)
+	print("Fire!!!")
 
 
 func _on_HurtBox_area_entered(area):

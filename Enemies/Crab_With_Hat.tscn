@@ -28,9 +28,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "yellow_walk",
+"name": "green_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ), ExtResource( 15 ) ],
@@ -38,19 +38,29 @@ animations = [ {
 "name": "purple_walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "blue_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "cyan_walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "white_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "violet_walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "orange_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "violet_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
@@ -68,19 +78,9 @@ animations = [ {
 "name": "black_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "cyan_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "green_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "blue_walk",
+"name": "yellow_walk",
 "speed": 5.0
 } ]
 
