@@ -18,6 +18,7 @@ func _ready():
 func start_game():
 	#Initialilze player's stats with base set
 	geraldStats.hit_points = 3
+	geraldStats.max_hit_points = 3
 	geraldStats.damage = 25
 	geraldStats.knockback_modifier = 1
 	geraldStats.weapon_type = 1
@@ -25,6 +26,7 @@ func start_game():
 	geraldStats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
+	$HUD.update_hp()
 
 
 
@@ -41,6 +43,7 @@ func _unhandled_input(event):
 		pause.show()
 
 func _on_Player_hit():
+	$HUD.update_hp()
 	if gerald.stats.hit_points <= 0:
 		deathSound.play()
 		print("No Lives Left")
