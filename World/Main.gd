@@ -12,9 +12,6 @@ onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqC
 onready var hud = $HUD
 onready var pause = $HUD/Pause
 
-func _ready():
-	start_game()
-
 func start_game():
 	#Initialilze player's stats with base set
 	geraldStats.hit_points = 3
@@ -29,6 +26,7 @@ func start_game():
 	bgm.play()
 	$HUD.update_hp()
 	$HUD.update_current_weapon()
+	$map1.start_game()
 
 
 
@@ -71,3 +69,12 @@ func _on_HUD_restart_game():
 
 func _on_map1_victory():
 	$HUD.victory()
+
+
+func _on_Begin_pressed():
+	$Start_Screen/Back_Screen.hide()
+	$Start_Screen/MainMenu.hide()
+	start_game()
+
+func _on_Exit_pressed():
+	get_tree().quit()
