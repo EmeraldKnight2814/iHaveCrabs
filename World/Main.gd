@@ -31,10 +31,10 @@ func start_game():
 
 func _unhandled_input(event):
 	if(event.is_action_pressed("swap_weapon")):
-		if(geraldStats.weapon_type == 1):
+		if(PlayerStats.weapon_type == 1):
 			PlayerStats.weapon_type = 2
 			$HUD.update_current_weapon()
-		elif(geraldStats.weapon_type == 2):
+		elif(PlayerStats.weapon_type == 2):
 			PlayerStats.weapon_type = 1
 			$HUD.update_current_weapon()
 		else:
