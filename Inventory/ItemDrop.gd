@@ -9,7 +9,7 @@ var player = null
 var being_picked_up = false
 
 func _ready():
-	if item_name == null:
+	if JsonData.check == null:
 		item_name = "Card_A"
 	else:
 		item_name = JsonData.get_rand() 

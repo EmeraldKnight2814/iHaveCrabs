@@ -121,7 +121,7 @@ func _on_HurtBox_area_entered(area):
 			$Hit.play()
 
 func drop_item():
-	JsonData.random_drop()
+	#JsonData.random_drop()
 	owner.owner.owner.add_child(drop.instance())
 
 func zone_change(value):

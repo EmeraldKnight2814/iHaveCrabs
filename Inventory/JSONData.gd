@@ -2,6 +2,7 @@ extends Node
 
 var item_data: Dictionary
 onready var rand = random_drop()
+var check = true
 
 func _ready():
 	item_data = LoadData("res://Data/ItemData.json")
