@@ -25,36 +25,6 @@ __meta__ = {
 }
 
 [node name="MainMenu" parent="Start_Screen" instance=ExtResource( 8 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 0.0
-
-[node name="VBoxContainer" parent="Start_Screen/MainMenu" index="0"]
-margin_right = 1920.0
-margin_bottom = 1080.0
-
-[node name="TextureRect" parent="Start_Screen/MainMenu/VBoxContainer" index="0"]
-margin_right = 1920.0
-
-[node name="MainMenu_Options" parent="Start_Screen/MainMenu/VBoxContainer" index="1"]
-margin_right = 1920.0
-margin_bottom = 1025.0
-
-[node name="Begin" parent="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options" index="0"]
-margin_top = 338.0
-margin_right = 1920.0
-margin_bottom = 388.0
-
-[node name="Exit" parent="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options" index="1"]
-margin_top = 408.0
-margin_right = 1920.0
-margin_bottom = 458.0
-
-[node name="Label" parent="Start_Screen/MainMenu/VBoxContainer" index="2"]
-margin_top = 1029.0
-margin_right = 1920.0
-margin_bottom = 1080.0
 
 [node name="map1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 82, 113 )

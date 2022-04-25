@@ -100,25 +100,34 @@ func pick_random_state(state_list):
 	return state_list.pop_front()
 
 func _on_HurtBox_area_entered(area):
-	if area.name == "SwordHitbox":
-		HIT_POINTS -= geraldStats.damage
-		if HIT_POINTS <= 0:
-			emit_signal("Crab_Killed")
-			queue_free()
+	var layer = area.get_collision_layer()
+	print("The layer that collided was: ")
+	print(layer)
+	#if area is sword
+	if layer == 32:
+		if area.name == "SwordHitbox":
+			HIT_POINTS -= geraldStats.damage
+			if HIT_POINTS <= 0:
+				emit_signal("Crab_Killed")
+				queue_free()
+			else:
+				$Hit.play()
+				knockback = area.knockback_vector * 200
 		else:
-			$Hit.play()
-			knockback = area.knockback_vector * 200
-	elif area.name == "Fireball":
-		HIT_POINTS = 0
+			HIT_POINTS -= geraldStats.damage
+			print("Crab hit by Arrow")
+			if HIT_POINTS <= 0:
+				emit_signal("Crab_Killed")
+				queue_free()
+			else:
+				$Hit.play()
+	#if area is fireball
+	elif layer == 128:
+		print("Crab hit by Fireball")
+		HIT_POINTS -= 200
 		emit_signal("Crab_Killed")
 		queue_free()
-	elif area.name == "Arrow":
-		HIT_POINTS -= geraldStats.damage
-		if HIT_POINTS <= 0:
-			emit_signal("Crab_Killed")
-			queue_free()
-		else:
-			$Hit.play()
+	
 
 func drop_item():
 	#JsonData.random_drop()

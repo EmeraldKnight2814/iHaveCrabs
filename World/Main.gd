@@ -6,7 +6,6 @@ var rng = RandomNumberGenerator.new()
 onready var gerald  = $Gerald
 onready var hitSound = $Sounds/Player_Hit
 onready var deathSound = $Sounds/Player_Death
-onready var enemies = $Enemies
 onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqCjgw
 onready var hud = $HUD
 onready var pause = $HUD/Pause

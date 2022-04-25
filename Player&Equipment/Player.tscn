@@ -492,7 +492,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 180.0 ]
+"values": [ -185.0 ]
 }
 
 [sub_resource type="Animation" id=57]
@@ -876,7 +876,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 13
-frame = 20
+frame = 44
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -953,8 +953,8 @@ position = Vector2( -0.9, 6.8 )
 shape = SubResource( 54 )
 
 [node name="Arrow_Start" type="Position2D" parent="."]
-position = Vector2( -2.3, -11.9 )
-rotation = -1.5708
+position = Vector2( -10.8, 8.2 )
+rotation = 3.14159
 
 [node name="swoosh" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
