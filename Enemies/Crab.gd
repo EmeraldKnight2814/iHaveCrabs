@@ -9,9 +9,6 @@ enum{
 	CHASE
 }
 
-#TJ COde
-var drop = preload("res://Inventory/ItemDrop.tscn")
-
 export var HIT_POINTS = 75
 export var FRICTION = 100
 export var VELOCITY = Vector2.ZERO
@@ -41,6 +38,7 @@ func _ready():
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = 75
+	add_to_group("enemy")
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -113,6 +111,12 @@ func _on_HurtBox_area_entered(area):
 			else:
 				$Hit.play()
 				knockback = area.knockback_vector * 200
+	if area.name == "SwordHitbox":
+		HIT_POINTS -= geraldStats.damage
+		if HIT_POINTS <= 0:
+			emit_signal("Crab_Killed")
+			drop_item()
+			queue_free()
 		else:
 			HIT_POINTS -= geraldStats.damage
 			print("Crab hit by Arrow")
@@ -126,13 +130,34 @@ func _on_HurtBox_area_entered(area):
 		print("Crab hit by Fireball")
 		HIT_POINTS -= 200
 		emit_signal("Crab_Killed")
+		drop_item()
 		queue_free()
 	
 
+	elif area.name == "Arrow":
+		HIT_POINTS -= geraldStats.damage
+		if HIT_POINTS <= 0:
+			emit_signal("Crab_Killed")
+			drop_item()
+			queue_free()
+		else:
+			$Hit.play()
+
+
 func drop_item():
-	#JsonData.random_drop()
-	owner.owner.owner.add_child(drop.instance())
+	JsonData.random_drop(self.position)
+	print("Trying to make card")
 
 func zone_change(value):
 	$PlayerDetectionZone/CollisionShape2D.shape.radius = value
 	print("Done!")
+
+func up_speed(value):
+	MAX_SPEED += value
+
+func fire_speed():
+	pass
+
+func reset():
+	MAX_SPEED = 30
+	MAX_HIT_POINTS = PlayerStats.crab_max_hit_points

@@ -1,8 +1,9 @@
 extends Node
 
 var item_data: Dictionary
-onready var rand = random_drop()
+var drop = preload("res://Inventory/ItemDrop.tscn")
 var check = true
+var main
 
 func _ready():
 	item_data = LoadData("res://Data/ItemData.json")
@@ -16,11 +17,15 @@ func LoadData(file_path):
 	file_data.close()
 	return json_data.result
 
-func random_drop():
+func random_drop(crab_position: Vector2):
 	item_data = LoadData("res://Data/ItemData.json")
+	var item_drop = drop.instance()
+	item_drop.position = crab_position
+	item_drop.item_name = get_name()
+	main.add_child(drop.instance())
+	print("Tried!")
+
+func get_name():
 	var a = item_data.keys()
 	a = a[randi() % a.size()]
-	rand = a
-
-func get_rand():
-	return rand
+	return a

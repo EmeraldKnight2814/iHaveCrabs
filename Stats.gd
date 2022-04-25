@@ -11,7 +11,6 @@ var crab_max_hit_points = 75 setget set_crab_hit_points
 var wizard_max_hit_points = 25 setget set_wizard_hit_points
 var crab_zone_of_truth_radius = 3000 setget set_crab_zone_of_truth 
 var wizard_zone_of_truth_radius = 6000 setget set_wizard_zone_of_truth 
-var crab_max_speed = 30 setget set_crab_max_speed
 
 signal no_hit_points
 signal hit_points_changed(value)
@@ -26,7 +25,6 @@ signal crab_hit_points_changed(value)
 signal wizard_hit_points_changed(value)
 signal crab_zone_of_truth_changed(value)
 signal wizard_zone_of_truth_changed(value)
-signal crab_max_speed_changed(value)
 
 func set_damage(value):
 	damage = value
@@ -75,26 +73,18 @@ func set_wizard_zone_of_truth(value):
 	wizard_zone_of_truth_radius = value
 	emit_signal("wizard_zone_of_truth_changed", value)
 
-func set_crab_max_speed(value):
-	crab_max_speed = value
-	emit_signal("crab_max_speed_changed", value)
-
 func _ready():
 	self.hit_points = max_hit_points
 
 func set_stats(item_name):
 	if (JsonData.item_data[item_name]["Mspeed"] != null):
-		print(crab_max_speed)
-		print(JsonData.item_data[item_name]["Mspeed"])
-		set_crab_max_speed(crab_max_speed + JsonData.item_data[item_name]["Mspeed"])
-		print("EAT")
-
-	if (JsonData.item_data[item_name]["Sneaky"] != null):
-		print(crab_zone_of_truth_radius)
-		print(JsonData.item_data[item_name]["Sneaky"])
-		set_crab_zone_of_truth(crab_zone_of_truth_radius + JsonData.item_data[item_name]["Sneaky"])
-		print("NOM")
-		print(crab_zone_of_truth_radius)
+		get_tree().call_group("enemy", "up_speed", JsonData.item_data[item_name]["Mspeed"])
+		print("C Speed Change")
+	
+	if (JsonData.item_data[item_name]["Fspeed"] != null):
+		get_tree().call_group("enemy", "fire_speed", JsonData.item_data[item_name]["Fspeed"])
+		print("F Speed Change")
+	
 
 func reset():
 	max_hit_points = 1
@@ -108,4 +98,4 @@ func reset():
 	wizard_max_hit_points = 25
 	crab_zone_of_truth_radius = 3000
 	wizard_zone_of_truth_radius = 6000
-	crab_max_speed = 30
+	get_tree().call_group("enemy", "reset")

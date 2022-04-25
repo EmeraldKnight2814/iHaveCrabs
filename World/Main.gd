@@ -10,6 +10,10 @@ onready var bgm = $Sounds/BGM #found at https://www.youtube.com/watch?v=arN6WFqC
 onready var hud = $HUD
 onready var pause = $HUD/Pause
 
+#TJ Code
+func _ready():
+	JsonData.main = self
+
 func start_game():
 	#Initialilze player's stats with base set
 	PlayerStats.hit_points = 3

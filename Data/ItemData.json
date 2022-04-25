@@ -8,7 +8,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": 4
   },
   "Card_B": {
     "Type": "P",
@@ -19,7 +20,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_C": {
     "Type": "P",
@@ -30,7 +32,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_D": {
     "Type": "P",
@@ -41,7 +44,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_E": {
     "Type": "P",
@@ -52,7 +56,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_F": {
     "Type": "P",
@@ -63,7 +68,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_G": {
     "Type": "P",
@@ -74,7 +80,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_H": {
     "Type": "P",
@@ -85,7 +92,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_I": {
     "Type": "P",
@@ -96,7 +104,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_J": {
     "Type": "P",
@@ -107,7 +116,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_K": {
     "Type": "P",
@@ -118,7 +128,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_L": {
     "Type": "P",
@@ -129,7 +140,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_M": {
     "Type": "P",
@@ -140,7 +152,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_N": {
     "Type": "P",
@@ -151,7 +164,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_O": {
     "Type": "P",
@@ -162,7 +176,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_P": {
     "Type": "P",
@@ -173,7 +188,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_Q": {
     "Type": "P",
@@ -184,7 +200,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_R": {
     "Type": "P",
@@ -195,7 +212,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_S": {
     "Type": "P",
@@ -206,7 +224,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_T": {
     "Type": "P",
@@ -217,7 +236,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_U": {
     "Type": "P",
@@ -228,7 +248,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_V": {
     "Type": "P",
@@ -239,7 +260,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_W": {
     "Type": "P",
@@ -250,7 +272,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_X": {
     "Type": "P",
@@ -261,7 +284,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_Y": {
     "Type": "P",
@@ -272,7 +296,8 @@
     "Sneaky": null,
     "Pspeed": null,
     "Pattack": null,
-    "Phealth": null
+    "Phealth": null,
+    "Fspeed": null
   },
   "Card_Z": {
     "Type": "P",
@@ -283,6 +308,7 @@
     "Sneaky": 6000,
     "Pspeed": null,
     "Pattack": 300,
-    "Phealth": 10
+    "Phealth": 10,
+    "Fspeed": null
   }
 }

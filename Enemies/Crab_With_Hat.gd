@@ -23,6 +23,7 @@ onready var MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
 var knockback = Vector2.ZERO
 var state = IDLE
 var fireballLoop = 100
+var fireballLoopcheck = 100
 var collision_disabled = false
 
 onready var sprite = $AnimatedSprite
@@ -38,6 +39,7 @@ func _ready():
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = MAX_HIT_POINTS
+	add_to_group("enemy")
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -61,7 +63,7 @@ func _physics_process(delta):
 				var direction = (player.global_position - global_position).normalized()
 				VELOCITY = VELOCITY.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 				$FireStarter.rotate($FireStarter.get_angle_to(player.global_position))
-				if fireballLoop == 100:
+				if fireballLoop == fireballLoopcheck:
 					fire(player)
 					fireballLoop = 1
 				else:
@@ -132,3 +134,13 @@ func _on_HurtBox_area_entered(area):
 		HIT_POINTS -= 200
 		emit_signal("Wizard_Crab_Killed")
 		queue_free()
+
+func up_speed(value):
+	MAX_SPEED += value
+
+func fire_speed(value):
+	fireballLoopcheck = value
+
+func reset():
+	MAX_SPEED = 50
+	MAX_HIT_POINTS = PlayerStats.crab_max_hit_points
