@@ -22,7 +22,9 @@ func _on_Fireball_area_entered(area):
 		sprite.set_flip_h(true)
 		sprite.set_flip_v(true)
 	else:
+		print("Fireball Hit Something")
 		queue_free()
 
 func _on_Fireball_body_entered(body):
+	print("Fireball Hit Something")
 	queue_free()
