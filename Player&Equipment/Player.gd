@@ -148,12 +148,19 @@ func loose_arrow():
 	a.transform = $Arrow_Start.global_transform
 
 func _on_Hurtbox_area_entered(area):
+	ouchie()
 	stats.hit_points -= 1
 	emit_signal('hit')
 
 func _on_no_hit_points():
 	state = DEAD
 	
+
+func ouchie():
+	$Hurtbox/CollisionShape2D.set_deferred("disabled", true)
+	print("Hitbox disabled")
+	$Sprite.modulate = Color(1, 0, 0)
+	$Timer.start()
 
 #TJ is writing this code btw Dan
 func _input(event):
@@ -162,3 +169,9 @@ func _input(event):
 			var pickup_item = $PickupZone.items_in_range.values()[0]
 			pickup_item.pick_up_item(self)
 			$PickupZone.items_in_range.erase(pickup_item)
+
+
+func _on_Timer_timeout():
+	$Hurtbox/CollisionShape2D.set_deferred("disabled", false)
+	print("Hitbox reenabled")
+	$Sprite.modulate = Color(1,1,1)

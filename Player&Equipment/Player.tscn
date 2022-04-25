@@ -855,7 +855,7 @@ graph_offset = Vector2( -377.137, 0 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=21]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 9.04
+radius = 8.0
 height = 0.0
 
 [sub_resource type="CapsuleShape2D" id=52]
@@ -910,6 +910,7 @@ parameters/idle/blend_position = Vector2( 0.00158477, 0.82659 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -0.1, 7 )
 rotation = 1.5708
 scale = Vector2( 2.5, 2 )
@@ -944,6 +945,7 @@ scale = Vector2( 2.5, 2 )
 shape = SubResource( 2 )
 
 [node name="PickupZone" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 256
 script = ExtResource( 5 )
@@ -959,8 +961,12 @@ rotation = 3.14159
 [node name="swoosh" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_entered"]
 [connection signal="body_exited" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="HitboxPivot/SwordHitbox"]
