@@ -40,8 +40,7 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 				if !slot.item:
 					left_click_empty_slot(slot)
 				else:
-					if find_parent("HUD").holding_item.item_name != slot.item.item_name:
-						left_click_swap(event, slot)
+					left_click_swap(event, slot)
 			elif slot.item:
 				left_click_not_holding(slot)
 

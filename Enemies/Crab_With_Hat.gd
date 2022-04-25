@@ -140,6 +140,7 @@ func up_speed(value):
 
 func fire_speed(value):
 	fireballLoopcheck = value
+	fireballLoop = value
 
 func reset():
 	MAX_SPEED = 50

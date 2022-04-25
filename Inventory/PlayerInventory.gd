@@ -7,14 +7,11 @@ var inventory = {
 	0: ["Card_A"],
 	1: ["Card_A"],
 	2: ["Card_A"],
-	3: ["Card_A"],
+	3: ["Card_A"]
 }
 
 var equips = {
-	0: ["Card_Z"],
-	1: ["Card_G"],
-	2: ["Card_L"]
-}
+	}
 
 func add_item(item_name):
 	for i in range(NUM_INVENTORY_SLOTS):

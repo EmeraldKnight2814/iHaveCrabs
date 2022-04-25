@@ -20,6 +20,7 @@ onready var crab12 = $Enemies/Crab12
 onready var crab13 = $Enemies/Crab13
 onready var crab14 = $Enemies/Crab14
 onready var crab15 = $Enemies/Crab15
+var check = false
 
 func _ready():
 	crab1.disable_collision_shapes()
@@ -54,39 +55,41 @@ func _ready():
 	crab15.hide()
 
 func room_ready():
-	$ColorRect.hide()
-	$RoomShape/RectColl.set_deferred("disabled", true)
-	if total_crabs_killed != total_crabs:
-		crab1.reenable_collision_shapes()
-		crab2.reenable_collision_shapes()
-		crab3.reenable_collision_shapes()
-		crab4.reenable_collision_shapes()
-		crab5.reenable_collision_shapes()
-		crab6.reenable_collision_shapes()
-		crab7.reenable_collision_shapes()
-		crab8.reenable_collision_shapes()
-		crab9.reenable_collision_shapes()
-		crab10.reenable_collision_shapes()
-		crab11.reenable_collision_shapes()
-		crab12.reenable_collision_shapes()
-		crab13.reenable_collision_shapes()
-		crab14.reenable_collision_shapes()
-		crab15.reenable_collision_shapes()
-		crab1.show()
-		crab2.show()
-		crab3.show()
-		crab4.show()
-		crab5.show()
-		crab6.show()
-		crab7.show()
-		crab8.show()
-		crab9.show()
-		crab10.show()
-		crab11.show()
-		crab12.show()
-		crab13.show()
-		crab14.show()
-		crab15.show()
+	if check == false:
+		check = true
+		$ColorRect.hide()
+		$RoomShape/RectColl.set_deferred("disabled", true)
+		if total_crabs_killed != total_crabs:
+			crab1.reenable_collision_shapes()
+			crab2.reenable_collision_shapes()
+			crab3.reenable_collision_shapes()
+			crab4.reenable_collision_shapes()
+			crab5.reenable_collision_shapes()
+			crab6.reenable_collision_shapes()
+			crab7.reenable_collision_shapes()
+			crab8.reenable_collision_shapes()
+			crab9.reenable_collision_shapes()
+			crab10.reenable_collision_shapes()
+			crab11.reenable_collision_shapes()
+			crab12.reenable_collision_shapes()
+			crab13.reenable_collision_shapes()
+			crab14.reenable_collision_shapes()
+			crab15.reenable_collision_shapes()
+			crab1.show()
+			crab2.show()
+			crab3.show()
+			crab4.show()
+			crab5.show()
+			crab6.show()
+			crab7.show()
+			crab8.show()
+			crab9.show()
+			crab10.show()
+			crab11.show()
+			crab12.show()
+			crab13.show()
+			crab14.show()
+			crab15.show()
 
 
 func _on_Crab_Killed():

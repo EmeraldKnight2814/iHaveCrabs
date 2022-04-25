@@ -9,7 +9,7 @@
     "Pspeed": null,
     "Pattack": null,
     "Phealth": null,
-    "Fspeed": 50
+    "Fspeed": null
   },
   "Card_B": {
     "Type": "P",
