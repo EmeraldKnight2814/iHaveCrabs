@@ -33,7 +33,7 @@ margin_right = -75.0
 margin_bottom = -900.0
 
 [node name="Crab" parent="Room1/Enemies" index="0"]
-position = Vector2( 267, 1054 )
+position = Vector2( 266, 1099 )
 ACCELERATION = 3000
 
 [node name="Crab2" parent="Room1/Enemies" index="1"]
@@ -58,7 +58,7 @@ position = Vector2( 511, 1146 )
 position = Vector2( 1032, 1419 )
 
 [node name="Crab9" parent="Room1/Enemies" index="8"]
-position = Vector2( 232, 1488 )
+position = Vector2( 379, 1533 )
 
 [node name="Crab10" parent="Room1/Enemies" index="9"]
 position = Vector2( 568, 1452 )
@@ -92,6 +92,9 @@ position = Vector2( 64, -2432 )
 
 [node name="Room5" parent="." instance=ExtResource( 11 )]
 position = Vector2( -1088, 896 )
+
+[node name="Crab_With_Hat5" parent="Room5/Enemies" index="9"]
+position = Vector2( 1014, 693 )
 
 [node name="Room6" parent="." instance=ExtResource( 12 )]
 position = Vector2( -1088, 1727 )

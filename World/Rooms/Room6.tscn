@@ -1052,7 +1052,7 @@ position = Vector2( 817, 462 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_With_Hat" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( -6.00012, 36 )
+position = Vector2( 20, 198 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_With_Hat2" parent="Enemies" instance=ExtResource( 4 )]
@@ -1060,15 +1060,15 @@ position = Vector2( 384, 187 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_With_Hat3" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 990, 23 )
+position = Vector2( 1005, 183 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_With_Hat4" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 0, 689 )
+position = Vector2( 15, 521 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_With_Hat5" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 1004, 693 )
+position = Vector2( 996, 527 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_Dead" type="AudioStreamPlayer" parent="."]

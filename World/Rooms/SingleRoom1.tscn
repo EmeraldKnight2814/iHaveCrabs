@@ -1033,7 +1033,7 @@ __meta__ = {
 }
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 278, 599 )
+position = Vector2( 249, 553 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab2" parent="Enemies" instance=ExtResource( 3 )]
@@ -1045,11 +1045,11 @@ position = Vector2( 636, 594 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab4" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 802, 597 )
+position = Vector2( 791, 581 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab5" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 991, 620 )
+position = Vector2( 981, 562 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab6" parent="Enemies" instance=ExtResource( 3 )]
@@ -1073,7 +1073,7 @@ position = Vector2( 201, 360 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab11" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 303, 146 )
+position = Vector2( 263, 229 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab12" parent="Enemies" instance=ExtResource( 3 )]
@@ -1085,11 +1085,11 @@ position = Vector2( 674, 146 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab14" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 845, 146 )
+position = Vector2( 813, 220 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab15" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 1016, 134 )
+position = Vector2( 1033, 222 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_Dead" type="AudioStreamPlayer" parent="."]
