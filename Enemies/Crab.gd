@@ -132,16 +132,6 @@ func _on_HurtBox_area_entered(area):
 		emit_signal("Crab_Killed")
 		drop_item()
 		queue_free()
-	
-
-	elif area.name == "Arrow":
-		HIT_POINTS -= geraldStats.damage
-		if HIT_POINTS <= 0:
-			emit_signal("Crab_Killed")
-			drop_item()
-			queue_free()
-		else:
-			$Hit.play()
 
 
 func drop_item():
