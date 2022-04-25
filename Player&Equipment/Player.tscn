@@ -125,7 +125,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id=37]
 resource_name = "attack_down"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -191,7 +191,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=36]
 resource_name = "attack_left"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -257,7 +257,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=34]
 resource_name = "attack_right"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -323,7 +323,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=35]
 resource_name = "attack_up"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -389,7 +389,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=55]
 resource_name = "bow_down"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -443,7 +443,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=56]
 resource_name = "bow_left"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -497,7 +497,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=57]
 resource_name = "bow_right"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -551,7 +551,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=58]
 resource_name = "bow_up"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -876,7 +876,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 13
-frame = 44
+frame = 23
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -955,8 +955,8 @@ position = Vector2( -0.9, 6.8 )
 shape = SubResource( 54 )
 
 [node name="Arrow_Start" type="Position2D" parent="."]
-position = Vector2( -10.8, 8.2 )
-rotation = 3.14159
+position = Vector2( 2.40001, 13.3 )
+rotation = 1.5708
 
 [node name="swoosh" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

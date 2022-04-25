@@ -24,10 +24,8 @@ func _physics_process(delta):
 
 
 func _on_Arrow_body_entered(body):
-	print("Arrow Hit Something")
 	queue_free()
 
 
 func _on_Arrow_area_entered(area):
-	print("Arrow Hit Something")
 	queue_free()
