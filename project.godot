@@ -19,7 +19,6 @@ config/icon="res://icon.png"
 JsonData="*res://Inventory/JSONData.gd"
 PlayerStats="*res://Player&Equipment/Player_Stats.tscn"
 PlayerInventory="*res://Inventory/PlayerInventory.gd"
-EquipChange="*res://Inventory/EquipChange.gd"
 Stats="*res://Stats.gd"
 
 [display]

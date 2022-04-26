@@ -87,15 +87,4 @@ func set_stats(item_name):
 	
 
 func reset():
-	max_hit_points = 1
-	hit_points = max_hit_points
-	damage = damage
-	knockback_modifier = knockback_modifier
-	weapon_type = 1 
-	current_weapon = 0 
-	current_armor = 0 
-	crab_max_hit_points = 75 
-	wizard_max_hit_points = 25
-	crab_zone_of_truth_radius = 3000
-	wizard_zone_of_truth_radius = 6000
 	get_tree().call_group("enemy", "reset")
