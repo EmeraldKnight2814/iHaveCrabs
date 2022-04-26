@@ -19,8 +19,6 @@ export var MAX_SPEED = 200
 export var WANDER_TARGET_RANGE = 4
 export var fireballLoopcheck = 100
 
-onready var MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
-
 var knockback = Vector2.ZERO
 var state = IDLE
 var fireballLoop = 500
@@ -97,8 +95,6 @@ func fire(player):
 	var fire = fireball.instance()
 	fire.transform = $FireStarter.global_transform
 	owner.add_child(fire)
-
-
 
 func _on_HurtBox_area_entered(area):
 	var layer = area.get_collision_layer()

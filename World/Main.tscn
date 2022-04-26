@@ -49,6 +49,7 @@ position = Vector2( -387, -977 )
 position = Vector2( 353, 355 )
 
 [node name="Sounds" type="Node" parent="."]
+pause_mode = 2
 
 [node name="Player_Hit" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 7 )

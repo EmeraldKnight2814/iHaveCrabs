@@ -30,11 +30,13 @@ var weapons = [preload("res://Sprites/UI/blank_sword.png"),
 #Open inv
 func _input(event):
 	if event.is_action_pressed("inventory"):
+		get_tree().paused = true
 		$Inventory.visible = !$Inventory.visible
 	#	$Inventory.initialize_inventory()
 		if (!$Inventory.visible):
 			Stats.reset()
 			$Inventory.update_stats()
+			get_tree().paused = false
 
 func _on_Unpause_pressed():
 	emit_signal("unpause")
