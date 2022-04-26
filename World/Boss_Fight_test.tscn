@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player&Equipment/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/Reginald_King_Of_The_Crabs.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player&Equipment/ZoomingCamera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Boss_Fight_test.gd" type="Script" id=4]
+[ext_resource path="res://World/HUD.tscn" type="PackedScene" id=5]
 
 [node name="Boss_Fight_test" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="Reginald_King_Of_The_Crabs" parent="." instance=ExtResource( 2 )]
 
@@ -15,3 +18,13 @@ position = Vector2( 866, 973 )
 scale = Vector2( 1, 1 )
 
 [node name="ZoomingCamera2D" parent="Player" instance=ExtResource( 3 )]
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="hit_sound" type="AudioStreamPlayer" parent="Sounds"]
+
+[node name="death_sound" type="AudioStreamPlayer" parent="Sounds"]
+
+[connection signal="King_Crab_Hit" from="Reginald_King_Of_The_Crabs" to="." method="_on_Reginald_King_Of_The_Crabs_King_Crab_Hit"]
+[connection signal="King_Crab_Killed" from="Reginald_King_Of_The_Crabs" to="." method="_on_Reginald_King_Of_The_Crabs_King_Crab_Killed"]
+[connection signal="hit" from="Player" to="." method="_on_Player_hit"]

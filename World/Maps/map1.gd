@@ -5,6 +5,7 @@ var first_room
 var rooms_cleared = []
 
 signal healed
+signal boss_battle_beginning
 
 onready var room1_collision_shape = $Room1/RoomShape/RectColl
 onready var room2_collision_shape = $Room1/RoomShape/RectColl
@@ -177,6 +178,7 @@ func _on_LinearRoom1_room_cleared():
 	boss_room_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
+	emit_signal("boss_battle_beginning")
 	$RoomClear.play()
 
 

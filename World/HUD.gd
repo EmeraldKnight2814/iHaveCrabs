@@ -24,8 +24,36 @@ var hp_5 = [preload("res://Sprites/UI/HP/Max_5/HealthBarFull_5.png"),
 			preload("res://Sprites/UI/HP/Max_5/HealthBar_5Damage_5.png"),]
 onready var hp = $Hit_Points
 
+var boss_hp_bar = [preload("res://Sprites/UI/HP/Boss/Full.png"),
+					preload("res://Sprites/UI/HP/Boss/475_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/450_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/425_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/400_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/375_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/350_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/325_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/300_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/275_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/250_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/225_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/200_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/175_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/150_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/125_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/100_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/075_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/050_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/025_HP.png"),
+					preload("res://Sprites/UI/HP/Boss/000_HP.png"),]
+
+onready var boss_hp = $BossBar/Bar
+onready var boss_name = $BossBar/Name
+
 var weapons = [preload("res://Sprites/UI/blank_sword.png"),
 					preload("res://Sprites/UI/blank_bow.png")]
+
+#func _ready():
+#	$BossBar.hide()
 
 #Open inv
 func _input(event):
@@ -79,6 +107,50 @@ func update_hp():
 			hp.texture = hp_5[0]
 		elif PlayerStats.hit_points == 0:
 			hp.texture = hp_5[5]
+
+func update_boss_hp():
+	if Stats.reginald_hp == 500:
+		boss_hp.texture = boss_hp_bar[0]
+	elif Stats.reginald_hp == 475:
+		boss_hp.texture = boss_hp_bar[1]
+	elif Stats.reginald_hp == 450:
+		boss_hp.texture = boss_hp_bar[2]
+	elif Stats.reginald_hp == 425:
+		boss_hp.texture = boss_hp_bar[3]
+	elif Stats.reginald_hp == 400:
+		boss_hp.texture = boss_hp_bar[4]
+	elif Stats.reginald_hp == 375:
+		boss_hp.texture = boss_hp_bar[5]
+	elif Stats.reginald_hp == 350:
+		boss_hp.texture = boss_hp_bar[6]
+	elif Stats.reginald_hp == 325:
+		boss_hp.texture = boss_hp_bar[7]
+	elif Stats.reginald_hp == 300:
+		boss_hp.texture = boss_hp_bar[8]
+	elif Stats.reginald_hp == 275:
+		boss_hp.texture = boss_hp_bar[9]
+	elif Stats.reginald_hp == 250:
+		boss_hp.texture = boss_hp_bar[10]
+	elif Stats.reginald_hp == 225:
+		boss_hp.texture = boss_hp_bar[11]
+	elif Stats.reginald_hp == 200:
+		boss_hp.texture = boss_hp_bar[12]
+	elif Stats.reginald_hp == 175:
+		boss_hp.texture = boss_hp_bar[13]
+	elif Stats.reginald_hp == 150:
+		boss_hp.texture = boss_hp_bar[14]
+	elif Stats.reginald_hp == 125:
+		boss_hp.texture = boss_hp_bar[15]
+	elif Stats.reginald_hp == 100:
+		boss_hp.texture = boss_hp_bar[16]
+	elif Stats.reginald_hp == 075:
+		boss_hp.texture = boss_hp_bar[17]
+	elif Stats.reginald_hp == 050:
+		boss_hp.texture = boss_hp_bar[18]
+	elif Stats.reginald_hp == 025:
+		boss_hp.texture = boss_hp_bar[19]
+	elif Stats.reginald_hp == 000:
+		boss_hp.texture = boss_hp_bar[20]
 
 func update_current_weapon():
 	if PlayerStats.weapon_type == 1:

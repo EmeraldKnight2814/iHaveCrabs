@@ -11,6 +11,7 @@ var crab_max_hit_points = 75 setget set_crab_hit_points
 var wizard_max_hit_points = 25 setget set_wizard_hit_points
 var crab_zone_of_truth_radius = 3000 setget set_crab_zone_of_truth 
 var wizard_zone_of_truth_radius = 6000 setget set_wizard_zone_of_truth 
+var reginald_hp = 500 setget set_reginald_hit_points
 
 signal no_hit_points
 signal hit_points_changed(value)
@@ -72,6 +73,9 @@ func set_crab_zone_of_truth(value):
 func set_wizard_zone_of_truth(value):
 	wizard_zone_of_truth_radius = value
 	emit_signal("wizard_zone_of_truth_changed", value)
+
+func set_reginald_hit_points(value):
+	reginald_hp = value
 
 func _ready():
 	self.hit_points = max_hit_points

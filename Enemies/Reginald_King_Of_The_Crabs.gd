@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal King_Crab_Killed
+signal King_Crab_Hit
 
 #bulk of code based off of uheartbeast tutorial (Github: https://github.com/uheartbeast/youtube-tutorials/tree/master/Action%20RPG)
 enum{
@@ -110,32 +111,31 @@ func _on_HurtBox_area_entered(area):
 	print(layer)
 	#if area is sword
 	if layer == 32:
-		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		HIT_POINTS -= PlayerStats.damage
-		print("Minus Player Damage = " + str(PlayerStats.damage))
-		print("Reignald's Hit Points = " + str(HIT_POINTS))
+		Stats.reginald_hp = HIT_POINTS
 		if HIT_POINTS <= 0:
 			emit_signal("King_Crab_Killed")
 			queue_free()
 		else:
+			emit_signal("King_Crab_Hit")
 			$Hit.play()
 			knockback = area.knockback_vector * 500
 	#if area is fireball
 	elif layer == 128:
-		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		HIT_POINTS -= 100
-		print("Minus Fireball Damage = " + str(100))
-		print("Reignald's Hit Points = " + str(HIT_POINTS))
-		if HIT_POINTS <= 0:
-			emit_signal("King_Crab_Killed")
-			queue_free()
-	elif layer == 512:
-		print("Reignald's Hit Points = " + str(HIT_POINTS))
-		HIT_POINTS -= PlayerStats.damage
-		print("Minus Player Damage = " + str(PlayerStats.damage))
-		print("Reignald's Hit Points = " + str(HIT_POINTS))
+		Stats.reginald_hp = HIT_POINTS
 		if HIT_POINTS <= 0:
 			emit_signal("King_Crab_Killed")
 			queue_free()
 		else:
+			emit_signal("King_Crab_Hit")
+			$Hit.play()
+	elif layer == 512:
+		HIT_POINTS -= PlayerStats.damage
+		Stats.reginald_hp = HIT_POINTS
+		if HIT_POINTS <= 0:
+			emit_signal("King_Crab_Killed")
+			queue_free()
+		else:
+			emit_signal("King_Crab_Hit")
 			$Hit.play()

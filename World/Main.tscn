@@ -14,18 +14,6 @@
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Start_Screen" type="CanvasLayer" parent="."]
-
-[node name="Back_Screen" type="ColorRect" parent="Start_Screen"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0.980392, 0.843137, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MainMenu" parent="Start_Screen" instance=ExtResource( 8 )]
-
 [node name="map1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 82, 113 )
 
@@ -61,15 +49,28 @@ stream = ExtResource( 6 )
 stream = ExtResource( 11 )
 volume_db = -20.0
 
-[connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Begin" to="." method="_on_Begin_pressed"]
-[connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Exit" to="." method="_on_Exit_pressed"]
+[node name="Start_Screen" type="CanvasLayer" parent="."]
+
+[node name="Back_Screen" type="ColorRect" parent="Start_Screen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.980392, 0.843137, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" parent="Start_Screen" instance=ExtResource( 8 )]
+
+[connection signal="boss_battle_beginning" from="map1" to="." method="_on_map1_boss_battle_beginning"]
 [connection signal="healed" from="map1" to="." method="_on_map1_healed"]
 [connection signal="victory" from="map1" to="." method="_on_map1_victory"]
+[connection signal="King_Crab_Hit" from="map1/BossRoomTop/Boss/Reginald_King_Of_The_Crabs" to="." method="_on_Reginald_King_Of_The_Crabs_Hit"]
 [connection signal="restart_game" from="HUD" to="." method="_on_HUD_restart_game"]
 [connection signal="unpause" from="HUD" to="." method="_on_HUD_unpause"]
 [connection signal="hit" from="Gerald" to="." method="_on_Player_hit"]
+[connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Begin" to="." method="_on_Begin_pressed"]
+[connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Exit" to="." method="_on_Exit_pressed"]
 
-[editable path="Start_Screen/MainMenu"]
 [editable path="map1"]
 [editable path="map1/StartRoom"]
 [editable path="map1/Room1"]
@@ -87,3 +88,4 @@ volume_db = -20.0
 [editable path="map1/SingleRoom3"]
 [editable path="map1/Room7"]
 [editable path="HUD"]
+[editable path="Start_Screen/MainMenu"]

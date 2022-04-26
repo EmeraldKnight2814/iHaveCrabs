@@ -70,6 +70,7 @@ func _on_HUD_restart_game():
 
 
 func _on_map1_victory():
+	$HUD.update_boss_hp()
 	$HUD.victory()
 
 
@@ -84,3 +85,11 @@ func _on_Exit_pressed():
 
 func _on_map1_healed():
 	$HUD.update_hp()
+
+
+func _on_map1_boss_battle_beginning():
+	$HUD/BossBar.show()
+
+
+func _on_Reginald_King_Of_The_Crabs_Hit():
+	$HUD.update_boss_hp()
