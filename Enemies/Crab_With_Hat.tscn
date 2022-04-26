@@ -34,6 +34,21 @@ animations = [ {
 "name": "violet_walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 14 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "black_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "orange_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "white_walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "green_walk",
@@ -42,21 +57,6 @@ animations = [ {
 "frames": [ ExtResource( 21 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "purple_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "blue_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "white_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "black_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
@@ -79,14 +79,14 @@ animations = [ {
 "name": "yellow_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
 "loop": true,
-"name": "orange_walk",
+"name": "blue_walk",
 "speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 6.73333
+radius = 6.661
 height = 9.46667
 
 [sub_resource type="CircleShape2D" id=3]
@@ -101,6 +101,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "rainbow_walk"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

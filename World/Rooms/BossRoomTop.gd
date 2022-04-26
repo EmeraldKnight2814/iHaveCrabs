@@ -2,7 +2,7 @@ extends Node2D
 
 signal room_cleared
 
-onready var reginald = $Boss/Reginald_king_of_the_crabs
+onready var reginald = $Boss/Reginald_King_Of_The_Crabs
 
 func _ready():
 	reginald.disable_collision_shapes()
@@ -15,6 +15,6 @@ func room_ready():
 	reginald.show()
 
 
-func _on_Reginald_king_of_the_crabs_Killed():
+func _on_Reginald_King_Of_The_Crabs_Killed():
 	$Crab_Dead.play()
 	emit_signal("room_cleared")

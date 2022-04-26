@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-signal Wizard_Crab_Killed
+signal King_Crab_Killed
 
 #bulk of code based off of uheartbeast tutorial (Github: https://github.com/uheartbeast/youtube-tutorials/tree/master/Action%20RPG)
 enum{
@@ -17,13 +17,13 @@ export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 500
 export var MAX_SPEED = 50
 export var WANDER_TARGET_RANGE = 4
+export var fireballLoopcheck = 100
 
 onready var MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
 
 var knockback = Vector2.ZERO
 var state = IDLE
 var fireballLoop = 100
-var fireballLoopcheck = 100
 var collision_disabled = false
 
 onready var sprite = $AnimatedSprite
@@ -31,7 +31,6 @@ onready var hurtbox = $HurtBox
 onready var zoneOfTruth = $PlayerDetectionZone
 onready var zoneOfTruthShape = $PlayerDetectionZone/CollisionShape2D
 onready var wanderController = $Wander_Controller
-onready var geraldStats = PlayerStats
 
 
 func _ready():
@@ -106,15 +105,16 @@ func fire(player):
 	owner.owner.owner.add_child(fire)
 
 
+
 func _on_HurtBox_area_entered(area):
 	var layer = area.get_collision_layer()
 	print("The layer that collided was: ")
 	print(layer)
 	#if area is sword
 	if layer == 32:
-		HIT_POINTS -= geraldStats.damage
+		HIT_POINTS -= PlayerStats.damage
 		if HIT_POINTS <= 0:
-			emit_signal("Wizard_Crab_Killed")
+			emit_signal("King_Crab_Killed")
 			queue_free()
 		else:
 			$Hit.play()
@@ -122,25 +122,14 @@ func _on_HurtBox_area_entered(area):
 	#if area is fireball
 	elif layer == 128:
 		print("Crab hit by Fireball")
-		HIT_POINTS -= 200
-		emit_signal("Wizard_Crab_Killed")
+		HIT_POINTS -= 100
+		emit_signal("Crab_Killed")
 		queue_free()
 	elif layer == 512:
-		HIT_POINTS -= geraldStats.damage
+		HIT_POINTS -= PlayerStats.damage
 		print("Crab hit by Arrow")
 		if HIT_POINTS <= 0:
-			emit_signal("Wizard_Crab_Killed")
+			emit_signal("Crab_Killed")
 			queue_free()
 		else:
 			$Hit.play()
-
-func up_speed(value):
-	MAX_SPEED += value
-
-func fire_speed(value):
-	fireballLoopcheck = value
-	fireballLoop = value
-
-func reset():
-	MAX_SPEED = 50
-	MAX_HIT_POINTS = PlayerStats.crab_max_hit_points
