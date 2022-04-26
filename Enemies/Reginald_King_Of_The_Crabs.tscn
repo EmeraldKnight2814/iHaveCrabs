@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Sprites/Crabs/KingCrabA.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Crabs/KingCrabB.png" type="Texture" id=2]
@@ -6,12 +6,19 @@
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Misc. Assets/crab_hit_sound.wav" type="AudioStream" id=5]
 [ext_resource path="res://Enemies/Wander_Controller.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/Crabs/KingCrabA_Fire.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Crabs/KingCrabB_Fire.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "King",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Fireball Prep",
 "speed": 5.0
 } ]
 

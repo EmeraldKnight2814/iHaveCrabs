@@ -7,6 +7,7 @@ onready var reginald = $Boss/Reginald_King_Of_The_Crabs
 func _ready():
 	reginald.disable_collision_shapes()
 	reginald.hide()
+	JsonData.main = self
 
 func room_ready():
 	$ColorRect.hide()

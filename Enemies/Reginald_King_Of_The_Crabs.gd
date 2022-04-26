@@ -15,13 +15,13 @@ export var HIT_POINTS = 500
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 5000
-export var MAX_SPEED = 200
+export var MAX_SPEED = 100
 export var WANDER_TARGET_RANGE = 4
-export var fireballLoopcheck = 100
+export var fireballLoopcheck = 250
 
 var knockback = Vector2.ZERO
 var state = IDLE
-var fireballLoop = 500
+var fireballLoop = fireballLoopcheck
 var collision_disabled = false
 var main = JsonData.main
 
@@ -31,6 +31,8 @@ onready var zoneOfTruth = $PlayerDetectionZone
 onready var zoneOfTruthShape = $PlayerDetectionZone/CollisionShape2D
 onready var wanderController = $Wander_Controller
 
+func _ready():
+	sprite.animation = "King"
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -57,6 +59,10 @@ func _physics_process(delta):
 				if fireballLoop == fireballLoopcheck:
 					fire(player)
 					fireballLoop = 1
+					sprite.animation = "King"
+				elif fireballLoop >= (fireballLoopcheck - 50):
+					sprite.animation = "Fireball Prep"
+					fireballLoop += 1
 				else:
 					fireballLoop += 1
 			else:
@@ -94,7 +100,9 @@ func pick_random_state(state_list):
 func fire(player):
 	var fire = fireball.instance()
 	fire.transform = $FireStarter.global_transform
-	owner.add_child(fire)
+	fire.scale.x = 0.15
+	fire.scale.y = 0.15
+	JsonData.main.add_child(fire)
 
 func _on_HurtBox_area_entered(area):
 	var layer = area.get_collision_layer()
@@ -114,11 +122,17 @@ func _on_HurtBox_area_entered(area):
 			knockback = area.knockback_vector * 500
 	#if area is fireball
 	elif layer == 128:
+		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		HIT_POINTS -= 100
-		emit_signal("King_Crab_Killed")
-		queue_free()
+		print("Minus Fireball Damage = " + str(100))
+		print("Reignald's Hit Points = " + str(HIT_POINTS))
+		if HIT_POINTS <= 0:
+			emit_signal("King_Crab_Killed")
+			queue_free()
 	elif layer == 512:
+		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		HIT_POINTS -= PlayerStats.damage
+		print("Minus Player Damage = " + str(PlayerStats.damage))
 		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		if HIT_POINTS <= 0:
 			emit_signal("King_Crab_Killed")
