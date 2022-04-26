@@ -9,7 +9,7 @@
     "Pspeed": null,
     "Pattack": null,
     "Phealth": null,
-    "Fspeed": 50
+    "Fspeed": 5
   },
   "Card_B": {
     "Type": "P",
@@ -302,7 +302,7 @@
   "Card_Z": {
     "Type": "P",
     "Description": null,
-    "Mspeed": 50,
+    "Mspeed": 500,
     "Mattack": null,
     "Mhealth": null,
     "Sneaky": 6000,
