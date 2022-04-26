@@ -11,11 +11,11 @@ enum{
 
 var fireball = preload("res://Enemies/Fireball.tscn")
 
-export var HIT_POINTS = 0
+export var HIT_POINTS = 500
 export var FRICTION = 200
 export var VELOCITY = Vector2.ZERO
-export var ACCELERATION = 500
-export var MAX_SPEED = 50
+export var ACCELERATION = 5000
+export var MAX_SPEED = 200
 export var WANDER_TARGET_RANGE = 4
 export var fireballLoopcheck = 100
 
@@ -23,8 +23,9 @@ onready var MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
 
 var knockback = Vector2.ZERO
 var state = IDLE
-var fireballLoop = 100
+var fireballLoop = 500
 var collision_disabled = false
+var main = JsonData.main
 
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $HurtBox
@@ -32,13 +33,6 @@ onready var zoneOfTruth = $PlayerDetectionZone
 onready var zoneOfTruthShape = $PlayerDetectionZone/CollisionShape2D
 onready var wanderController = $Wander_Controller
 
-
-func _ready():
-	randomize()
-	var crab_colors = sprite.frames.get_animation_names()
-	sprite.animation = crab_colors[randi() % crab_colors.size()]
-	HIT_POINTS = MAX_HIT_POINTS
-	add_to_group("enemy")
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -102,7 +96,7 @@ func pick_random_state(state_list):
 func fire(player):
 	var fire = fireball.instance()
 	fire.transform = $FireStarter.global_transform
-	owner.owner.owner.add_child(fire)
+	owner.add_child(fire)
 
 
 
@@ -112,24 +106,26 @@ func _on_HurtBox_area_entered(area):
 	print(layer)
 	#if area is sword
 	if layer == 32:
+		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		HIT_POINTS -= PlayerStats.damage
+		print("Minus Player Damage = " + str(PlayerStats.damage))
+		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		if HIT_POINTS <= 0:
 			emit_signal("King_Crab_Killed")
 			queue_free()
 		else:
 			$Hit.play()
-			knockback = area.knockback_vector * 200
+			knockback = area.knockback_vector * 500
 	#if area is fireball
 	elif layer == 128:
-		print("Crab hit by Fireball")
 		HIT_POINTS -= 100
-		emit_signal("Crab_Killed")
+		emit_signal("King_Crab_Killed")
 		queue_free()
 	elif layer == 512:
 		HIT_POINTS -= PlayerStats.damage
-		print("Crab hit by Arrow")
+		print("Reignald's Hit Points = " + str(HIT_POINTS))
 		if HIT_POINTS <= 0:
-			emit_signal("Crab_Killed")
+			emit_signal("King_Crab_Killed")
 			queue_free()
 		else:
 			$Hit.play()

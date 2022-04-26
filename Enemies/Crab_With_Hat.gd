@@ -25,6 +25,7 @@ var state = IDLE
 var fireballLoop = 100
 var fireballLoopcheck = 100
 var collision_disabled = false
+var main = JsonData.main
 
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $HurtBox
@@ -103,7 +104,7 @@ func pick_random_state(state_list):
 func fire(player):
 	var fire = fireball.instance()
 	fire.transform = $FireStarter.global_transform
-	owner.owner.owner.add_child(fire)
+	main.add_child(fire)
 
 
 func _on_HurtBox_area_entered(area):
