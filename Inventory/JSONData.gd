@@ -17,13 +17,14 @@ func LoadData(file_path):
 	file_data.close()
 	return json_data.result
 
-func random_drop(crab_position: Vector2):
+func random_drop(position: Vector2):
 	item_data = LoadData("res://Data/ItemData.json")
 	var item_drop = drop.instance()
-	item_drop.position = crab_position
 	item_drop.item_name = get_name()
-	main.add_child(drop.instance())
+	item_drop.position = position
+	main.add_child(item_drop)
 	print("Tried!")
+	print("Item drop position = " + str(position))
 
 func get_name():
 	var a = item_data.keys()

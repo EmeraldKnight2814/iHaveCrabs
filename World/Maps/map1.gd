@@ -103,6 +103,8 @@ func boss_room_ready():
 
 #WHEN ROOMS ARE CLEARED, READY NEW ROOMS
 func _on_Room1_room_cleared():
+	JsonData.random_drop(room1_center)
+	print(room1_center)
 	rooms_cleared.append(1)
 	room5_ready()
 	room4_ready()
@@ -115,6 +117,8 @@ func _on_Room1_room_cleared():
 
 
 func _on_Room4_room_cleared():
+	JsonData.random_drop(room4_center)
+	print(room4_center)
 	rooms_cleared.append(4)
 	room1_ready()
 	room6_ready()
@@ -127,6 +131,8 @@ func _on_Room4_room_cleared():
 
 
 func _on_Room2_room_cleared():
+	JsonData.random_drop(room2_center)
+	print(room2_center)
 	rooms_cleared.append(2)
 	corner_room1_ready()
 	corner_room2_ready()
@@ -139,6 +145,8 @@ func _on_Room2_room_cleared():
 
 
 func _on_CornerRoom1_room_cleared():
+	JsonData.random_drop(corner_room1_center)
+	print(corner_room1_center)
 	rooms_cleared.append(8)
 	room1_ready()
 	room2_ready()
@@ -150,6 +158,8 @@ func _on_CornerRoom1_room_cleared():
 
 
 func _on_SingleRoom1_room_cleared():
+	JsonData.random_drop(single_room1_center)
+	print(single_room1_center)
 	rooms_cleared.append(9)
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
@@ -159,6 +169,8 @@ func _on_SingleRoom1_room_cleared():
 
 
 func _on_SingleRoom2_room_cleared():
+	JsonData.random_drop(single_room2_center)
+	print(single_room2_center)
 	rooms_cleared.append(10)
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
@@ -168,6 +180,8 @@ func _on_SingleRoom2_room_cleared():
 
 
 func _on_Room3_room_cleared():
+	JsonData.random_drop(room3_center)
+	print(room3_center)
 	rooms_cleared.append(3)
 	single_room3_ready()
 	corner_room2_ready()
@@ -179,6 +193,8 @@ func _on_Room3_room_cleared():
 
 
 func _on_CornerRoom2_room_cleared():
+	JsonData.random_drop(corner_room2_center)
+	print(corner_room2_center)
 	rooms_cleared.append(11)
 	room3_ready()
 	room2_ready()
@@ -190,6 +206,8 @@ func _on_CornerRoom2_room_cleared():
 
 
 func _on_LinearRoom1_room_cleared():
+	JsonData.random_drop(linear_room_center)
+	print(linear_room_center)
 	boss_room_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
@@ -205,6 +223,8 @@ func _on_BossRoomTop_room_cleared():
 
 
 func _on_Room5_room_cleared():
+	JsonData.random_drop(room5_center)
+	print(room5_center)
 	rooms_cleared.append(5)
 	room7_ready()
 	room1_ready()
@@ -217,6 +237,8 @@ func _on_Room5_room_cleared():
 
 
 func _on_Room6_room_cleared():
+	JsonData.random_drop(room6_center)
+	print(room6_center)
 	rooms_cleared.append(6)
 	room5_ready()
 	room4_ready()
@@ -228,6 +250,8 @@ func _on_Room6_room_cleared():
 
 
 func _on_SingleRoom3_room_cleared():
+	JsonData.random_drop(single_room3_center)
+	print(single_room3_center)
 	rooms_cleared.append(12)
 	PlayerStats.hit_points = PlayerStats.max_hit_points
 	emit_signal("healed")
@@ -237,6 +261,8 @@ func _on_SingleRoom3_room_cleared():
 
 
 func _on_Room7_room_cleared():
+	JsonData.random_drop(room7_center)
+	print(room7_center)
 	rooms_cleared.append(7)
 	room5_ready()
 	PlayerStats.hit_points = PlayerStats.max_hit_points

@@ -98,3 +98,6 @@ func set_stats(item_name):
 		print("P Armor Change")
 func reset():
 	get_tree().call_group("enemy", "reset")
+	current_weapon = 0
+	current_armor = 0
+	get_tree().call_group("player", "updateSprite")
