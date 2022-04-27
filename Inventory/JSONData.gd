@@ -21,7 +21,7 @@ func random_drop(position: Vector2):
 	item_data = LoadData("res://Data/ItemData.json")
 	var item_drop = drop.instance()
 	item_drop.item_name = get_name()
-	item_drop.position = position
+	item_drop.global_position = position
 	main.add_child(item_drop)
 	print("Tried!")
 	print("Item drop position = " + str(position))

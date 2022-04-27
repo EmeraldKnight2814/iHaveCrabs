@@ -22,7 +22,7 @@ onready var corner_room2_collision_shape = $CornerRoom2/RoomShape/RectColl
 onready var linear_room_collision_shape = $LinearRoom1/RoomShape/RectColl
 onready var boss_room_collision_shape = $BossRoomTop/RoomShape/BossRoomColl
 
-onready var room1_center = $Room1/RoomShape/RectColl.position + $Room1/RoomShape.position
+onready var room1_center = $Room1/RoomShape/RectColl.global_position + $Room1/RoomShape.global_position
 onready var room2_center = $Room2/RoomShape/RectColl.position + $Room2/RoomShape.position
 onready var room3_center = $Room3/RoomShape/RectColl.position + $Room3/RoomShape.position
 onready var room4_center = $Room4/RoomShape/RectColl.position + $Room4/RoomShape.position
