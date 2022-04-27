@@ -68,6 +68,7 @@ __meta__ = {
 [connection signal="King_Crab_Hit" from="map1/BossRoomTop/Boss/Reginald_King_Of_The_Crabs" to="." method="_on_Reginald_King_Of_The_Crabs_Hit"]
 [connection signal="restart_game" from="HUD" to="." method="_on_HUD_restart_game"]
 [connection signal="unpause" from="HUD" to="." method="_on_HUD_unpause"]
+[connection signal="armor_changed" from="Gerald" to="." method="_on_Gerald_armor_changed"]
 [connection signal="hit" from="Gerald" to="." method="_on_Player_hit"]
 [connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Begin" to="." method="_on_Begin_pressed"]
 [connection signal="pressed" from="Start_Screen/MainMenu/VBoxContainer/MainMenu_Options/Exit" to="." method="_on_Exit_pressed"]

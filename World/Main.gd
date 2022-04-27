@@ -94,3 +94,7 @@ func _on_map1_boss_battle_beginning():
 
 func _on_Reginald_King_Of_The_Crabs_Hit():
 	$HUD.update_boss_hp()
+
+
+func _on_Gerald_armor_changed():
+	$HUD.update_hp()
