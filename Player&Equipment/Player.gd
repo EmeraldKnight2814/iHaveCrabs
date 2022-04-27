@@ -44,6 +44,7 @@ onready var hitboxCollisionShape = $HitboxPivot/SwordHitbox/CollisionShape2D
 onready var texture = $Sprite.texture
 
 func _ready():
+	PlayerStats.player = self
 	aniTree.active = true
 	hitboxCollisionShape.disabled = true
 	hitbox.knockback_vector = Vector2.ZERO

@@ -31,10 +31,10 @@ rotation = 0.13207
 zoom = Vector2( 0.3, 0.3 )
 
 [node name="ItemDrop2" parent="." instance=ExtResource( 10 )]
-position = Vector2( -387, -977 )
+position = Vector2( 928, 376 )
 
 [node name="ItemDrop" parent="." instance=ExtResource( 10 )]
-position = Vector2( 353, 355 )
+position = Vector2( 399, 365 )
 
 [node name="Sounds" type="Node" parent="."]
 pause_mode = 2
@@ -52,6 +52,7 @@ volume_db = -20.0
 [node name="Start_Screen" type="CanvasLayer" parent="."]
 
 [node name="Back_Screen" type="ColorRect" parent="Start_Screen"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0.980392, 0.843137, 1 )
