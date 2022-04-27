@@ -9,10 +9,11 @@ signal armor_changed
 enum{
 	MOVE,
 	ATTACK,
-	DEAD
+	DEAD,
+	PREGAME
 }
 
-var state = MOVE
+var state = PREGAME
 var velocity = Vector2.ZERO
 var stats = PlayerStats
 var arrow = preload("res://Player&Equipment/Arrow.tscn")
@@ -59,6 +60,8 @@ func _physics_process(delta):
 			attack_state(delta)
 		DEAD:
 			dead_state(delta)
+		PREGAME:
+			pregame_state(delta)
 	
 	
 func move_state(delta):
@@ -207,6 +210,9 @@ func attack_state(delta):
 func dead_state(delta):
 	hide()
 	$CollisionShape2D.disabled = true
+
+func pregame_state(delta):
+	pass
 
 func attack_animation_finished():
 	state = MOVE

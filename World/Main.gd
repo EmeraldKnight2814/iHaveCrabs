@@ -1,5 +1,13 @@
 extends Node2D
 
+#Player States
+enum{
+	MOVE,
+	ATTACK,
+	DEAD,
+	PREGAME
+}
+
 var crab = preload("res://Enemies/Crab.tscn")
 var rng = RandomNumberGenerator.new()
 
@@ -25,6 +33,7 @@ func start_game():
 	Stats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
+	gerald.state = MOVE
 	bgm.play()
 	$HUD.update_hp()
 	$HUD.update_current_weapon()
