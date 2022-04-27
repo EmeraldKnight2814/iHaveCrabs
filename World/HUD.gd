@@ -52,8 +52,8 @@ onready var boss_name = $BossBar/Name
 var weapons = [preload("res://Sprites/UI/blank_sword.png"),
 					preload("res://Sprites/UI/blank_bow.png")]
 
-#func _ready():
-#	$BossBar.hide()
+func _ready():
+	$BossBar.hide()
 
 #Open inv
 func _input(event):
