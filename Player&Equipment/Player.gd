@@ -41,7 +41,6 @@ onready var aniState = aniTree.get('parameters/playback')
 onready var hurtbox = $Hurtbox
 onready var hitbox = $HitboxPivot/SwordHitbox
 onready var hitboxCollisionShape = $HitboxPivot/SwordHitbox/CollisionShape2D
-onready var texture = $Sprite.texture
 
 func _ready():
 	add_to_group("player")
@@ -87,59 +86,59 @@ func updateSprite():
 	if (Stats.current_weapon == Stats.current_armor):
 		if(Stats.current_armor == 0): #Base Set
 			print("Base Set")
-			texture = sprites[0]
+			$Sprite.texture = sprites[0]
 		elif(Stats.current_armor == 1): #Death Set
 			print("Death Set")
-			texture = sprites[1]
+			$Sprite.texture = sprites[1]
 		elif(Stats.current_armor == 2): #Ocean Set
 			print("Ocean Set")
-			texture = sprites[2]
+			$Sprite.texture = sprites[2]
 		elif(Stats.current_armor == 3): #Volcano Set
 			print("Volcano Set")
-			texture = sprites[3]
+			$Sprite.texture = sprites[3]
 		else:
 			print("Else used")
-			texture = sprites[0]
+			$Sprite.texture = sprites[0]
 	else:
 		if(Stats.current_armor == 0 and Stats.current_weapon == 1): #Base Armor, Death Weapon, Index = 0
 			print("Base Armor, Death Weapon")
-			texture = unmatchedSprites[0]
+			$Sprite.texture = unmatchedSprites[0]
 		elif(Stats.current_armor == 0 and Stats.current_weapon == 2): #Base Armor, Ocean Weapon, Index = 1
 			print("Base Armor, Ocean Weapon")
-			texture = unmatchedSprites[1]
+			$Sprite.texture = unmatchedSprites[1]
 		elif(Stats.current_armor == 0 and Stats.current_weapon == 3): #Base Armor, Volcano Weapon, Index = 2
 			print("Base Armor, Volcano Weapon")
-			texture = unmatchedSprites[2]
+			$Sprite.texture = unmatchedSprites[2]
 		elif(Stats.current_armor == 1 and Stats.current_weapon == 0): #Death Armor, Base Weapon, Index = 3
 			print("Death Armor, Base Weapon")
-			texture = unmatchedSprites[3]
+			$Sprite.texture = unmatchedSprites[3]
 		elif(Stats.current_armor == 1 and Stats.current_weapon == 2): #Death Armor, Ocean Weapon, Index = 4
 			print("Death Armor, Ocean Weapon")
-			texture = unmatchedSprites[4]
+			$Sprite.texture = unmatchedSprites[4]
 		elif(Stats.current_armor == 1 and Stats.current_weapon == 3): #Death Armor, Volcano Weapon, Index = 5
 			print("Death Armor, Volcano Weapon")
-			texture = unmatchedSprites[5]
+			$Sprite.texture = unmatchedSprites[5]
 		elif(Stats.current_armor == 2 and Stats.current_weapon == 0): #Ocean Armor, Base Weapon, Index = 6
 			print("Ocean Armor, Base Weapon")
-			texture = unmatchedSprites[6]
+			$Sprite.texture = unmatchedSprites[6]
 		elif(Stats.current_armor == 2 and Stats.current_weapon == 1): #Ocean Armor, Death Weapon, Index = 7
 			print("Ocean Armor, Death Weapon")
-			texture = unmatchedSprites[7]
+			$Sprite.texture = unmatchedSprites[7]
 		elif(Stats.current_armor == 2 and Stats.current_weapon == 3): #Ocean Armor, Volcano Weapon, Index = 8
 			print("Ocean Armor, Volcano Weapon")
-			texture = unmatchedSprites[8]
+			$Sprite.texture = unmatchedSprites[8]
 		elif(Stats.current_armor == 3 and Stats.current_weapon == 0): #Volcano Armor, Base Weapon, Index = 9
 			print("Volcano Armor, Base Weapon")
-			texture = unmatchedSprites[9]
+			$Sprite.texture = unmatchedSprites[9]
 		elif(Stats.current_armor == 3 and Stats.current_weapon == 1): #Volcano Armor, Death Weapon, Index = 10
 			print("Volcano Armor, Death Weapon")
-			texture = unmatchedSprites[10]
+			$Sprite.texture = unmatchedSprites[10]
 		elif(Stats.current_armor == 3 and Stats.current_weapon == 2): #Volcano Armor, Ocean Weapon, Index = 11
 			print("Volcano Armor, Ocean Weapon")
-			texture = unmatchedSprites[11]
+			$Sprite.texture = unmatchedSprites[11]
 		else:
 			print("else used")
-			texture = sprites[0]
+			$Sprite.texture = sprites[0]
 	
 func attack_state(delta):
 	if (stats.weapon_type == 1):
