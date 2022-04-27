@@ -44,3 +44,12 @@ func update_slot_visual(slot_index, item_name):
 		slot.item.set_item(item_name)
 	else:
 		slot.initialize_item(item_name)
+
+func reloadscene():
+	inventory = {
+	0: ["Card_A"],
+	1: ["Card_A"],
+	2: ["Card_A"],
+	3: ["Card_A"],
+	}
+	equips.clear()

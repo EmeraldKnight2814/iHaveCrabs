@@ -44,7 +44,7 @@ onready var hitboxCollisionShape = $HitboxPivot/SwordHitbox/CollisionShape2D
 onready var texture = $Sprite.texture
 
 func _ready():
-	PlayerStats.player = self
+	add_to_group("player")
 	aniTree.active = true
 	hitboxCollisionShape.disabled = true
 	hitbox.knockback_vector = Vector2.ZERO
@@ -84,41 +84,41 @@ func move_state(delta):
 		state = ATTACK
 	
 func updateSprite():
-	if (stats.current_weapon == stats.current_armor):
-		if(stats.current_armor == 0): #Base Set
+	if (PlayerStats.current_weapon == PlayerStats.current_armor):
+		if(PlayerStats.current_armor == 0): #Base Set
 			texture = sprites[0]
-		elif(stats.current_armor == 1): #Death Set
+		elif(PlayerStats.current_armor == 1): #Death Set
 			texture = sprites[1]
-		elif(stats.current_armor == 2): #Ocean Set
+		elif(PlayerStats.current_armor == 2): #Ocean Set
 			texture = sprites[2]
-		elif(stats.current_armor == 3): #Volcano Set
+		elif(PlayerStats.current_armor == 3): #Volcano Set
 			texture = sprites[3]
 		else:
 			texture = sprites[0]
 	else:
-		if(stats.current_armor == 0 and stats.current_weapon == 1): #Base Armor, Death Weapon, Index = 0
+		if(PlayerStats.current_armor == 0 and PlayerStats.current_weapon == 1): #Base Armor, Death Weapon, Index = 0
 			texture = unmatchedSprites[0]
-		elif(stats.current_armor == 0 and stats.current_weapon == 2): #Base Armor, Ocean Weapon, Index = 1
+		elif(PlayerStats.current_armor == 0 and PlayerStats.current_weapon == 2): #Base Armor, Ocean Weapon, Index = 1
 			texture = unmatchedSprites[1]
-		elif(stats.current_armor == 0 and stats.current_weapon == 3): #Base Armor, Volcano Weapon, Index = 2
+		elif(PlayerStats.current_armor == 0 and PlayerStats.current_weapon == 3): #Base Armor, Volcano Weapon, Index = 2
 			texture = unmatchedSprites[2]
-		elif(stats.current_armor == 1 and stats.current_weapon == 0): #Death Armor, Base Weapon, Index = 3
+		elif(PlayerStats.current_armor == 1 and PlayerStats.current_weapon == 0): #Death Armor, Base Weapon, Index = 3
 			texture = unmatchedSprites[3]
-		elif(stats.current_armor == 1 and stats.current_weapon == 2): #Death Armor, Ocean Weapon, Index = 4
+		elif(PlayerStats.current_armor == 1 and PlayerStats.current_weapon == 2): #Death Armor, Ocean Weapon, Index = 4
 			texture = unmatchedSprites[4]
-		elif(stats.current_armor == 1 and stats.current_weapon == 3): #Death Armor, Volcano Weapon, Index = 5
+		elif(PlayerStats.current_armor == 1 and PlayerStats.current_weapon == 3): #Death Armor, Volcano Weapon, Index = 5
 			texture = unmatchedSprites[5]
-		elif(stats.current_armor == 2 and stats.current_weapon == 0): #Ocean Armor, Base Weapon, Index = 6
+		elif(PlayerStats.current_armor == 2 and PlayerStats.current_weapon == 0): #Ocean Armor, Base Weapon, Index = 6
 			texture = unmatchedSprites[6]
-		elif(stats.current_armor == 2 and stats.current_weapon == 1): #Ocean Armor, Death Weapon, Index = 7
+		elif(PlayerStats.current_armor == 2 and PlayerStats.current_weapon == 1): #Ocean Armor, Death Weapon, Index = 7
 			texture = unmatchedSprites[7]
-		elif(stats.current_armor == 2 and stats.current_weapon == 3): #Ocean Armor, Volcano Weapon, Index = 8
+		elif(PlayerStats.current_armor == 2 and PlayerStats.current_weapon == 3): #Ocean Armor, Volcano Weapon, Index = 8
 			texture = unmatchedSprites[8]
-		elif(stats.current_armor == 3 and stats.current_weapon == 0): #Volcano Armor, Base Weapon, Index = 9
+		elif(PlayerStats.current_armor == 3 and PlayerStats.current_weapon == 0): #Volcano Armor, Base Weapon, Index = 9
 			texture = unmatchedSprites[9]
-		elif(stats.current_armor == 3 and stats.current_weapon == 1): #Volcano Armor, Death Weapon, Index = 10
+		elif(PlayerStats.current_armor == 3 and PlayerStats.current_weapon == 1): #Volcano Armor, Death Weapon, Index = 10
 			texture = unmatchedSprites[10]
-		elif(stats.current_armor == 3 and stats.current_weapon == 2): #Volcano Armor, Ocean Weapon, Index = 11
+		elif(PlayerStats.current_armor == 3 and PlayerStats.current_weapon == 2): #Volcano Armor, Ocean Weapon, Index = 11
 			texture = unmatchedSprites[11]
 		else:
 			texture = sprites[0]

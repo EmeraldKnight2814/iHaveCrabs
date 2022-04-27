@@ -64,6 +64,7 @@ func _on_HUD_unpause():
 
 func _on_HUD_restart_game():
 	$map1.restart()
+	PlayerInventory.reloadscene()
 	start_game()
 	$HUD/RestartButton.hide()
 	$HUD/dead.hide()
