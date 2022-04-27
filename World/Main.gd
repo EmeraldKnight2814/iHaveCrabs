@@ -21,8 +21,8 @@ func start_game():
 	PlayerStats.damage = 25
 	PlayerStats.knockback_modifier = 1
 	PlayerStats.weapon_type = 1
-	PlayerStats.current_armor = 0
-	PlayerStats.current_weapon = 0
+	Stats.current_armor = 0
+	Stats.current_weapon = 0
 	gerald.position.x = 660
 	gerald.position.y = 520
 	bgm.play()

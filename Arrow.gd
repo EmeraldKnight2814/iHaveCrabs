@@ -5,16 +5,16 @@ var sprites = [preload("res://Sprites/Player/Arrows/Base_Arrow.png"),
 				preload("res://Sprites/Player/Arrows/Ocean_Arrow.png"),
 				preload("res://Sprites/Player/Arrows/Volcano_Arrow.png"),]
 var speed = 1000
-var gerald_stats = PlayerStats
+
 
 func _ready():
-	if gerald_stats.current_weapon == 0:
+	if Stats.current_weapon == 0:
 		$Sprite.texture = sprites[0]
-	elif gerald_stats.current_weapon == 1:
+	elif Stats.current_weapon == 1:
 		$Sprite.texture = sprites[1]
-	elif gerald_stats.current_weapon == 2:
+	elif Stats.current_weapon == 2:
 		$Sprite.texture = sprites[2]
-	elif gerald_stats.current_weapon == 3:
+	elif Stats.current_weapon == 3:
 		$Sprite.texture = sprites[3]
 	else:
 		$Sprite.texture = sprites[0]
