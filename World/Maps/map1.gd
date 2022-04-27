@@ -22,20 +22,20 @@ onready var corner_room2_collision_shape = $CornerRoom2/RoomShape/RectColl
 onready var linear_room_collision_shape = $LinearRoom1/RoomShape/RectColl
 onready var boss_room_collision_shape = $BossRoomTop/RoomShape/BossRoomColl
 
-onready var room1_center = $Room1/RoomShape/RectColl.global_position + $Room1/RoomShape.global_position
-onready var room2_center = $Room2/RoomShape/RectColl.position + $Room2/RoomShape.position
-onready var room3_center = $Room3/RoomShape/RectColl.position + $Room3/RoomShape.position
-onready var room4_center = $Room4/RoomShape/RectColl.position + $Room4/RoomShape.position
-onready var room5_center = $Room5/RoomShape/RectColl.position + $Room5/RoomShape.position
-onready var room6_center = $Room6/RoomShape/RectColl.position + $Room6/RoomShape.position
-onready var room7_center = $Room7/RoomShape/RectColl.position + $Room7/RoomShape.position
-onready var single_room1_center = $SingleRoom1/RoomShape/RectColl.position + $SingleRoom1/RoomShape.position
-onready var single_room2_center = $SingleRoom2/RoomShape/RectColl.position + $SingleRoom2/RoomShape.position
-onready var single_room3_center = $SingleRoom3/RoomShape/RectColl.position + $SingleRoom3/RoomShape.position
-onready var corner_room1_center = $CornerRoom1/RoomShape/RectColl.position + $CornerRoom1/RoomShape.position
-onready var corner_room2_center = $CornerRoom2/RoomShape/RectColl.position + $CornerRoom2/RoomShape.position
-onready var linear_room_center = $LinearRoom1/RoomShape/RectColl.position + $LinearRoom1/RoomShape.position
-onready var boss_room_center = $BossRoomTop/RoomShape/BossRoomColl.position + $BossRoomTop/RoomShape.position
+onready var room1_center = $Room1/RoomShape/RectColl.global_position 
+onready var room2_center = $Room2/RoomShape/RectColl.global_position 
+onready var room3_center = $Room3/RoomShape/RectColl.global_position 
+onready var room4_center = $Room4/RoomShape/RectColl.global_position 
+onready var room5_center = $Room5/RoomShape/RectColl.global_position 
+onready var room6_center = $Room6/RoomShape/RectColl.global_position
+onready var room7_center = $Room7/RoomShape/RectColl.global_position 
+onready var single_room1_center = $SingleRoom1/RoomShape/RectColl.global_position
+onready var single_room2_center = $SingleRoom2/RoomShape/RectColl.global_position 
+onready var single_room3_center = $SingleRoom3/RoomShape/RectColl.global_position
+onready var corner_room1_center = $CornerRoom1/RoomShape/RectColl.global_position 
+onready var corner_room2_center = $CornerRoom2/RoomShape/RectColl.global_position 
+onready var linear_room_center = $LinearRoom1/RoomShape/RectColl.global_position 
+onready var boss_room_center = $BossRoomTop/RoomShape/BossRoomColl.global_position
 
 
 signal victory
