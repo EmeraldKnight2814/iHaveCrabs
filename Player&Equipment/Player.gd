@@ -84,43 +84,61 @@ func move_state(delta):
 		state = ATTACK
 	
 func updateSprite():
-	if (PlayerStats.current_weapon == PlayerStats.current_armor):
-		if(PlayerStats.current_armor == 0): #Base Set
+	if (Stats.current_weapon == Stats.current_armor):
+		if(Stats.current_armor == 0): #Base Set
+			print("Base Set")
 			texture = sprites[0]
-		elif(PlayerStats.current_armor == 1): #Death Set
+		elif(Stats.current_armor == 1): #Death Set
+			print("Death Set")
 			texture = sprites[1]
-		elif(PlayerStats.current_armor == 2): #Ocean Set
+		elif(Stats.current_armor == 2): #Ocean Set
+			print("Ocean Set")
 			texture = sprites[2]
-		elif(PlayerStats.current_armor == 3): #Volcano Set
+		elif(Stats.current_armor == 3): #Volcano Set
+			print("Volcano Set")
 			texture = sprites[3]
 		else:
+			print("Else used")
 			texture = sprites[0]
 	else:
-		if(PlayerStats.current_armor == 0 and PlayerStats.current_weapon == 1): #Base Armor, Death Weapon, Index = 0
+		if(Stats.current_armor == 0 and Stats.current_weapon == 1): #Base Armor, Death Weapon, Index = 0
+			print("Base Armor, Death Weapon")
 			texture = unmatchedSprites[0]
-		elif(PlayerStats.current_armor == 0 and PlayerStats.current_weapon == 2): #Base Armor, Ocean Weapon, Index = 1
+		elif(Stats.current_armor == 0 and Stats.current_weapon == 2): #Base Armor, Ocean Weapon, Index = 1
+			print("Base Armor, Ocean Weapon")
 			texture = unmatchedSprites[1]
-		elif(PlayerStats.current_armor == 0 and PlayerStats.current_weapon == 3): #Base Armor, Volcano Weapon, Index = 2
+		elif(Stats.current_armor == 0 and Stats.current_weapon == 3): #Base Armor, Volcano Weapon, Index = 2
+			print("Base Armor, Volcano Weapon")
 			texture = unmatchedSprites[2]
-		elif(PlayerStats.current_armor == 1 and PlayerStats.current_weapon == 0): #Death Armor, Base Weapon, Index = 3
+		elif(Stats.current_armor == 1 and Stats.current_weapon == 0): #Death Armor, Base Weapon, Index = 3
+			print("Death Armor, Base Weapon")
 			texture = unmatchedSprites[3]
-		elif(PlayerStats.current_armor == 1 and PlayerStats.current_weapon == 2): #Death Armor, Ocean Weapon, Index = 4
+		elif(Stats.current_armor == 1 and Stats.current_weapon == 2): #Death Armor, Ocean Weapon, Index = 4
+			print("Death Armor, Ocean Weapon")
 			texture = unmatchedSprites[4]
-		elif(PlayerStats.current_armor == 1 and PlayerStats.current_weapon == 3): #Death Armor, Volcano Weapon, Index = 5
+		elif(Stats.current_armor == 1 and Stats.current_weapon == 3): #Death Armor, Volcano Weapon, Index = 5
+			print("Death Armor, Volcano Weapon")
 			texture = unmatchedSprites[5]
-		elif(PlayerStats.current_armor == 2 and PlayerStats.current_weapon == 0): #Ocean Armor, Base Weapon, Index = 6
+		elif(Stats.current_armor == 2 and Stats.current_weapon == 0): #Ocean Armor, Base Weapon, Index = 6
+			print("Ocean Armor, Base Weapon")
 			texture = unmatchedSprites[6]
-		elif(PlayerStats.current_armor == 2 and PlayerStats.current_weapon == 1): #Ocean Armor, Death Weapon, Index = 7
+		elif(Stats.current_armor == 2 and Stats.current_weapon == 1): #Ocean Armor, Death Weapon, Index = 7
+			print("Ocean Armor, Death Weapon")
 			texture = unmatchedSprites[7]
-		elif(PlayerStats.current_armor == 2 and PlayerStats.current_weapon == 3): #Ocean Armor, Volcano Weapon, Index = 8
+		elif(Stats.current_armor == 2 and Stats.current_weapon == 3): #Ocean Armor, Volcano Weapon, Index = 8
+			print("Ocean Armor, Volcano Weapon")
 			texture = unmatchedSprites[8]
-		elif(PlayerStats.current_armor == 3 and PlayerStats.current_weapon == 0): #Volcano Armor, Base Weapon, Index = 9
+		elif(Stats.current_armor == 3 and Stats.current_weapon == 0): #Volcano Armor, Base Weapon, Index = 9
+			print("Volcano Armor, Base Weapon")
 			texture = unmatchedSprites[9]
-		elif(PlayerStats.current_armor == 3 and PlayerStats.current_weapon == 1): #Volcano Armor, Death Weapon, Index = 10
+		elif(Stats.current_armor == 3 and Stats.current_weapon == 1): #Volcano Armor, Death Weapon, Index = 10
+			print("Volcano Armor, Death Weapon")
 			texture = unmatchedSprites[10]
-		elif(PlayerStats.current_armor == 3 and PlayerStats.current_weapon == 2): #Volcano Armor, Ocean Weapon, Index = 11
+		elif(Stats.current_armor == 3 and Stats.current_weapon == 2): #Volcano Armor, Ocean Weapon, Index = 11
+			print("Volcano Armor, Ocean Weapon")
 			texture = unmatchedSprites[11]
 		else:
+			print("else used")
 			texture = sprites[0]
 	
 func attack_state(delta):

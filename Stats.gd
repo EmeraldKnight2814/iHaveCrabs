@@ -84,12 +84,16 @@ func set_stats(item_name):
 		print("C Health Change")
 	
 	if (JsonData.item_data[item_name]["Pweapon"] != null):
+		print(JsonData.item_data[item_name]["Pweapon"])
 		current_weapon = JsonData.item_data[item_name]["Pweapon"]
+		print("Current weapon: " + str(current_weapon))
 		get_tree().call_group("player", "updateSprite")
 		print("P Weapon Change")
 	
 	if (JsonData.item_data[item_name]["Parmor"] != null):
+		print(JsonData.item_data[item_name]["Parmor"])
 		current_armor = JsonData.item_data[item_name]["Parmor"]
+		print("Current armor: " + str(current_armor))
 		get_tree().call_group("player", "updateSprite")
 		print("P Armor Change")
 func reset():
