@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Player&Equipment/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Player_BaseSet.png" type="Texture" id=2]
@@ -855,12 +855,16 @@ graph_offset = Vector2( -377.137, 0 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=21]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 8.0
+radius = 6.0
 height = 0.0
 
 [sub_resource type="CapsuleShape2D" id=52]
 radius = 16.1
 height = 12.2
+
+[sub_resource type="CapsuleShape2D" id=66]
+radius = 16.65
+height = 11.34
 
 [sub_resource type="CircleShape2D" id=54]
 radius = 33.0872
@@ -910,8 +914,7 @@ parameters/idle/blend_position = Vector2( 0.00158477, 0.82659 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -0.1, 7 )
+position = Vector2( 0.84, 2.83 )
 rotation = 1.5708
 scale = Vector2( 2.5, 2 )
 shape = SubResource( 2 )
@@ -938,11 +941,9 @@ collision_layer = 16
 collision_mask = 136
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-modulate = Color( 0.00784314, 1, 0, 1 )
-position = Vector2( -0.1, 7 )
-rotation = 1.5708
-scale = Vector2( 2.5, 2 )
-shape = SubResource( 2 )
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 1.61, 2.56 )
+shape = SubResource( 66 )
 
 [node name="PickupZone" type="Area2D" parent="."]
 visible = false
