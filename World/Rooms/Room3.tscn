@@ -1959,7 +1959,7 @@ __meta__ = {
 }
 
 [node name="Crab_With_Hat" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 1758, 1254 )
+position = Vector2( 2042.14, 1249.24 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Crab_With_Hat2" parent="Enemies" instance=ExtResource( 3 )]
