@@ -880,7 +880,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 13
-frame = 23
+frame = 15
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -910,7 +910,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 21 )
 parameters/attack/blend_position = Vector2( 0, 0 )
 parameters/bow/blend_position = Vector2( 0, 0 )
-parameters/idle/blend_position = Vector2( 0.00158477, 0.82659 )
+parameters/idle/blend_position = Vector2( -0.000774622, -0.00621116 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -942,7 +942,7 @@ collision_mask = 136
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 1.61, 2.56 )
+position = Vector2( -0.68, 3.77 )
 shape = SubResource( 66 )
 
 [node name="PickupZone" type="Area2D" parent="."]
