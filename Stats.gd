@@ -12,6 +12,10 @@ var wizard_max_hit_points = 25 setget set_wizard_hit_points
 var crab_zone_of_truth_radius = 3000 setget set_crab_zone_of_truth 
 var wizard_zone_of_truth_radius = 6000 setget set_wizard_zone_of_truth 
 var reginald_hp = 500 setget set_reginald_hit_points
+var speed
+var acc
+var Cspeed
+var Cacc
 
 signal no_hit_points
 signal hit_points_changed(value)

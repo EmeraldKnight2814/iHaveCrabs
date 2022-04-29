@@ -52,8 +52,6 @@ onready var boss_name = $BossBar/Name
 var weapons = [preload("res://Sprites/UI/blank_sword.png"),
 					preload("res://Sprites/UI/blank_bow.png")]
 
-func _ready():
-	$BossBar.hide()
 
 #Open inv
 func _input(event):
@@ -64,6 +62,7 @@ func _input(event):
 		if (!$Inventory.visible):
 			Stats.reset()
 			$Inventory.update_stats()
+			change_stats()
 			get_tree().paused = false
 
 func _on_Unpause_pressed():
@@ -159,6 +158,16 @@ func update_current_weapon():
 		$Current_Weapon.texture = weapons[1]
 	else:
 		$Current_Weapon.texture = weapons[0]
+
+func change_stats():
+	$StatBar/Damage.set_text("Damage: " + str(PlayerStats.damage))
+	$StatBar/Speed.set_text("Speed: " + str(PlayerStats.speed))
+	$StatBar/Acc.set_text("Accelerate: " + str(PlayerStats.acc))
+	$StatBar/Cdamage.set_text("Damage: " + str(PlayerStats.damage))
+	$StatBar/Cspeed.set_text("Speed: " + str(PlayerStats.speed))
+	$StatBar/CAcc.set_text("Accelerate: " + str(PlayerStats.acc))
+	$StatBar/Cfrate.set_text("Fire Rate: " + str(PlayerStats.damage))
+	$StatBar/Chealth.set_text("Health: " + str(PlayerStats.speed))
 
 func victory():
 	$RestartButton.text = "You Won! Restart?"

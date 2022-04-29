@@ -50,6 +50,8 @@ func _ready():
 	hitboxCollisionShape.disabled = true
 	hitbox.knockback_vector = Vector2.ZERO
 	stats.connect("no_hit_points", self, "_on_no_hit_points")
+	PlayerStats.speed = MAX_SPEED
+	PlayerStats.acc = ACCELERATION
 
 func _physics_process(delta):
 	match state:
