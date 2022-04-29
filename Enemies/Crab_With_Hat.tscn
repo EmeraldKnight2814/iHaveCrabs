@@ -29,6 +29,21 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "yellow_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "red_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "cyan_walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 19 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "violet_walk",
@@ -44,29 +59,9 @@ animations = [ {
 "name": "orange_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "white_walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "green_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "purple_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "red_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "cyan_walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 23 ) ],
@@ -74,14 +69,19 @@ animations = [ {
 "name": "rainbow_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "yellow_walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "blue_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "purple_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "white_walk",
 "speed": 5.0
 } ]
 
@@ -93,7 +93,7 @@ height = 9.46667
 radius = 6000.0
 
 [node name="Crab_With_Hat" type="KinematicBody2D"]
-collision_layer = 64
+collision_layer = 0
 collision_mask = 66
 script = ExtResource( 1 )
 
