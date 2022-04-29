@@ -163,7 +163,6 @@ func change_stats():
 	$StatBar/Damage.set_text("Damage: " + str(PlayerStats.damage))
 	$StatBar/Speed.set_text("Speed: " + str(PlayerStats.speed))
 	$StatBar/Acc.set_text("Accelerate: " + str(PlayerStats.acc))
-	$StatBar/Cdamage.set_text("Damage: " + str(PlayerStats.damage))
 	$StatBar/Cspeed.set_text("Speed: " + str(PlayerStats.speed))
 	$StatBar/CAcc.set_text("Accelerate: " + str(PlayerStats.acc))
 	$StatBar/Cfrate.set_text("Fire Rate: " + str(PlayerStats.damage))

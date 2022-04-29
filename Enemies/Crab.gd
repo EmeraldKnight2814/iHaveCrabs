@@ -39,6 +39,8 @@ func _ready():
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = 75
 	add_to_group("enemy")
+	PlayerStats.Cacc = ACCELERATION
+	PlayerStats.Cspeed = MAX_SPEED
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -136,6 +138,11 @@ func zone_change(value):
 
 func up_speed(value):
 	MAX_SPEED += value
+	PlayerStats.Cspeed = MAX_SPEED
+
+func up_acc(value):
+	ACCELERATION += value
+	PlayerStats.Cacc = ACCELERATION
 
 func fire_speed():
 	pass

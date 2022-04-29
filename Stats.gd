@@ -79,6 +79,10 @@ func set_stats(item_name):
 		get_tree().call_group("enemy", "up_speed", JsonData.item_data[item_name]["Mspeed"])
 		print("C Speed Change")
 	
+	if (JsonData.item_data[item_name]["Maccel"] != null):
+		get_tree().call_group("enemy", "up_acc", JsonData.item_data[item_name]["Maccel"])
+		print("C Acc Change")
+	
 	if (JsonData.item_data[item_name]["Fspeed"] != null):
 		get_tree().call_group("enemy", "fire_speed", JsonData.item_data[item_name]["Fspeed"])
 		print("F Speed Change")
