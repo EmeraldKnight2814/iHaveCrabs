@@ -259,20 +259,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cdamage" type="Label" parent="StatBar"]
-margin_left = -1.0
-margin_top = 183.0
-margin_right = 156.0
-margin_bottom = 220.0
-theme = SubResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Cspeed" type="Label" parent="StatBar"]
-margin_top = 218.0
+margin_top = 184.0
 margin_right = 135.0
-margin_bottom = 255.0
+margin_bottom = 221.0
 theme = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -280,9 +270,9 @@ __meta__ = {
 
 [node name="CAcc" type="Label" parent="StatBar"]
 margin_left = -1.0
-margin_top = 254.0
+margin_top = 220.0
 margin_right = 222.0
-margin_bottom = 291.0
+margin_bottom = 257.0
 theme = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -290,18 +280,18 @@ __meta__ = {
 
 [node name="Cfrate" type="Label" parent="StatBar"]
 margin_left = -1.0
-margin_top = 289.0
+margin_top = 256.0
 margin_right = 192.0
-margin_bottom = 326.0
+margin_bottom = 293.0
 theme = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Chealth" type="Label" parent="StatBar"]
-margin_top = 324.0
+margin_top = 293.0
 margin_right = 215.0
-margin_bottom = 361.0
+margin_bottom = 330.0
 theme = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false

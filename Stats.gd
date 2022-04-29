@@ -16,6 +16,8 @@ var speed
 var acc
 var Cspeed
 var Cacc
+var Fspeed
+var Chealth = 1
 
 signal no_hit_points
 signal hit_points_changed(value)
@@ -88,7 +90,9 @@ func set_stats(item_name):
 		print("F Speed Change")
 	
 	if (JsonData.item_data[item_name]["Mhealth"] != null):
-		get_tree().call_group("enemy", "up_health", JsonData.item_data[item_name]["Mhealth"])
+		crab_max_hit_points *= JsonData.item_data[item_name]["Mhealth"]
+		wizard_max_hit_points *= JsonData.item_data[item_name]["Mhealth"]
+		Chealth = JsonData.item_data[item_name]["Mhealth"]
 		print("C Health Change")
 	
 	if (JsonData.item_data[item_name]["Pweapon"] != null):
@@ -104,7 +108,10 @@ func set_stats(item_name):
 		print("Current armor: " + str(current_armor))
 		get_tree().call_group("player", "updateSprite")
 		print("P Armor Change")
+
 func reset():
+	crab_max_hit_points = 75
+	wizard_max_hit_points = 25
 	get_tree().call_group("enemy", "reset")
 	current_weapon = 0
 	current_armor = 0

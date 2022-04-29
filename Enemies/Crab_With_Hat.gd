@@ -41,6 +41,7 @@ func _ready():
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
 	HIT_POINTS = MAX_HIT_POINTS
 	add_to_group("enemy")
+	PlayerStats.Fspeed = fireballLoopcheck
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -141,7 +142,13 @@ func up_speed(value):
 func fire_speed(value):
 	fireballLoopcheck = value
 	fireballLoop = value
+	PlayerStats.Fspeed = fireballLoopcheck
 
 func reset():
 	MAX_SPEED = 50
+	ACCELERATION = 500
+	fireballLoop = 100
+	fireballLoopcheck = 100
+	MAX_HIT_POINTS = PlayerStats.wizard_max_hit_points
+	HIT_POINTS = MAX_HIT_POINTS
 	MAX_HIT_POINTS = PlayerStats.crab_max_hit_points

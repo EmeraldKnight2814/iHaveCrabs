@@ -9,7 +9,7 @@ enum{
 	CHASE
 }
 
-export var HIT_POINTS = 75
+export var HIT_POINTS = 0
 export var FRICTION = 100
 export var VELOCITY = Vector2.ZERO
 export var ACCELERATION = 200
@@ -37,7 +37,7 @@ func _ready():
 	randomize()
 	var crab_colors = sprite.frames.get_animation_names()
 	sprite.animation = crab_colors[randi() % crab_colors.size()]
-	HIT_POINTS = 75
+	HIT_POINTS = MAX_HIT_POINTS
 	add_to_group("enemy")
 	PlayerStats.Cacc = ACCELERATION
 	PlayerStats.Cspeed = MAX_SPEED
@@ -148,5 +148,7 @@ func fire_speed():
 	pass
 
 func reset():
+	ACCELERATION = 200
 	MAX_SPEED = 30
 	MAX_HIT_POINTS = PlayerStats.crab_max_hit_points
+	HIT_POINTS = MAX_HIT_POINTS

@@ -163,10 +163,10 @@ func change_stats():
 	$StatBar/Damage.set_text("Damage: " + str(PlayerStats.damage))
 	$StatBar/Speed.set_text("Speed: " + str(PlayerStats.speed))
 	$StatBar/Acc.set_text("Accelerate: " + str(PlayerStats.acc))
-	$StatBar/Cspeed.set_text("Speed: " + str(PlayerStats.speed))
-	$StatBar/CAcc.set_text("Accelerate: " + str(PlayerStats.acc))
-	$StatBar/Cfrate.set_text("Fire Rate: " + str(PlayerStats.damage))
-	$StatBar/Chealth.set_text("Health: " + str(PlayerStats.speed))
+	$StatBar/Cspeed.set_text("Speed: " + str(PlayerStats.Cspeed))
+	$StatBar/CAcc.set_text("Accelerate: " + str(PlayerStats.Cacc))
+	$StatBar/Cfrate.set_text("Fire Rate: " + str(PlayerStats.Fspeed))
+	$StatBar/Chealth.set_text("Health: " + str(PlayerStats.Chealth))
 
 func victory():
 	$RestartButton.text = "You Won! Restart?"
