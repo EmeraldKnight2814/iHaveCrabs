@@ -20,6 +20,7 @@ onready var pause = $HUD/Pause
 
 #TJ Code
 func _ready():
+	randomize()
 	JsonData.main = self
 
 func start_game():

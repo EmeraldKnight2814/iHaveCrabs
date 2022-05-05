@@ -4,6 +4,7 @@ var item_name
 var item_quantity
 
 func _ready():
+	randomize()
 	var rand_val =  randi() % 3
 	if rand_val == 0:
 		item_name = "Card_A"

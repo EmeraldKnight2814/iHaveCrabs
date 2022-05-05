@@ -6,6 +6,7 @@ var check = true
 var main
 
 func _ready():
+	randomize()
 	item_data = LoadData("res://Data/ItemData.json")
 
 func LoadData(file_path):
