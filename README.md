@@ -14,10 +14,17 @@ When you defeat the King of the Crabs, you will be asked if you wish to try agai
 
 This was a simple game demo designed to help us learn the basic principles of game design, while also express our creativity.
 
-Controls:
+
+# Controls:
+
 Movement: WASD
+
 Attack: Left Mouse Click
+
 Switch Weapons: Q
+
 Access Card Inventory: E
+
 Pick Up Card: Z
+
 Pause: ESC
