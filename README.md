@@ -1,6 +1,6 @@
 # iHaveCrabs
 
-This game was made over the course of 4 months as a part of the Northwest Missouri State University Foundations of Game Development class. It was contributed to by Daniel Crowley, Phillip Lyons, and Turbo Mair.
+This game was made over the course of 4 months as a part of the Northwest Missouri State University Foundations of Game Development class. It was contributed to by Daniel Crowley, Jacob Daleske, Phillip Lyons, and Turbo Mair.
 
 iHaveCrabs is a Dungeon-Crawler style game. you are placed at the center of the map with a Sword and Bow as your available weapons. One of the 4 rooms adjacent to the center will be open with some crabs for you to take out. Once you have taken out all of the crabs in this room, all rooms adjacent to the cleared room will become available to enter and clear out.
 
